@@ -1,0 +1,6 @@
+{
+    "name": "personal_site",
+    "dependencies": {
+        "tiny-slider": "^2.9.3"
+    }
+}
