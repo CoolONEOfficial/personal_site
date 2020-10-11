@@ -23,6 +23,7 @@ enum ProjectPlatform: String, Decodable {
 enum ProjectType: String, Decodable {
     case game
     case app
+    case site
 }
 
 extension ProjectPlatform {
@@ -46,6 +47,8 @@ extension ProjectType {
             return "Приложение"
         case .game:
             return "Игра"
+        case .site:
+            return "Сайт"
         }
     }
 }

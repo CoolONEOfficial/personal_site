@@ -29,6 +29,15 @@
         }
       },
       {
+        "package": "FTPPublishDeploy",
+        "repositoryURL": "https://github.com/CoolONEOfficial/FTPPublishDeploy.git",
+        "state": {
+          "branch": null,
+          "revision": "20a7ac870d3dffcbdafba6c3ee5bfc7e9211fd36",
+          "version": "0.1.0"
+        }
+      },
+      {
         "package": "Ink",
         "repositoryURL": "https://github.com/johnsundell/ink.git",
         "state": {

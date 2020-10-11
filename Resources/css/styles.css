@@ -147,6 +147,7 @@ a {
     padding: 4px 6px;
     border-radius: 5px;
     margin-right: 5px;
+    margin-top: 5px;
 }
 
 .tag-list a,
@@ -191,9 +192,15 @@ a {
     margin-right: 10px;
 }
 
+.item-description li {
+    margin-bottom: 5px;
+}
+
 .item-singleImage {
     width: 190px;
-    margin-left: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .item-big-singleImage {
@@ -244,6 +251,28 @@ img[alt=item-right] {
 
 img[alt=item-left] {
     float: left;
+}
+
+.pagination-title {
+    width: 100%;
+    text-align: center;
+}
+
+.pagination-prev {
+    min-width: 200px;
+}
+
+.pagination-next {
+    min-width: 200px;
+    text-align: right;
+}
+
+.vk-post {
+    transform: translateX(-50%);
+    position: relative;
+    left: 50%;
+    margin-bottom: 10px;
+    max-width: 400px;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -5,10 +5,12 @@ import Plot
 import SplashPublishPlugin
 import DarkImagePublishPlugin
 import TinySliderPublishPlugin
+import FTPPublishDeploy
+import Files
 
 // This type acts as the configuration for your website.
-struct PortfolioSite: Website {
-    enum SectionID: String, WebsiteSectionID {
+public struct PortfolioSite: Website {
+    public enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
         case projects
         case books
@@ -17,7 +19,7 @@ struct PortfolioSite: Website {
         case achievements
     }
 
-    struct ItemMetadata: WebsiteItemMetadata {
+    public struct ItemMetadata: WebsiteItemMetadata {
         var project: ProjectMetadata?
         var event: EventMetadata?
         var career: CareerMetadata?
@@ -26,22 +28,44 @@ struct PortfolioSite: Website {
         
         var logo: String?
         var singleImage: String?
+        var endDate: String?
     }
 
-    var url = URL(string: "https://coolone.ru")!
-    var name = "Сайт Николая Трухина"
-    var description = "Здесь собрана вся информация проектах, мероприятиях, книгах и многое другое"
-    var language: Language { .russian }
-    var imagePath: Path? { "/img/avatar.jpg" }
-    var favicon: Favicon? { .init(path: "/img/avatar.jpg", type: "image/jpg") }
+    public var url = URL(string: "https://coolone.ru")!
+    public var name = "Сайт Николая Трухина"
+    public var description = "Здесь собрана вся информация проектах, мероприятиях, книгах и многое другое"
+    public var language: Language { .russian }
+    public var imagePath: Path? { "/img/avatar.jpg" }
+    public var favicon: Favicon? { .init(path: "/img/avatar.jpg", type: "image/jpg") }
+}
+
+extension PortfolioSite.ItemMetadata {
+    static let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        return dateFormatter
+    }()
+    
+    var parsedEndDate: Date? {
+        if let endDate = endDate {
+            return PortfolioSite.ItemMetadata.dateFormatter.date(from: endDate)
+        }
+        return nil
+    }
+}
+
+let file = try File(path: #file)
+guard let ftpConnection = try FTPConnection(file: file) else {
+    throw FilesError(path: file.path, reason: LocationErrorReason.missing)
 }
 
 // This will generate your website using the built-in Foundation theme:
 try PortfolioSite().publish(
     withTheme: .portfolio,
+    deployedUsing: .ftp(connection: ftpConnection, useSSL: false),
     additionalSteps: [
-        .addDefaultSectionTitles()
-        //.addPage(.init(path: "/all", content: <#T##Content#>))
+        .addDefaultSectionTitles(),
+        .addItemPages()
     ],
     plugins: [
         .splash(withClassPrefix: ""),
@@ -85,23 +109,37 @@ extension PublishingStep where Site == PortfolioSite {
             }
         }
     }
+    
+    static func addItemPages() -> Self {
+        .step(named: "Add items pages") { context in
+            let chunks = context.allItems(
+                sortedBy: \.date,
+                order: .descending
+            ).chunked(into: 10)
+            for (index, chunk) in chunks.enumerated() {
+                let index = index + 1
+                context.addPage(.init(path: "/items/\(index)", content: .init(
+                    title: "Все посты",
+                    description: "Список всех постов",
+                    body: .init(node: .makeItemsPageContent(
+                        context: context,
+                        items: chunk,
+                        pageIndex: index,
+                        lastPage: chunks.count == index
+                    ))
+                )))
+            }
+        }
+    }
 }
 
-public extension Plugin {
+extension Plugin {
     static func itemImage(suffix: String = "-dark") -> Self {
         Plugin(name: "DarkItemImage") { context in
             context.markdownParser.addModifier(
                 .itemImage(suffix: suffix, context: context)
             )
         }
-    }
-}
-
-extension Collection where Element: Equatable {
-    /// Returns the second index where the specified value appears in the collection.
-    func secondIndex(of element: Element) -> Index? {
-        guard let index = firstIndex(of: element) else { return nil }
-        return self[self.index(after: index)...].firstIndex(of: element)
     }
 }
 
