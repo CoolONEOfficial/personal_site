@@ -29,6 +29,8 @@ enum ColSize: String {
     case _8
     case _9
     case _10
+    case _11
+    case _12
     case auto
 }
 
@@ -55,24 +57,29 @@ extension ColConfig {
 }
 
 struct RowColsConfig {
-    var breakpoint: Breakpoint? = nil
     var cols: UInt
+    var breakpoint: Breakpoint? = nil
     
     var str: String {
         "row-cols\(breakpoint != nil ? "-\(breakpoint!)" : "")-\(cols)"
     }
 }
 
-enum RowJustifyConfig: String {
+struct RowJustifyConfig {
+    var type: RowJustifyType
+    var breakpoint: Breakpoint? = nil
+    
+    var str: String {
+        "justify-content-\(breakpoint != nil ? "\(breakpoint!.rawValue)-" : "")\(type.rawValue)"
+    }
+}
+
+enum RowJustifyType: String {
     case start
     case end
     case center
     case around
     case between
-    
-    var str: String {
-        "justify-content-\(rawValue)"
-    }
 }
 
 enum RowAlignConfig: String {
@@ -97,7 +104,7 @@ enum Side: String {
 extension Node where Context == HTML.BodyContext {
     static func row(
         colsConfig: RowColsConfig? = nil,
-        justifyConfig: RowJustifyConfig? = nil,
+        justifyConfigs: [RowJustifyConfig] = [],
         alignConfig: RowAlignConfig? = .center,
         gutters: Bool = false,
         classSuffix: String = "",
@@ -111,8 +118,8 @@ extension Node where Context == HTML.BodyContext {
         if let colsConfig = colsConfig {
             classStr.append(colsConfig.str)
         }
-        if let justifyConfig = justifyConfig {
-            classStr.append(justifyConfig.str)
+        for config in justifyConfigs {
+            classStr.append(config.str)
         }
         if let alignConfig = alignConfig {
             classStr.append(alignConfig.str)
@@ -125,6 +132,7 @@ extension Node where Context == HTML.BodyContext {
 extension Node where Context == HTML.BootstrapRowContext {
     static func col(
         _ configs: [ColConfig],
+        verticalSpacing: Bool = false,
         _ nodes: Node<HTML.BodyContext>...
     ) -> Node {
         var nodes = nodes
@@ -132,7 +140,11 @@ extension Node where Context == HTML.BootstrapRowContext {
         if configs.isEmpty {
             configs.append(.init())
         }
-        nodes.append(.class(configs.map { $0.classStr }.joined(separator: " ")))
+        var classArr = configs.map { $0.classStr }
+        if verticalSpacing {
+            classArr.append(.spacing([ .init(type: .margin, size: 1, side: .vertical) ]))
+        }
+        nodes.append(.class(classArr))
         return .element(named: "div", nodes: nodes)
     }
 }

@@ -61,34 +61,57 @@ extension Node where Context == HTML.BodyContext {
 
         return .header(
             .wrapper(
-                .img(
-                    .src("/img/avatar.jpg"),
-                    .class("logo")
-                ),
-                .div(
-                    .class("logo-column"),
-                    .a(
-                        .href("/"),
-                        .p(
-                            .class("logo-title"),
-                            .text("Николай Трухин")
-                        ),
-                        .p(
-                            .class("logo-subtitle"),
-                            .text("iOS разработчик")
+                .row(justifyConfigs: [
+                        .init(type: .between, breakpoint: .md),
+                        .init(type: .center)
+                    ],
+                    .col([.init(size: .auto)],
+                         .row(gutters: true,
+                              .col([.init(size: .auto, breakpoint: .md)],
+                                .img(
+                                    .src("/img/avatar.jpg"),
+                                    .class("logo")
+                                )
+                            ),
+                            .col([],
+                                .div(
+                                    .a(
+                                        .href("/"),
+                                        .p(
+                                            .class("logo-title"),
+                                            .text("Николай Трухин")
+                                        ),
+                                        .p(
+                                            .class("logo-subtitle"),
+                                            .text("iOS разработчик")
+                                        )
+                                    )
+                                )
+                            )
                         )
+                    ),
+                    .col([.init(size: .auto, breakpoint: .md)],
+                         .row(justifyConfigs: [
+                                .init(type: .end, breakpoint: .md),
+                                .init(type: .center)
+                            ],
+                            .forEach(sectionIDs) { section in
+                                .col([.init(size: .auto)],
+                                    .a(
+                                        .class(
+                                            section == selectedSection ? "selected" : "",
+                                            .spacing([ .init(type: .margin, size: 2, side: .horizontal) ])
+                                        ),
+                                        .href(context.sections[section].path),
+                                        .text(context.sections[section].title)
+                                    )
+                                )
+                            }
+                         )
+                        
                     )
-                ),
-                .div(
-                    .class("header-right"),
-                    .forEach(sectionIDs) { section in
-                        .a(
-                            .class(section == selectedSection ? "selected" : ""),
-                            .href(context.sections[section].path),
-                            .text(context.sections[section].title)
-                        )
-                    }
                 )
+                
             )
         )
     }
@@ -135,6 +158,10 @@ public extension Node where Context: HTMLContext {
     /// Assign a class name to the current element. May also be a list of
     /// space-separated class names.
     static func `class`(_ classNames: String...) -> Node {
+        .class(classNames.joined(separator: " "))
+    }
+    
+    static func `class`(_ classNames: [String]) -> Node {
         .class(classNames.joined(separator: " "))
     }
 }

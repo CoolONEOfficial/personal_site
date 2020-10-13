@@ -37,30 +37,23 @@ header .wrapper {
 }
 
 .logo {
-    float: left;
     border-radius: 30px;
     width: 60px;
     height: 60px;
     object-fit: cover;
+    margin-bottom: 5px;
 }
 
 header a {
-    float: left;
     text-align: center;
-    padding: 12px;
     text-decoration: none;
     font-size: 18px;
     line-height: 40px;
     border-radius: 4px;
-    margin-left: 8px;
 }
 
 header a.selected {
     color: #8a8a8a
-}
-
-header .logo-column {
-    float: left;
 }
 
 header .logo-title {
@@ -76,12 +69,18 @@ header .logo-subtitle {
 
 header .logo-subtitle, header .logo-title {
     margin-bottom: 0;
-    text-align: left;
+    text-align: center;
     line-height: 22px;
 }
 
-header .header-right {
-    float: right;
+@media (min-width: 768px) {
+    header .logo-subtitle, header .logo-title {
+        text-align: left;
+    }
+    
+    .logo {
+        margin-bottom: 0;
+    }
 }
 
 h1 {
@@ -147,7 +146,6 @@ a {
     padding: 4px 6px;
     border-radius: 5px;
     margin-right: 5px;
-    margin-top: 5px;
 }
 
 .tag-list a,
@@ -201,6 +199,10 @@ a {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.item-date {
+    white-space: pre-wrap;
 }
 
 .item-big-singleImage {

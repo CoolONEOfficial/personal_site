@@ -26,7 +26,7 @@ public extension Theme {
 struct PortfolioHTMLFactory: HTMLFactory {
     static let cssPaths: [Path] = [
         "/styles.css",
-        "/modules/tiny-slider/dist/tiny-slider.min.css",
+        "/modules/tiny-slider/dist/tiny-slider.css",
         "/modules/bootstrap/dist/css/bootstrap-grid.min.css"
     ]
     

@@ -22,7 +22,7 @@ extension Item where Site == PortfolioSite {
     func node(on site: PortfolioSite, context: PublishingContext<PortfolioSite>, sectionShow: Bool) -> Node<HTML.ListContext> {
         let html = MarkdownParser().html(from: description)
         return .li(.article(
-            .row(justifyConfig: .center,
+            .row(justifyConfigs: [.init(type: .center)],
                 .col([],
                     header(context: context, sectionShow: sectionShow),
                     .div(
@@ -73,13 +73,13 @@ extension Item where Site == PortfolioSite {
         }
         
         return .row(
-            .col([],
+            .col([], verticalSpacing: true,
                 tagList(on: site)
             ),
-            .col([.init(size: .auto)],
+            .col([.init(size: .auto)], verticalSpacing: true,
                 .span(
                     .text(dateStr),
-                    .style("white-space: nowrap;")
+                    .class("item-date")
                 )
             )
         )
@@ -90,10 +90,10 @@ extension Item where Site == PortfolioSite {
         sectionShow: Bool = true
     ) -> Node<HTML.BodyContext> {
         .row(
-             .col([.init(size: .auto, breakpoint: .xs)],
-                  image("logo", metadata.logo)
-             ),
-             .col([],
+            .col([.init(size: .auto)],
+                 image("logo", metadata.logo)
+            ),
+            .col([.init(breakpoint: .md)],
                 .h1(.a(
                     .href(path),
                     .text(title)
