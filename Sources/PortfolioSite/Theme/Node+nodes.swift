@@ -57,7 +57,8 @@ extension Node where Context == HTML.BodyContext {
         for context: PublishingContext<PortfolioSite>,
         selectedSection: PortfolioSite.SectionID?
     ) -> Node {
-        let sectionIDs = PortfolioSite.SectionID.allCases
+        var sectionIDs: [PortfolioSite.SectionID?] = PortfolioSite.SectionID.allCases
+        sectionIDs.insert(nil, at: sectionIDs.count / 2 + 1)
 
         return .header(
             .wrapper(
@@ -67,7 +68,7 @@ extension Node where Context == HTML.BodyContext {
                     ],
                     .col([.init(size: .auto)],
                          .row(gutters: true,
-                              .col([.init(size: .auto, breakpoint: .md)],
+                            .col([.init(size: .auto, breakpoint: .md)],
                                 .img(
                                     .src("/img/avatar.jpg"),
                                     .class("logo")
@@ -91,24 +92,27 @@ extension Node where Context == HTML.BodyContext {
                         )
                     ),
                     .col([.init(size: .auto, breakpoint: .md)],
-                         .row(justifyConfigs: [
+                        .row(justifyConfigs: [
                                 .init(type: .end, breakpoint: .md),
                                 .init(type: .center)
                             ],
                             .forEach(sectionIDs) { section in
-                                .col([.init(size: .auto)],
-                                    .a(
-                                        .class(
-                                            section == selectedSection ? "selected" : "",
-                                            .spacing([ .init(type: .margin, size: 2, side: .horizontal) ])
-                                        ),
-                                        .href(context.sections[section].path),
-                                        .text(context.sections[section].title)
+                                if let section = section {
+                                    return .col([.init(size: .auto)],
+                                        .a(
+                                            .class(
+                                                section == selectedSection ? "selected" : "",
+                                                .spacing([ .init(type: .margin, size: 2, side: .horizontal) ])
+                                            ),
+                                            .href(context.sections[section].path),
+                                            .text(context.sections[section].title)
+                                        )
                                     )
-                                )
+                                } else {
+                                    return .element(named: "div", nodes: [ .class("header-wrap") ])
+                                }
                             }
-                         )
-                        
+                        )
                     )
                 )
                 

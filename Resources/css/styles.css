@@ -73,9 +73,17 @@ header .logo-subtitle, header .logo-title {
     line-height: 22px;
 }
 
+.header-wrap {
+    width: 100%;
+}
+
 @media (min-width: 768px) {
     header .logo-subtitle, header .logo-title {
         text-align: left;
+    }
+    
+    .header-wrap {
+        width: unset;
     }
     
     .logo {
