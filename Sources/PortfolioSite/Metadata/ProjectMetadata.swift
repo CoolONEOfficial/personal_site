@@ -38,6 +38,20 @@ struct ProjectMetadata: WebsiteItemMetadata {
     var github: String?
     var app_store: String?
     var google_play: String?
+    
+    var icons: [String: String] {
+        var icons = [String: String]()
+        if let github = github {
+            icons["github"] = github
+        }
+        if let appStore = app_store {
+            icons["app-store"] = appStore
+        }
+        if let googlePlay = google_play {
+            icons["google-play"] = googlePlay
+        }
+        return Dictionary(uniqueKeysWithValues: icons.map { ($1, "/projects/icons/\($0).png") } )
+    }
 }
 
 extension ProjectType {

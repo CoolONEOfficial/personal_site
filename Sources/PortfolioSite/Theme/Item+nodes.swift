@@ -109,12 +109,29 @@ extension Item where Site == PortfolioSite {
     ) -> Node<HTML.BodyContext> {
         let section = context.sections[sectionID]
 
-        var subNode: Node<HTML.BodyContext>?
+        var subNodes = [Node<HTML.BodyContext>]()
+
+        func addIcons(_ icons: Dictionary<String, String>) {
+            subNodes.append(.row(
+                classSuffix: .spacing([ .init(type: .margin, size: 1, side: .top) ]),
+                .forEach(icons) { iconEntry in
+                    .col([.init(size: .auto)],
+                         .a(
+                            .href(iconEntry.key),
+                            .div(
+                                .icon(iconEntry.value, context: context)
+                            )
+                         )
+                    )
+                }
+            ))
+        }
+
         switch sectionID {
         case .projects:
             guard let metaProject = metadata.project else { break }
             let iconUrl = metaProject.platform.icon
-            subNode = .row(
+            subNodes.append(.row(
                 classSuffix: .spacing([ .init(type: .margin, size: 1, side: .top) ]),
                 .col([.init(size: .auto)],
                      .icon(iconUrl, context: context)
@@ -124,27 +141,28 @@ extension Item where Site == PortfolioSite {
                         .text(metaProject.type.name)
                     )
                 )
-            )
+            ))
+            addIcons(metaProject.icons)
         case .books:
             guard let metaBook = metadata.book else { break }
-            subNode = .h4(.text(
+            subNodes.append(.h4(.text(
                 metaBook.author
-            ))
+            )))
         case .events:
             guard let metaEvent = metadata.event else { break }
-            subNode = .h4(.text(
+            subNodes.append(.h4(.text(
                 metaEvent.location?.title ?? ""
-            ))
+            )))
         case .career:
             guard let metaCareer = metadata.career else { break }
-            subNode = .h4(.text(
+            subNodes.append(.h4(.text(
                 metaCareer.position + ", " + metaCareer.type.name
-            ))
+            )))
         case .achievements:
             guard let metaAchievement = metadata.achievement else { break }
-            subNode = .h4(.text(
+            subNodes.append(.h4(.text(
                 metaAchievement.type.name
-            ))
+            )))
         }
         
         return .div(
@@ -154,7 +172,7 @@ extension Item where Site == PortfolioSite {
                     .text(section.title)
                 ))
             ),
-            subNode ?? .div()
+            .forEach(subNodes) { $0 }
         )
     }
 
