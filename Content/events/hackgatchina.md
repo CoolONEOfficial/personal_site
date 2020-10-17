@@ -3,7 +3,6 @@ date: 2019-05-26 00:00
 description: Первый хакатон на выезде. В нем впервые наша команда Team13 в основном составе смогла получить 2 место.
 tags: web, flutter, hack
 event.location.title: Санкт-Петербург
-event.videos: OJkL4-4S6wY
 event.site: https://hackgatchina.city/
 event.location.latitude: 59.96930399999999
 event.type: hack

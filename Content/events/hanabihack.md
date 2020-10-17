@@ -2,7 +2,7 @@
 date: 2019-06-30 00:00
 description: Этот хакатон был одним из самых запоминающихся среди всех потому что там было очень атмосферно – всем раздавали зарубежную еду, ночью можно было просмотреть фильмы, на площадке были настольные игры и многое другое.
 tags: vue, web, hack
-event.videos: OJkL4-4S6wY, 24bpyzMmt-Q
+videos: 24bpyzMmt-Q
 event.type: hack
 event.location.latitude: 55.81521789616312
 event.location.longitude: 37.51258436590433

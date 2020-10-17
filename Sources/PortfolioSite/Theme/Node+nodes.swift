@@ -131,7 +131,7 @@ extension Node where Context == HTML.BodyContext {
             .forEach(items) { $0.node(on: site, context: context, sectionShow: sectionShow)}
         )
     }
-    
+
     static func footer(for site: PortfolioSite) -> Node {
         return .footer(
             .p(
@@ -155,6 +155,18 @@ extension Node where Context == HTML.BodyContext {
     
     static func icon(_ path: String, context: PublishingContext<PortfolioSite>) -> Node {
         .adaptiveImage(path, "icon", context: context)
+    }
+    
+    static func video(_ id: String) -> Node {
+        .div(
+            .class("item-youtube"),
+            .iframe(
+                .class("item-youtube-iframe"),
+                .src("https://www.youtube.com/embed/\(id)?rel=0"),
+                Attribute(name: "allowfullscreen", value: nil, ignoreIfValueIsEmpty: false),
+                .attribute(named: "frameborder", value: "0")
+            )
+        )
     }
 }
 

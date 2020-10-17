@@ -2,7 +2,7 @@
 date: 2016-04-30 00:00
 description: Моя первая игра на C++. Во время её разработки мне хотелось сделать её максимально красивой и качественной, но в тот момент у меня не было достаточного опыта и знаний для разработки действительно большого проекта, да и лет мне было немного.
 tags: qt, cpp, game
-project.videos: 0siAlCL5R2s
+videos: 0siAlCL5R2s
 project.type: game
 project.github: https://github.com/CoolONEOfficial/sword_battle
 logo: .png

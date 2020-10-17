@@ -117,6 +117,9 @@ struct PortfolioHTMLFactory: HTMLFactory {
                                         )
                                     )
                                 ),
+                                .forEach(metadata.videos ?? []) { video in
+                                    .video(video)
+                                },
                                 item.footer(on: context.site, context: context)
                             ),
                             .col([.init(size: .auto, breakpoint: .sm)],

@@ -26,6 +26,7 @@ public struct PortfolioSite: Website {
         var book: BookMetadata?
         var achievement: AchievementMetadata?
         
+        var videos: [String]?
         var logo: String?
         var singleImage: String?
         var endDate: String?
