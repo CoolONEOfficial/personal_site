@@ -1,9 +1,0 @@
-.DS_Store
-/build
-/.build
-/.swiftpm
-/*.xcodeproj
-.publish
-Output/*
-Resources/modules/*
-ftp.json
