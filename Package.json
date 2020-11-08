@@ -1,7 +1,0 @@
-{
-    "name": "personal_site",
-    "dependencies": {
-        "bootstrap": "^4.5.2",
-        "tiny-slider": "^2.9.3"
-    }
-}
