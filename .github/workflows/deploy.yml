@@ -13,8 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - run: |
-      curl -O https://github.com/JohnSundell/Publish/archive/0.7.0.tar.gz
-      tar -xzvf 0.7.0.tar.gz
+    - name: Publish dep
+      run: curl -O https://github.com/JohnSundell/Publish/archive/0.7.0.tar.gz; tar -xzvf 0.7.0.tar.gz
     - name: Build
       run: ./0.7.0/publish generate
