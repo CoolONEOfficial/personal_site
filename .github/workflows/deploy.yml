@@ -9,11 +9,11 @@ on:
 jobs:
   build:
 
-    runs-on: macos-latest
+    runs-on: macos-11
 
     steps:
     - uses: actions/checkout@v2
     - name: Publish dep
-      run: brew install publish@0.7.0
+      run: brew install publish
     - name: Build
       run: publish generate
