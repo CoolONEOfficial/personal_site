@@ -9,11 +9,13 @@ on:
 jobs:
   build:
 
-    runs-on: macos-11
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
     - name: Publish dep
-      run: brew install publish
+      run:
+      - curl -O https://github.com/JohnSundell/Publish/archive/0.7.0.tar.gz
+      - tar -xzvf 0.7.0.tar.gz
     - name: Build
-      run: publish generate
+      run: ./0.7.0/publish generate
