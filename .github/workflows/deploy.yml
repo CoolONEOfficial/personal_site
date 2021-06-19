@@ -14,6 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Publish dep
-      run: curl -OL https://github.com/JohnSundell/Publish/archive/0.7.0.tar.gz; tar -xzvf 0.7.0.tar.gz
+      run: curl -OL https://github.com/JohnSundell/Publish/archive/0.7.0.tar.gz; tar -xzvf 0.7.0.tar.gz; cd ./Publish-0.7.0; make; cd ..
     - name: Build
-      run: ./0.7.0/publish generate
+      run: ./Publish-0.7.0/.build/release/publish-cli generate
