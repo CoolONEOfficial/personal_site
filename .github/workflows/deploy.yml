@@ -8,12 +8,13 @@ on:
 
 jobs:
   build:
-
     runs-on: macos-latest
-
     steps:
+    - uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: 12.5
     - uses: actions/checkout@v2
     - name: Publish dep
-      run: curl -OL https://github.com/JohnSundell/Publish/archive/0.7.0.tar.gz; tar -xzvf 0.7.0.tar.gz; cd ./Publish-0.7.0; make; cd ..
+      run: brew install publish
     - name: Build
-      run: ./Publish-0.7.0/.build/release/publish-cli generate
+      run: publish generate
