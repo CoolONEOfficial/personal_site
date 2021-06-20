@@ -15,12 +15,10 @@ jobs:
         release-version: 5.4
     - uses: actions/checkout@v2
     - name: Publish dep
-      run: curl -OL https://github.com/JohnSundell/Publish/archive/0.7.0.tar.gz; tar -xzvf 0.7.0.tar.gz; cd ./Publish-0.7.0; swift build -c release; cd ..
-    - name: Config
-      run: "echo \"{ \"username\": \"${{ secrets.USERNAME }}\", \"password\": \"${{ secrets.PASSWORD }}\", \"host\": \"${{ secrets.HOST }}\", \"port\": 21 }\" > ftp.json"
+      run: curl -OL https://github.com/JohnSundell/Publish/archive/0.8.0.tar.gz; tar -xzvf 0.8.0.tar.gz; cd ./Publish-0.8.0; swift build -c release; cd ..
     - name: Build
-      run: ./Publish-0.7.0/.build/release/publish-cli generate
-    - name: 📂 Sync files
+      run: ./Publish-0.8.0/.build/release/publish-cli generate
+    - name: Deploy files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
         server: ${{ secrets.HOST }}
