@@ -55,14 +55,14 @@ extension PortfolioSite.ItemMetadata {
     }
 }
 
-let file = try File(path: #file)
-guard let ftpConnection = try FTPConnection(file: file) else {
-    throw FilesError(path: file.path, reason: LocationErrorReason.missing)
-}
+//let file = try File(path: #file)
+//guard let ftpConnection = try FTPConnection(file: file) else {
+//    throw FilesError(path: file.path, reason: LocationErrorReason.missing)
+//}
 
 try PortfolioSite().publish(
     withTheme: .portfolio,
-    deployedUsing: .ftp(connection: ftpConnection, useSSL: false),
+    //deployedUsing: .ftp(connection: ftpConnection, useSSL: false),
     additionalSteps: [
         .addDefaultSectionTitles(),
         .addItemPages()
