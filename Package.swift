@@ -11,10 +11,10 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(name: "Publish", url: "https://github.com/johnsundell/publish.git", from: "0.7.0"),
+        .package(name: "Publish", url: "https://github.com/johnsundell/publish.git", from: "0.8.0"),
         .package(name: "SplashPublishPlugin", url: "https://github.com/johnsundell/splashpublishplugin.git", from: "0.1.0"),
         .package(name: "DarkImagePublishPlugin", url: "https://github.com/insidegui/DarkImagePublishPlugin.git", from: "0.1.0"),
-        .package(name: "TinySliderPublishPlugin", url: "https://github.com/CoolONEOfficial/TinySliderPlugin.git", from: "0.1.1"),
+        .package(name: "TinySliderPublishPlugin", url: "https://github.com/CoolONEOfficial/TinySliderPlugin.git", from: "0.1.2"),
         .package(name: "FTPPublishDeploy", url: "https://github.com/CoolONEOfficial/FTPPublishDeploy.git", from: "0.1.0")
     ],
     targets: [

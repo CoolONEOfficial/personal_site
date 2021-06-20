@@ -51,8 +51,8 @@
         "repositoryURL": "https://github.com/johnsundell/plot.git",
         "state": {
           "branch": null,
-          "revision": "61e828949ca6f84071bde65c8fc046cf74b7d1a2",
-          "version": "0.8.0"
+          "revision": "c27f6857deeb4c4623db294172a8ec572790a9be",
+          "version": "0.10.0"
         }
       },
       {
@@ -60,8 +60,8 @@
         "repositoryURL": "https://github.com/johnsundell/publish.git",
         "state": {
           "branch": null,
-          "revision": "e77aab786992350ea92333737fdb3d7cad3ca8fc",
-          "version": "0.7.0"
+          "revision": "1402af3cbe18df03fb6df701fdcf51471f98d0ff",
+          "version": "0.8.0"
         }
       },
       {
@@ -105,8 +105,8 @@
         "repositoryURL": "https://github.com/CoolONEOfficial/TinySliderPlugin.git",
         "state": {
           "branch": null,
-          "revision": "3e05d35639e3453eb6dc6cd52aa0700037a56754",
-          "version": "0.1.1"
+          "revision": "49d6b0708f40af525737185816f04a6f3d0f7e8f",
+          "version": "0.1.2"
         }
       }
     ]

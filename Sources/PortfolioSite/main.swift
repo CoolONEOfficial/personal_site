@@ -60,7 +60,6 @@ guard let ftpConnection = try FTPConnection(file: file) else {
     throw FilesError(path: file.path, reason: LocationErrorReason.missing)
 }
 
-// This will generate your website using the built-in Foundation theme:
 try PortfolioSite().publish(
     withTheme: .portfolio,
     deployedUsing: .ftp(connection: ftpConnection, useSSL: false),
