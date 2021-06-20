@@ -20,3 +20,11 @@ jobs:
       run: "echo \"{ \"username\": \"${{ secrets.USERNAME }}\", \"password\": \"${{ secrets.PASSWORD }}\", \"host\": \"${{ secrets.HOST }}\", \"port\": 21 }\" > ftp.json"
     - name: Build
       run: ./Publish-0.7.0/.build/release/publish-cli generate
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        local-dir: ./Output
+        server-dir: ./public_html
