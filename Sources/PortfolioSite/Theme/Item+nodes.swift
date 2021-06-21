@@ -103,6 +103,22 @@ extension Item where Site == PortfolioSite {
         )
     }
     
+    private func iconsRow<Key: Iconic & Hashable>(_ icons: Dictionary<Key, String?>, context: PublishingContext<PortfolioSite>) -> Node<HTML.BodyContext> {
+        .row(
+            classSuffix: .spacing([ .init(type: .margin, size: 1, side: .top) ]),
+            .forEach(icons) { iconEntry in
+                .col([.init(size: .auto)],
+                     .a(
+                        .href(iconEntry.value ?? ""),
+                        .div(
+                            .icon(iconEntry.key.icon, context: context)
+                        )
+                     )
+                )
+            }
+        )
+    }
+
     func subheader(
         context: PublishingContext<PortfolioSite>,
         sectionShow: Bool = true
@@ -111,38 +127,42 @@ extension Item where Site == PortfolioSite {
 
         var subNodes = [Node<HTML.BodyContext>]()
 
-        func addIcons(_ icons: Dictionary<String, String>) {
-            subNodes.append(.row(
-                classSuffix: .spacing([ .init(type: .margin, size: 1, side: .top) ]),
-                .forEach(icons) { iconEntry in
-                    .col([.init(size: .auto)],
-                         .a(
-                            .href(iconEntry.key),
-                            .div(
-                                .icon(iconEntry.value, context: context)
-                            )
-                         )
-                    )
-                }
-            ))
-        }
-
         switch sectionID {
         case .projects:
-            guard let metaProject = metadata.project else { break }
-            let iconUrl = metaProject.platform.icon
+            guard var metaProject = metadata.project else { break }
             subNodes.append(.row(
                 classSuffix: .spacing([ .init(type: .margin, size: 1, side: .top) ]),
-                .col([.init(size: .auto)],
-                     .icon(iconUrl, context: context)
-                ),
+                .forEach(metaProject.platforms.map(\.icon)) { iconUrl in
+                    .col([.init(size: .auto)],
+                         .icon(iconUrl, context: context)
+                    )
+                },
                 .col([],
                     .h4(
                         .text(metaProject.type.name)
                     )
                 )
             ))
-            addIcons(metaProject.icons)
+            
+            if let marketplaces = metaProject.marketplacesParsed {
+                subNodes.append(.row(
+                    classSuffix: .spacing([ .init(type: .margin, size: 1, side: .top) ]),
+                    .col([.init(size: .auto)],
+                        .h4(
+                            .text("Доступно на"),
+                            .attribute(named: "style", value: "margin-right: 5px")
+                        )
+                    ),
+                    .forEach(marketplaces.enumerated().map(\.element)) { (marketplace, url) in
+                        .col([.init(size: .auto)],
+                             .a(
+                                .href(url),
+                                .div(.icon(marketplace.icon, context: context))
+                             )
+                        )
+                    }
+                ))
+            }
         case .books:
             guard let metaBook = metadata.book else { break }
             subNodes.append(.h4(.text(

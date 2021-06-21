@@ -4,9 +4,9 @@ description: Моя первая игра на C++. Во время её раз�
 tags: qt, cpp, game
 videos: 0siAlCL5R2s
 project.type: game
-project.github: https://github.com/CoolONEOfficial/sword_battle
 logo: .png
-project.platform: desktop
+project.marketplaces: "github: https://github.com/CoolONEOfficial/sword_battle"
+project.platforms: linux, windows
 ---
 # Sword Battle
 

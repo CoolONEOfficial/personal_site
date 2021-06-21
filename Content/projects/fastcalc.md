@@ -2,10 +2,9 @@
 date: 2017-10-22 00:00
 description: Промежуточный проект в рамках IT Школы Samsung. При разработке этого приложения я делал упор на удобность дизайна и большую функциональность.
 tags: java, app
-project.platform: android
+project.platforms: android
 project.type: app
-project.github: https://github.com/CoolONEOfficial/fastcalc
-project.google_play: https://play.google.com/store/apps/details?id=ru.coolone.calculator
+project.marketplaces: "github: https://github.com/CoolONEOfficial/fastcalc"
 logo: .png
 ---
 # FastCalc

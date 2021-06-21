@@ -4,8 +4,8 @@ description: Это приложение для туристов – выпус�
 tags: android, java, firestore, app
 project.type: app
 logo: .png
-project.platform: android
-project.github: https://github.com/CoolONEOfficial/travel_quest
+project.platforms: android
+project.marketplaces: "github: https://github.com/CoolONEOfficial/travel_quest"
 ---
 # Travel Quest
 

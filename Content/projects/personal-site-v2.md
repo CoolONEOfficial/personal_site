@@ -2,10 +2,10 @@
 date: 2019-12-07 00:00
 description: Вторая версия персонального сайта с проектами, достижениями и многим другим. Данный сайт был написан на Nuxt.js – одном из крупных фреймворков поддерживающем актуальные технологии.
 tags: nuxt, ssr, spotify-api, firestore, heroku, vue, firebase, app
-project.platform: web
-project.github: https://github.com/CoolONEOfficial/personal_site_nuxt
+project.platforms: web
+project.marketplaces: "github: https://github.com/CoolONEOfficial/personal_site_nuxt"
 logo: .jpg
-project.type: site
+project.type: website
 ---
 # Персональный сайт-портфолио (v2)
 

@@ -2,12 +2,10 @@
 date: 2018-11-26 00:00
 description: Приложение для просмотра расписания занятий для студентов НИУ РАНХиГС. В нем я реализовал все пожелания моих одногрупников – есть нативный виджет, поддержка кеширования, цветовые профили, интеграция с Google Календарем и будильником. Сейчас им пользуется большая часть студентов и преподавателей РАНХиГС.
 tags: flutter, java, android-widget, today-ext, app
-project.app_store: https://apps.apple.com/ru/app/niu-ranepa/id1489094504
 project.type: app
 logo: .png
-project.platform: mobile
-project.google_play: https://play.google.com/store/apps/details?id=ru.coolone.ranepatimetable
-project.github: https://github.com/CoolONEOfficial/ranepa_timetable
+project.platforms: android, ios
+project.marketplaces: "github: https://github.com/CoolONEOfficial/ranepa_timetable", "google_play: https://play.google.com/store/apps/details?id=ru.coolone.ranepatimetable"
 ---
 # РАНХиГС (Расписание)
 

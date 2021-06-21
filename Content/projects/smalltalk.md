@@ -3,8 +3,8 @@ date: 2020-03-06 00:00
 description: Быстрый и удобный мессенджер для iOS вдохновленный Telegram. Приложение было разработано в качестве итогового проекта в рамках курсов по iOS разработке от EPAM. В разработке была задействована команда из четырёх учащихся, в том числе и меня.
 tags: swift, firebase, firestore, algolia, app
 project.organisation: EPAM
-project.github: https://github.com/CoolONEOfficial/smalltalk_messenger
-project.platform: ios
+project.platforms: ios
+project.marketplaces: "github: https://github.com/CoolONEOfficial/smalltalk_messenger"
 project.type: app
 logo: .jpg
 ---
