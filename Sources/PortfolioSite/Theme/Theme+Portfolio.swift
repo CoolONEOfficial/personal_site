@@ -39,10 +39,13 @@ struct PortfolioHTMLFactory: HTMLFactory {
                 .header(for: context, selectedSection: nil),
                 .wrapper(
                     .div(
-                        .class("content", .spacing([ .init(type: .margin, size: 2, side: .vertical) ])),
-                        .contentBody(index.body)
+                        .class("welcome-block"),
+                        .div(
+                            .class("content", .spacing([ .init(type: .margin, size: 2, side: .vertical) ])),
+                            .contentBody(index.body)
+                        )
                     ),
-                    .h2("Хронология", .style("text-align: center; margin-bottom: 30px;")),
+                    .h2("Хронология", .style("text-align: center; margin: 30px 0;")),
                     .itemList(
                         for: Array(context.allItems(
                             sortedBy: \.date,

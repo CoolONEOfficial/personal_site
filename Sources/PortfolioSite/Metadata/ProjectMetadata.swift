@@ -47,6 +47,7 @@ enum ProjectType: String, Decodable {
     case app
     case website
     case chatbot
+    case framework
 }
 
 struct ProjectMetadata: WebsiteItemMetadata {
@@ -80,6 +81,9 @@ extension ProjectType {
 
         case .chatbot:
             return "Чат-бот"
+
+        case .framework:
+            return "Фреймворк"
         }
     }
 }

@@ -14,7 +14,6 @@ extension Item where Site == PortfolioSite {
     static var itemDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
-        formatter.doesRelativeDateFormatting = true
         formatter.locale = Locale(identifier: "ru_RU")
         return formatter
     }()
@@ -150,7 +149,7 @@ extension Item where Site == PortfolioSite {
                     .col([.init(size: .auto)],
                         .h4(
                             .text("Доступно на"),
-                            .attribute(named: "style", value: "margin-right: 5px")
+                            .style("margin-right: 5px")
                         )
                     ),
                     .forEach(marketplaces.enumerated().map(\.element)) { (marketplace, url) in
@@ -168,6 +167,7 @@ extension Item where Site == PortfolioSite {
             subNodes.append(.h4(.text(
                 metaBook.author
             )))
+            
         case .events:
             guard let metaEvent = metadata.event else { break }
             subNodes.append(.h4(.text(
