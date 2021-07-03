@@ -11,7 +11,7 @@ protocol Iconic {
     var icon: String { get }
 }
 
-enum ProjectPlatform: String, Decodable, Iconic {
+enum ProjectPlatform: String, Decodable, Iconic, CaseIterable {
     case android
     case ios
     case linux

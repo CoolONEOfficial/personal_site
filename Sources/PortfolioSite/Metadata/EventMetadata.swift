@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EventType: String, Decodable {
+enum EventType: String, Decodable, CaseIterable {
     case other
     case hack
     case meetup

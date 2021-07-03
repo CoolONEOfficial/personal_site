@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AchievementType: String, Decodable {
+enum AchievementType: String, Decodable, CaseIterable {
     case certificate
     case diploma
 }
