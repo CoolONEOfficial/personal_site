@@ -6,9 +6,6 @@
 //
 
 import Foundation
-import Publish
-import Plot
-import Ink
 
 protocol Iconic {
     var icon: String { get }

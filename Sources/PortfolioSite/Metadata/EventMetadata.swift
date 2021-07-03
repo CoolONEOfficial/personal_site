@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Publish
 
 enum EventType: String, Decodable {
     case other

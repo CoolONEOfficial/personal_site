@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import Publish
-import Plot
 
 enum AchievementType: String, Decodable {
     case certificate

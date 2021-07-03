@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Publish
 
 enum JobType: String, Decodable {
     case office

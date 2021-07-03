@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Publish
 
 struct BookMetadata: WebsiteItemMetadata {
     var author: String
