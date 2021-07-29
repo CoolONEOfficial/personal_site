@@ -1,13 +1,12 @@
 ---
 date: 2018-10-27 00:00
 description: Моё первое посещение этого фестиваля. Больше всего мне на нем понравились лекции, которые помогли мне в изучении Firebase.
-tags: firebase, google, festival
-event.type: festival
-event.location.longitude: 44.0253486
 event.location.latitude: 56.2682659
-event.organisation: GDG Nizhny Novgorod
-logo: .png
+event.location.longitude: 44.0253486
 event.location.title: Нижний Новгород
+event.type: festival
+logo: .png
+tags: firebase, google, festival
 ---
 # GDG DevFest Gorky 2018
 
