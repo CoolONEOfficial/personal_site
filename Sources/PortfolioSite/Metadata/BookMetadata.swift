@@ -9,4 +9,5 @@ import Foundation
 
 struct BookMetadata: WebsiteItemMetadata {
     var author: String
+    var organisation: String
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 #if os(iOS)
-public typealias WebsiteItemMetadata = Decodable & Hashable
+public typealias WebsiteItemMetadata = Codable & Hashable
 #else
 import Publish
 public typealias WebsiteItemMetadata = Publish.WebsiteItemMetadata

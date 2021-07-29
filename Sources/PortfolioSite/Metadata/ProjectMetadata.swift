@@ -11,7 +11,7 @@ protocol Iconic {
     var icon: String { get }
 }
 
-enum ProjectPlatform: String, Decodable, Iconic, CaseIterable {
+enum ProjectPlatform: String, Codable, Iconic, CaseIterable {
     case android
     case ios
     case linux
@@ -26,7 +26,7 @@ enum ProjectPlatform: String, Decodable, Iconic, CaseIterable {
     }
 }
 
-enum ProjectMarketplace: String, Decodable, Iconic {
+enum ProjectMarketplace: String, Codable, Iconic, CaseIterable {
     case app_store
     case google_play
     case website
@@ -39,7 +39,7 @@ enum ProjectMarketplace: String, Decodable, Iconic {
     }
 }
 
-enum ProjectType: String, Decodable {
+enum ProjectType: String, Codable, CaseIterable {
     case game
     case app
     case website
@@ -48,20 +48,27 @@ enum ProjectType: String, Decodable {
 }
 
 struct ProjectMetadata: WebsiteItemMetadata {
+    internal init(type: ProjectType, platforms: [ProjectPlatform], marketplaces: [String]? = nil) {
+        self.type = type
+        self.platforms = platforms
+        self.marketplaces = marketplaces
+        self.marketplacesParsed = marketplaces?.reduce([:]) { dict, str in
+            let str = str.dropFirst().dropLast()
+            guard let dividerIndex = str.firstIndex(of: ":"),
+                  let key = ProjectMarketplace(rawValue: .init(str[str.startIndex ..< dividerIndex]).trimmingCharacters(in: .whitespacesAndNewlines)),
+                  var dict = dict else { return dict }
+
+            let val = String(str[dividerIndex ..< str.endIndex]).dropFirst().trimmingCharacters(in: .whitespacesAndNewlines)
+
+            dict[key] = val
+            return dict
+        }
+    }
+    
     var type: ProjectType
     var platforms: [ProjectPlatform]
     var marketplaces: [String]?
-    lazy var marketplacesParsed: [ProjectMarketplace: String]? = marketplaces?.reduce([:]) { dict, str in
-        var str = str.dropFirst().dropLast()
-        guard let dividerIndex = str.firstIndex(of: ":"),
-              let key = ProjectMarketplace(rawValue: .init(str[str.startIndex ..< dividerIndex]).trimmingCharacters(in: .whitespacesAndNewlines)),
-              var dict = dict else { return dict }
-
-        let val = String(str[dividerIndex ..< str.endIndex]).dropFirst().trimmingCharacters(in: .whitespacesAndNewlines)
-
-        dict[key] = val
-        return dict
-    }
+    var marketplacesParsed: [ProjectMarketplace: String]?
 }
 
 extension ProjectType {

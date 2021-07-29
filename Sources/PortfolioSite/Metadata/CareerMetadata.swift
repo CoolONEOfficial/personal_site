@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum JobType: String, Decodable, CaseIterable {
+enum JobType: String, Codable, CaseIterable {
     case office
     case contract
     case remote
