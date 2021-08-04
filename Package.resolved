@@ -57,11 +57,11 @@
       },
       {
         "package": "Publish",
-        "repositoryURL": "https://github.com/johnsundell/publish.git",
+        "repositoryURL": "https://github.com/CoolONEOfficial/publish.git",
         "state": {
-          "branch": null,
-          "revision": "1402af3cbe18df03fb6df701fdcf51471f98d0ff",
-          "version": "0.8.0"
+          "branch": "master",
+          "revision": "4e4fbe10a50605bf24411b448a8fc7eee1df1d6d",
+          "version": null
         }
       },
       {
