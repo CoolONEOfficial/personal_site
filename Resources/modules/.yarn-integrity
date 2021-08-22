@@ -1,0 +1,18 @@
+{
+  "systemParams": "darwin-x64-64",
+  "modulesFolders": [
+    "Resources/modules"
+  ],
+  "flags": [],
+  "linkedModules": [],
+  "topLevelPatterns": [
+    "bootstrap@^4.6.0",
+    "tiny-slider@^2.9.3"
+  ],
+  "lockfileEntries": {
+    "bootstrap@^4.6.0": "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.6.0.tgz#97b9f29ac98f98dfa43bf7468262d84392552fd7",
+    "tiny-slider@^2.9.3": "https://registry.yarnpkg.com/tiny-slider/-/tiny-slider-2.9.3.tgz#94d8158f704f3192fef1634c0ae6779fb14ea04e"
+  },
+  "files": [],
+  "artifacts": {}
+}

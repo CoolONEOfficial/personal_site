@@ -5,5 +5,4 @@
 /*.xcodeproj
 .publish
 Output/*
-Resources/modules/*
 ftp.json

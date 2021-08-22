@@ -8,7 +8,8 @@ let package = Package(
         .executable(
             name: "PortfolioSite",
             targets: ["PortfolioSite"]
-        )
+        ),
+        .library(name: "PortfolioSite2", targets: [ "PortfolioSite" ])
     ],
     dependencies: [
         .package(name: "Publish", url: "https://github.com/CoolONEOfficial/publish.git", .branch("master")),
@@ -18,7 +19,7 @@ let package = Package(
         .package(name: "FTPPublishDeploy", url: "https://github.com/CoolONEOfficial/FTPPublishDeploy.git", from: "0.1.0")
     ],
     targets: [
-        .executableTarget(
+        .target(
             name: "PortfolioSite",
             dependencies: [
                 "Publish",
