@@ -116,7 +116,7 @@ a {
     display: block;
     padding: 20px;
     border-radius: 20px;
-    background-color: #111;
+    background-color: #eee;
     margin-bottom: 20px;
 }
 
@@ -325,6 +325,10 @@ img[alt=item-left] {
     }
 
     header {
+        background-color: #111;
+    }
+    
+    .welcome-block {
         background-color: #111;
     }
 }
