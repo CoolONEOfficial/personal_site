@@ -64,8 +64,8 @@ struct PortfolioHTMLFactory: HTMLFactory {
         )
     }
 
-    func makeSectionHTML(for section: Section<Site>,
-                         context: PublishingContext<Site>) throws -> HTML {
+    func makeSectionHTML(for section: Section<PortfolioSite>,
+                         context: PublishingContext<PortfolioSite>) throws -> HTML {
         HTML(
             .lang(context.site.language),
             .head(for: section, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths),
@@ -149,7 +149,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
         )
     }
 
-    func makePageHTML(for page: Page,
+    func makePageHTML(for page: Publish.Page,
                       context: PublishingContext<PortfolioSite>) throws -> HTML {
         HTML(
             .lang(context.site.language),
