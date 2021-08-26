@@ -13,9 +13,9 @@ project.marketplaces: "github: https://github.com/CoolONEOfficial/travel_quest"
 Структура описаний достопримечательностей устроена таким образом что имеется возможность разделять текст на подзаголовки, а также ссылаться на другие достопримечательности.
 
 1. { }
-2. ![ ](/img/projects/travel-quest/2_400x400.jpg)
-3. ![ ](/img/projects/travel-quest/1_400x400.jpg)
-4. ![ ](/img/projects/travel-quest/3_400x400.jpg)
+2. ![ ](2_400x400.jpg)
+3. ![ ](1_400x400.jpg)
+4. ![ ](3_400x400.jpg)
 
  Также все вводимые данные локализируются с помощью Google Translate API. 
 Среди проектов выпускников IT Школы Samsung этот проект [занял 1 место](https://coolone.ru/achievements/samsung-it-school/) по направлению "Социальные приложения".

@@ -70,7 +70,7 @@ extension Node where Context == HTML.BodyContext {
                          .row(gutters: true,
                             .col([.init(size: .auto, breakpoint: .md)],
                                 .img(
-                                    .src("/img/avatar.jpg"),
+                                    .src("/avatar.jpg"),
                                     .class("logo")
                                 )
                             ),

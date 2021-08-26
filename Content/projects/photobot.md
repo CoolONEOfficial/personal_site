@@ -26,9 +26,9 @@ logo: .png
 - Отменять, а в перспективе переносить заказы.
 
 1. { }
-2. ![ ](/img/projects/photobot/1.png)
-3. ![ ](/img/projects/photobot/2.png)
-4. ![ ](/img/projects/photobot/3.png)
-5. ![ ](/img/projects/photobot/4.png)
+2. ![ ](1.png)
+3. ![ ](2.png)
+4. ![ ](3.png)
+5. ![ ](4.png)
 
 

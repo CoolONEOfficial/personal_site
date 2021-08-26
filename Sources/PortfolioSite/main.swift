@@ -36,8 +36,8 @@ public struct PortfolioSite: Website {
     public var name = "Сайт Николая Трухина"
     public var description = "Здесь собрана вся информация проектах, мероприятиях, книгах и многое другое"
     public var language: Language { .russian }
-    public var imagePath: Path? { "/img/avatar.jpg" }
-    public var favicon: Favicon? { .init(path: "/img/avatar.jpg", type: "image/jpg") }
+    public var imagePath: Path? { "/avatar.jpg" }
+    public var favicon: Favicon? { .init(path: "/avatar.jpg", type: "image/jpg") }
 }
 
 extension PortfolioSite.ItemMetadata {
@@ -70,7 +70,6 @@ try PortfolioSite().publish(
     plugins: [
         .splash(withClassPrefix: ""),
         .darkImage(),
-        .itemImage(),
         .tinySlider(jsPath: "/modules/tiny-slider/src/tiny-slider.js", defaultConfig: [
             "mouseDrag": true,
             "swipeAngle": false,
@@ -133,28 +132,9 @@ extension PublishingStep where Site == PortfolioSite {
     }
 }
 
-extension Plugin {
-    static func itemImage(suffix: String = "-dark") -> Self {
-        Plugin(name: "DarkItemImage") { context in
-            context.markdownParser.addModifier(
-                .itemImage(suffix: suffix, context: context)
-            )
-        }
-    }
-}
-
 extension Item {
     var id: String {
         let path = self.path.absoluteString
         return String(path[path.lastIndex(of: "/")!..<path.endIndex])
-    }
-}
-
-public extension Modifier {
-    static func itemImage<T: Website>(suffix: String, context: PublishingContext<T>) -> Self {
-        Modifier(target: .images) { html, markdown in
-            html.replacingOccurrences(of: "src=\"", with: "src=\"/img")
-                .replacingOccurrences(of: "srcset=\"", with: "srcset=\"/img")
-        }
     }
 }

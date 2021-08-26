@@ -14,10 +14,10 @@ tags: firebase, google, festival
 
 
 1. { }
-2. ![ ](/img/events/devfest-18/2_400x400.jpg)
-3. ![ ](/img/events/devfest-18/4_400x400.jpg)
-4. ![ ](/img/events/devfest-18/1_400x400.jpg)
-5. ![ ](/img/events/devfest-18/3_400x400.jpg)
+2. ![ ](2_400x400.jpg)
+3. ![ ](4_400x400.jpg)
+4. ![ ](1_400x400.jpg)
+5. ![ ](3_400x400.jpg)
 
 
  Больше всего мне на нем понравились лекции, которые помогли мне в изучении Firebase.
