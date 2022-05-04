@@ -1,32 +1,32 @@
-// swift-tools-version:5.4
+// swift-tools-version:5.6
 
 import PackageDescription
 
 let package = Package(
     name: "PortfolioSite",
+    platforms: [.macOS(.v12)],
     products: [
         .executable(
             name: "PortfolioSite",
             targets: ["PortfolioSite"]
-        ),
-        .library(name: "PortfolioSite2", targets: [ "PortfolioSite" ])
+        )
     ],
     dependencies: [
-        .package(name: "Publish", url: "https://github.com/CoolONEOfficial/publish.git", .branch("master")),
-        .package(name: "SplashPublishPlugin", url: "https://github.com/johnsundell/splashpublishplugin.git", from: "0.1.0"),
-        .package(name: "DarkImagePublishPlugin", url: "https://github.com/insidegui/DarkImagePublishPlugin.git", from: "0.1.0"),
-        .package(name: "TinySliderPublishPlugin", url: "https://github.com/CoolONEOfficial/TinySliderPlugin.git", from: "0.1.3"),
-        .package(name: "FTPPublishDeploy", url: "https://github.com/CoolONEOfficial/FTPPublishDeploy.git", from: "0.1.0")
+        .package(url: "https://github.com/johnsundell/Publish.git", from: "0.9.0"),
+        .package(url: "https://github.com/johnsundell/SplashPublishPlugin.git", from: "0.2.0"),
+        .package(url: "https://github.com/CoolONEOfficial/DarkImagePublishPlugin.git", branch: "patch-1"),
+        .package(url: "https://github.com/CoolONEOfficial/TinySliderPublishPlugin.git", exact: "0.1.4")
+//        .package(url: "https://github.com/CoolONEOfficial/FTPPublishDeploy.git", from: "0.1.0")
     ],
     targets: [
-        .target(
+        .executableTarget(
             name: "PortfolioSite",
             dependencies: [
-                "Publish",
-                "SplashPublishPlugin",
-                "DarkImagePublishPlugin",
-                "TinySliderPublishPlugin",
-                "FTPPublishDeploy"
+                .product(name: "Publish", package: "Publish"),
+                .product(name: "SplashPublishPlugin", package: "SplashPublishPlugin"),
+                .product(name: "DarkImagePublishPlugin", package: "DarkImagePublishPlugin"),
+                .product(name: "TinySliderPublishPlugin", package: "TinySliderPublishPlugin"),
+//                "FTPPublishDeploy"
             ]
         )
     ]

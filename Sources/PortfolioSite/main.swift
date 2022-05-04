@@ -5,7 +5,6 @@ import Plot
 import SplashPublishPlugin
 import DarkImagePublishPlugin
 import TinySliderPublishPlugin
-import FTPPublishDeploy
 import Files
 
 // This type acts as the configuration for your website.
