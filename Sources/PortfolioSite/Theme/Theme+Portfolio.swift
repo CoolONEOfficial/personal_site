@@ -33,7 +33,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
     func makeIndexHTML(for index: Index,
                        context: PublishingContext<PortfolioSite>) throws -> HTML {
         HTML(
-            .lang(context.site.language),
+            .lang(index.language!),
             .head(for: index, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths),
             .body(
                 .header(for: context, selectedSection: nil),
@@ -49,6 +49,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
                     .itemList(
                         for: Array(context.allItems(
                             sortedBy: \.date,
+                            in: index.language!,
                             order: .descending
                         ).prefix(10)),
                         on: context.site,

@@ -12,7 +12,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/johnsundell/Publish.git", from: "0.9.0"),
+        .package(url: "https://github.com/CoolONEOfficial/Publish.git", branch: "Multi-Language"),
         .package(url: "https://github.com/johnsundell/SplashPublishPlugin.git", from: "0.2.0"),
         .package(url: "https://github.com/CoolONEOfficial/DarkImagePublishPlugin.git", branch: "patch-1"),
         .package(url: "https://github.com/CoolONEOfficial/TinySliderPublishPlugin.git", exact: "0.1.4")

@@ -8,7 +8,7 @@ import TinySliderPublishPlugin
 import Files
 
 // This type acts as the configuration for your website.
-public struct PortfolioSite: Website {
+public struct PortfolioSite: MultiLanguageWebsite {
     public enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
         case projects
@@ -18,7 +18,7 @@ public struct PortfolioSite: Website {
         case achievements
     }
 
-    public struct ItemMetadata: WebsiteItemMetadata {
+    public struct ItemMetadata: MultiLanguageWebsiteItemMetadata {
         var project: ProjectMetadata?
         var event: EventMetadata?
         var career: CareerMetadata?
@@ -29,12 +29,13 @@ public struct PortfolioSite: Website {
         var logo: String?
         var singleImage: String?
         var endDate: String?
+        public var alternateLinkIdentifier: String?
     }
 
     public var url = URL(string: "https://coolone.ru")!
     public var name = "Сайт Николая Трухина"
     public var description = "Здесь собрана вся информация проектах, мероприятиях, книгах и многое другое"
-    public var language: Language { .russian }
+    public var languages: [Language] { [ .english, .russian ] }
     public var imagePath: Path? { "/avatar.jpg" }
     public var favicon: Favicon? { .init(path: "/avatar.jpg", type: "image/jpg") }
 }
@@ -124,7 +125,8 @@ extension PublishingStep where Site == PortfolioSite {
                         items: chunk,
                         pageIndex: index,
                         lastPage: chunks.count == index
-                    ))
+                    )),
+                    language: context.index.language!
                 )))
             }
         }

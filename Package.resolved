@@ -57,10 +57,10 @@
     {
       "identity" : "publish",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/johnsundell/Publish.git",
+      "location" : "https://github.com/CoolONEOfficial/Publish.git",
       "state" : {
-        "revision" : "1c8ad00d39c985cb5d497153241a2f1b654e0d40",
-        "version" : "0.9.0"
+        "branch" : "Multi-Language",
+        "revision" : "6869592ff70fa0cc2d12d8f40985ce6df5481582"
       }
     },
     {

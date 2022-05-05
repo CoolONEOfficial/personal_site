@@ -128,7 +128,7 @@ extension Item where Site == PortfolioSite {
 
         switch sectionID {
         case .projects:
-            guard var metaProject = metadata.project else { break }
+            guard let metaProject = metadata.project else { break }
             subNodes.append(.row(
                 classSuffix: .spacing([ .init(type: .margin, size: 1, side: .top) ]),
                 .forEach(metaProject.platforms.map(\.icon)) { iconUrl in
