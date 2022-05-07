@@ -211,6 +211,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
                         for: context.items(
                             taggedWith: page.tag,
                             sortedBy: \.date,
+                            in: page.language!,
                             order: .descending
                         ),
                         on: context.site,

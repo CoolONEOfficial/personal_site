@@ -77,7 +77,7 @@ extension Node where Context == HTML.BodyContext {
                             .col([],
                                 .div(
                                     .a(
-                                        .href("/\(context.site.pathPrefix(for: language!))"),
+                                        .href("/\(context.site.pathPrefix(for: language!))/"),
                                         .p(
                                             .class("logo-title"),
                                             .text(language == .russian ? "Николай Трухин" : "Nikolai Trukhin")
