@@ -33,10 +33,10 @@ struct PortfolioHTMLFactory: HTMLFactory {
     func makeIndexHTML(for index: Index,
                        context: PublishingContext<PortfolioSite>) throws -> HTML {
         HTML(
-            .lang(index.language!),
+            .lang(index.language ?? context.site.language),
             .head(for: index, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths),
             .body(
-                .header(for: context, selectedSection: nil),
+                .header(for: context, selectedSection: nil, in: index.language),
                 .wrapper(
                     .div(
                         .class("welcome-block"),
@@ -45,7 +45,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
                             .contentBody(index.body)
                         )
                     ),
-                    .h2("Хронология", .style("text-align: center; margin: 30px 0;")),
+                    .h2(index.language == .russian ? "Хронология" : "Chronology", .style("text-align: center; margin: 30px 0;")),
                     .itemList(
                         for: Array(context.allItems(
                             sortedBy: \.date,
@@ -56,11 +56,11 @@ struct PortfolioHTMLFactory: HTMLFactory {
                         context: context
                     ),
                     .a(
-                        .href(Path("/items/2")),
-                        .h2("Остальные посты →", .style("text-align: center"))
+                        .href(Path("/\(context.site.pathPrefix(for: index.language!))/items/2")),
+                        .h2(index.language == .russian ? "Остальные посты →" : "Other posts →", .style("text-align: center"))
                     )
                 ),
-                .footer(for: context.site)
+                .footer(for: context.site, in: index.language)
             )
         )
     }
@@ -68,15 +68,15 @@ struct PortfolioHTMLFactory: HTMLFactory {
     func makeSectionHTML(for section: Section<PortfolioSite>,
                          context: PublishingContext<PortfolioSite>) throws -> HTML {
         HTML(
-            .lang(context.site.language),
+            .lang(section.language ?? context.site.language),
             .head(for: section, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths),
             .body(
-                .header(for: context, selectedSection: section.id),
+                .header(for: context, selectedSection: section.id, in: section.language),
                 .wrapper(
-                    .h1(.text(section.title)),
+                    .h1(.text(section.title(in: context.index.language!))),
                     .itemList(for: section.items, on: context.site, context: context, sectionShow: false)
                 ),
-                .footer(for: context.site)
+                .footer(for: context.site, in: section.language)
             )
         )
     }
@@ -92,11 +92,11 @@ struct PortfolioHTMLFactory: HTMLFactory {
         }
         let showRightSingleImage = metadata.singleImage != nil && metadata.logo == nil
         return HTML(
-            .lang(context.site.language),
+            .lang(item.language ?? context.site.language),
             .head(for: item, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths),
             .body(
                 .class("item-page"),
-                .header(for: context, selectedSection: item.sectionID),
+                .header(for: context, selectedSection: item.sectionID, in: item.language),
                 .wrapper(
                     .article(
                         .row(gutters: showRightSingleImage,
@@ -145,7 +145,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
                         .attribute(named: "async")
                     )
                 ),
-                .footer(for: context.site)
+                .footer(for: context.site, in: item.language)
             )
         )
     }
@@ -153,12 +153,12 @@ struct PortfolioHTMLFactory: HTMLFactory {
     func makePageHTML(for page: Publish.Page,
                       context: PublishingContext<PortfolioSite>) throws -> HTML {
         HTML(
-            .lang(context.site.language),
+            .lang(page.language ?? context.site.language),
             .head(for: page, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths),
             .body(
-                .header(for: context, selectedSection: nil),
+                .header(for: context, selectedSection: nil, in: page.language),
                 .wrapper(.contentBody(page.body)),
-                .footer(for: context.site)
+                .footer(for: context.site, in: page.language)
             )
         )
     }
@@ -166,12 +166,12 @@ struct PortfolioHTMLFactory: HTMLFactory {
     func makeTagListHTML(for page: TagListPage,
                          context: PublishingContext<PortfolioSite>) throws -> HTML? {
         HTML(
-            .lang(context.site.language),
+            .lang(page.language ?? context.site.language),
             .head(for: page, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths),
             .body(
-                .header(for: context, selectedSection: nil),
+                .header(for: context, selectedSection: nil, in: page.language),
                 .wrapper(
-                    .h1("Другие теги"),
+                    .h1(page.language == .russian ? "Другие теги" : "Other tags"),
                     .ul(
                         .class("all-tags"),
                         .forEach(page.tags.sorted()) { tag in
@@ -185,7 +185,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
                         }
                     )
                 ),
-                .footer(for: context.site)
+                .footer(for: context.site, in: page.language)
             )
         )
     }
@@ -193,18 +193,18 @@ struct PortfolioHTMLFactory: HTMLFactory {
     func makeTagDetailsHTML(for page: TagDetailsPage,
                             context: PublishingContext<PortfolioSite>) throws -> HTML? {
         HTML(
-            .lang(context.site.language),
+            .lang(page.language ?? context.site.language),
             .head(for: page, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths),
             .body(
-                .header(for: context, selectedSection: nil),
+                .header(for: context, selectedSection: nil, in: page.language),
                 .wrapper(
                     .h1(
-                        "Записи с ",
+                        page.language == .russian ? "Записи с " : "Posts with ",
                         .span(.class("tag"), .text(page.tag.string))
                     ),
                     .a(
                         .class("browse-all"),
-                        .text("Другие теги"),
+                        .text(page.language == .russian ? "Другие теги" : "Other tags"),
                         .href(context.site.tagListPath)
                     ),
                     .itemList(
@@ -217,7 +217,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
                         context: context
                     )
                 ),
-                .footer(for: context.site)
+                .footer(for: context.site, in: page.language)
             )
         )
     }

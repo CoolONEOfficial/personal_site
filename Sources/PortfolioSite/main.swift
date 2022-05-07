@@ -64,7 +64,7 @@ try PortfolioSite().publish(
     withTheme: .portfolio,
     //deployedUsing: .ftp(connection: ftpConnection, useSSL: false),
     additionalSteps: [
-        .addDefaultSectionTitles(),
+        //.addDefaultSectionTitles(),
         .addItemPages()
     ],
     plugins: [
@@ -89,45 +89,74 @@ try PortfolioSite().publish(
     ]
 )
 
-extension PublishingStep where Site == PortfolioSite {
-    static func addDefaultSectionTitles() -> Self {
-        .step(named: "Default section titles") { context in
-            context.mutateAllSections { section in
-                switch section.id {
-                case .projects:
-                    section.title = "Проекты"
-                case .books:
-                    section.title = "Книги"
-                case .events:
-                    section.title = "Мероприятия"
-                case .career:
-                    section.title = "Карьера"
-                case .achievements:
-                    section.title = "Достижения"
-                }
+extension Section where Site == PortfolioSite {
+    public func title(in language: Language) -> String {
+        switch language {
+        case .russian:
+            switch id {
+            case .projects:
+                return "Проекты"
+            case .books:
+                return "Книги"
+            case .events:
+                return "Мероприятия"
+            case .career:
+                return "Карьера"
+            case .achievements:
+                return "Достижения"
+            }
+
+        default:
+            switch id {
+            case .projects:
+                return "Project"
+            case .books:
+                return "Books"
+            case .events:
+                return "Events"
+            case .career:
+                return "Career"
+            case .achievements:
+                return "Achievements"
             }
         }
     }
+}
+
+extension PublishingStep where Site == PortfolioSite {
+//    static func addDefaultSectionTitles() -> Self {
+//        .step(named: "Default section titles") { context in
+//            let language = context.index.language
+//
+//            context.mutateAllSections { section in
+//
+//
+//            }
+//        }
+//    }
     
     static func addItemPages() -> Self {
         .step(named: "Add items pages") { context in
-            let chunks = context.allItems(
-                sortedBy: \.date,
-                order: .descending
-            ).chunked(into: 10)
-            for (index, chunk) in chunks.enumerated() {
-                let index = index + 1
-                context.addPage(.init(path: "/items/\(index)", content: .init(
-                    title: "Все посты",
-                    description: "Список всех постов",
-                    body: .init(node: .makeItemsPageContent(
-                        context: context,
-                        items: chunk,
-                        pageIndex: index,
-                        lastPage: chunks.count == index
-                    )),
-                    language: context.index.language!
-                )))
+            for language in context.site.languages {
+                let chunks = context.allItems(
+                    sortedBy: \.date,
+                    in: language,
+                    order: .descending
+                ).chunked(into: 10)
+                for (index, chunk) in chunks.enumerated() {
+                    let index = index + 1
+                    context.addPage(.init(path: "/items/\(index)", content: .init(
+                        title: context.site.language == .russian ? "Все посты" : "All posts",
+                        description: "Список всех постов",
+                        body: .init(node: .makeItemsPageContent(
+                            context: context,
+                            items: chunk,
+                            pageIndex: index,
+                            lastPage: chunks.count == index
+                        )),
+                        language: language
+                    )))
+                }
             }
         }
     }

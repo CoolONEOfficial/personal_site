@@ -17,19 +17,19 @@ extension Node where Context == HTML.BodyContext {
                 .tr(
                     .th(
                         .if(pageIndex > 1, .a(
-                            .text("Назад"),
-                            .href("/items/\(pageIndex - 1)")
+                            .text(context.site.language == .russian ? "Назад" : "Back"),
+                            .href("/\(context.site.pathPrefix(for: context.site.language))/items/\(pageIndex - 1)")
                         )),
                         .class("pagination-prev")
                     ),
                     .th(
-                        .h4(.text("Страница \(pageIndex)")),
+                        .h4(.text("\(context.site.language == .russian ? "Страница" : "Page") \(pageIndex)")),
                         .class("pagination-title")
                     ),
                     .th(
                         .if(!lastPage, .a(
-                            .text("Вперед"),
-                            .href("/items/\(pageIndex + 1)")
+                            .text(context.site.language == .russian ? "Вперед" : "Next"),
+                            .href("/\(context.site.pathPrefix(for: context.site.language))/items/\(pageIndex + 1)")
                         )),
                         .class("pagination-next")
                     )
@@ -37,7 +37,7 @@ extension Node where Context == HTML.BodyContext {
             )
         )
         return .div(
-            .h1(.text("Последние посты")),
+            .h1(.text(context.site.language == .russian ? "Последние посты" : "Latest posts")),
             
             navNode,
             .itemList(
@@ -55,11 +55,11 @@ extension Node where Context == HTML.BodyContext {
 
     static func header(
         for context: PublishingContext<PortfolioSite>,
-        selectedSection: PortfolioSite.SectionID?
+        selectedSection: PortfolioSite.SectionID?,
+        in language: Language?
     ) -> Node {
         var sectionIDs: [PortfolioSite.SectionID?] = PortfolioSite.SectionID.allCases
         sectionIDs.insert(nil, at: sectionIDs.count / 2 + 1)
-
         return .header(
             .wrapper(
                 .row(justifyConfigs: [
@@ -77,14 +77,14 @@ extension Node where Context == HTML.BodyContext {
                             .col([],
                                 .div(
                                     .a(
-                                        .href("/"),
+                                        .href("/\(context.site.pathPrefix(for: language!))"),
                                         .p(
                                             .class("logo-title"),
-                                            .text("Николай Трухин")
+                                            .text(language == .russian ? "Николай Трухин" : "Nikolai Trukhin")
                                         ),
                                         .p(
                                             .class("logo-subtitle"),
-                                            .text("iOS разработчик")
+                                            .text(language == .russian ? "iOS разработчик" : "iOS developer")
                                         )
                                     )
                                 )
@@ -104,8 +104,8 @@ extension Node where Context == HTML.BodyContext {
                                                 section == selectedSection ? "selected" : "",
                                                 .spacing([ .init(type: .margin, size: 2, side: .horizontal) ])
                                             ),
-                                            .href(context.sections[section].path),
-                                            .text(context.sections[section].title)
+                                            .href(Path(context.site.pathPrefix(for: language!)).appendingComponent(context.sections[section].path.string)),
+                                            .text(context.sections[section].title(in: language!))
                                         )
                                     )
                                 } else {
@@ -132,18 +132,21 @@ extension Node where Context == HTML.BodyContext {
         )
     }
 
-    static func footer(for site: PortfolioSite) -> Node {
+    static func footer(
+        for site: PortfolioSite,
+        in language: Language?
+    ) -> Node {
         return .footer(
             .p(
-                .text("Сгенерировано с помощью "),
+                .text(language == .russian ? "Сгенерировано с помощью " : "Generated using "),
                 .a(
                     .text("Publish"),
                     .href("https://github.com/johnsundell/publish")
                 )
             ),
             .p(.a(
-                .text("RSS лента"),
-                .href("/feed.rss")
+                .text(language == .russian ? "RSS лента" : "RSS channel"),
+                .href("/\(site.pathPrefix(for: language!))/feed.rss")
             ))
         )
     }

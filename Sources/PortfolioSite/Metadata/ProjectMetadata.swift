@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Plot
 
 protocol Iconic {
     var icon: String { get }
@@ -72,23 +73,45 @@ struct ProjectMetadata: WebsiteItemMetadata {
 }
 
 extension ProjectType {
-    var name: String {
-        switch self {
-        case .app:
-            return "Приложение"
+    func name(in language: Language) -> String {
+        switch language {
+        case .russian:
+            switch self {
+            case .app:
+                return "Приложение"
 
-        case .game:
-            return "Игра"
+            case .game:
+                return "Игра"
 
-        case .website:
-            return "Сайт"
+            case .website:
+                return "Сайт"
 
-        case .chatbot:
-            return "Чат-бот"
+            case .chatbot:
+                return "Чат-бот"
 
-        case .framework:
-            return "Фреймворк"
+            case .framework:
+                return "Фреймворк"
+            }
+            
+        default:
+            switch self {
+            case .app:
+                return "App"
+
+            case .game:
+                return "Game"
+
+            case .website:
+                return "Website"
+
+            case .chatbot:
+                return "Chatbot"
+
+            case .framework:
+                return "Framework"
+            }
         }
+
     }
 }
 

@@ -11,12 +11,12 @@ import Publish
 import Ink
 
 extension Item where Site == PortfolioSite {
-    static var itemDateFormatter: DateFormatter = {
+    var itemDateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
-        formatter.locale = Locale(identifier: "ru_RU")
+        formatter.locale = Locale(identifier: self.language == .russian ? "ru_RU" : "en_US")
         return formatter
-    }()
+    }
     
     func node(on site: PortfolioSite, context: PublishingContext<PortfolioSite>, sectionShow: Bool) -> Node<HTML.ListContext> {
         let html = MarkdownParser().html(from: description)
@@ -64,11 +64,11 @@ extension Item where Site == PortfolioSite {
         on site: PortfolioSite,
         context: PublishingContext<PortfolioSite>
     ) -> Node<HTML.BodyContext> {
-        var dateStr = Item<PortfolioSite>.itemDateFormatter.string(from: date)
+        var dateStr = itemDateFormatter.string(from: date)
         if let endDate = metadata.parsedEndDate {
-            dateStr += " — " + Item<PortfolioSite>.itemDateFormatter.string(from: endDate)
+            dateStr += " — " + itemDateFormatter.string(from: endDate)
         } else if sectionID == .career {
-            dateStr += " — по настоящее время"
+            dateStr += language == .russian ? " — по настоящее время" : " - now"
         }
         
         return .row(
@@ -94,7 +94,7 @@ extension Item where Site == PortfolioSite {
             ),
             .col([.init(breakpoint: .md)],
                 .h1(.a(
-                    .href(path),
+                    .href(context.site.pathWithPrefix(path: path, in: language!)),
                     .text(title)
                 )),
                 subheader(context: context, sectionShow: sectionShow)
@@ -102,21 +102,21 @@ extension Item where Site == PortfolioSite {
         )
     }
     
-    private func iconsRow<Key: Iconic & Hashable>(_ icons: Dictionary<Key, String?>, context: PublishingContext<PortfolioSite>) -> Node<HTML.BodyContext> {
-        .row(
-            classSuffix: .spacing([ .init(type: .margin, size: 1, side: .top) ]),
-            .forEach(icons) { iconEntry in
-                .col([.init(size: .auto)],
-                     .a(
-                        .href(iconEntry.value ?? ""),
-                        .div(
-                            .icon(iconEntry.key.icon, context: context)
-                        )
-                     )
-                )
-            }
-        )
-    }
+//    private func iconsRow<Key: Iconic & Hashable>(_ icons: Dictionary<Key, String?>, context: PublishingContext<PortfolioSite>) -> Node<HTML.BodyContext> {
+//        .row(
+//            classSuffix: .spacing([ .init(type: .margin, size: 1, side: .top) ]),
+//            .forEach(icons) { iconEntry in
+//                .col([.init(size: .auto)],
+//                     .a(
+//                        .href(iconEntry.value ?? ""),
+//                        .div(
+//                            .icon(iconEntry.key.icon, context: context)
+//                        )
+//                     )
+//                )
+//            }
+//        )
+//    }
 
     func subheader(
         context: PublishingContext<PortfolioSite>,
@@ -138,7 +138,7 @@ extension Item where Site == PortfolioSite {
                 },
                 .col([],
                     .h4(
-                        .text(metaProject.type.name)
+                        .text(metaProject.type.name(in: language!))
                     )
                 )
             ))
@@ -148,7 +148,7 @@ extension Item where Site == PortfolioSite {
                     classSuffix: .spacing([ .init(type: .margin, size: 1, side: .top) ]),
                     .col([.init(size: .auto)],
                         .h4(
-                            .text("Доступно на"),
+                            .text(language == .russian ? "Доступно на" : "Available on"),
                             .style("margin-right: 5px")
                         )
                     ),
@@ -188,7 +188,7 @@ extension Item where Site == PortfolioSite {
         return .div(
             .if(sectionShow,
                 .h4(.a(
-                    .href(section.path),
+                    .href(context.site.pathWithPrefix(path: section.path, in: language!)),
                     .text(section.title)
                 ))
             ),
@@ -199,7 +199,7 @@ extension Item where Site == PortfolioSite {
     func tagList(on site: PortfolioSite) -> Node<HTML.BodyContext> {
         .ul(.class("tag-list"), .forEach(tags) { tag in
             .li(.a(
-                .href(site.path(for: tag)),
+                .href(site.path(for: tag, in: language!)),
                 .text(tag.string)
             ))
         })
@@ -220,5 +220,11 @@ extension Item where Site == PortfolioSite {
                 .roundedImage(ext)
             )
         )
+    }
+}
+
+extension PortfolioSite {
+    func pathWithPrefix(path: Path, in language: Language) -> Path {
+        Path(pathPrefix(for: language)).appendingComponent(path.string)
     }
 }
