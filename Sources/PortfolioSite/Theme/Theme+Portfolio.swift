@@ -205,7 +205,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
                     .a(
                         .class("browse-all"),
                         .text(page.language == .russian ? "Другие теги" : "Other tags"),
-                        .href(context.site.tagListPath)
+                        .href(context.site.pathWithPrefix(path: context.site.tagListPath, in: page.language!))
                     ),
                     .itemList(
                         for: context.items(

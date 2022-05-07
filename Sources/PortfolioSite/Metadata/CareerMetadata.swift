@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Publish
 
 enum JobType: String, Codable, CaseIterable {
     case office
@@ -16,19 +17,37 @@ enum JobType: String, Codable, CaseIterable {
 }
 
 extension JobType {
-    var name: String {
-        switch self {
-        case .office:
-            return "в офисе"
-        case .contract:
-            return "по контракту"
-        case .remote:
-            return "удаленка"
-        case .freelance:
-            return "на фрилансе"
-        case .free_schedule:
-            return "свободный график"
+    var name(in language: Language) -> String {
+        switch language {
+        case .russian:
+            switch self {
+            case .office:
+                return "в офисе"
+            case .contract:
+                return "по контракту"
+            case .remote:
+                return "удаленка"
+            case .freelance:
+                return "на фрилансе"
+            case .free_schedule:
+                return "свободный график"
+            }
+            
+        default:
+            switch self {
+            case .office:
+                return "office"
+            case .contract:
+                return "contract"
+            case .remote:
+                return "remote"
+            case .freelance:
+                return "freelance"
+            case .free_schedule:
+                return "free schedule"
+            }
         }
+        
     }
 }
 
