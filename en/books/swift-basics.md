@@ -3,7 +3,7 @@ date: 2020-01-08 00:00
 description: A good book for an introduction to the Swift programming language that I read in preparation for an iOS development course.
 tags: swift, ios
 book.site: https://swiftme.ru/
-book.author: Василий Усов
+book.author: Vasilii Usov
 singleImage: .jpg
 alternateLinkIdentifier: swift-basics
 ---
