@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Publish
+import Plot
 
 enum JobType: String, Codable, CaseIterable {
     case office
@@ -17,7 +17,7 @@ enum JobType: String, Codable, CaseIterable {
 }
 
 extension JobType {
-    var name(in language: Language) -> String {
+    func name(in language: Language) -> String {
         switch language {
         case .russian:
             switch self {

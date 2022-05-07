@@ -176,7 +176,7 @@ extension Item where Site == PortfolioSite {
         case .career:
             guard let metaCareer = metadata.career else { break }
             subNodes.append(.h4(.text(
-                metaCareer.position + ", " + metaCareer.type.name
+                metaCareer.position + ", " + metaCareer.type.name(in: language!)
             )))
         case .achievements:
             guard let metaAchievement = metadata.achievement else { break }
