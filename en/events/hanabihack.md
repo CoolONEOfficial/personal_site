@@ -1,6 +1,6 @@
 ---
 date: 2019-06-30 00:00
-description: Этот хакатон был одним из самых запоминающихся среди всех потому что там было очень атмосферно – всем раздавали зарубежную еду, ночью можно было просмотреть фильмы, на площадке были настольные игры и многое другое.
+description: This hackathon was one of the most memorable of all because it was very atmospheric - everyone was given foreign food, at night you could watch movies, there were board games and much more.
 tags: vue, web, hack
 videos: 24bpyzMmt-Q
 event.type: hack
@@ -9,13 +9,13 @@ event.location.longitude: 37.51258436590433
 logo: .jpg
 event.organisation: Actum, Grooves, SAMI
 event.place: 2
-event.location.title: Москва
+event.location.title: Moscow
 event.site: http://sami-japan.ru
 alternateLinkIdentifier: hanabihack
 ---
 # HanabiHack
 
-Этот хакатон был одним из самых запоминающихся среди всех потому что там было очень атмосферно – всем раздавали зарубежную еду, ночью можно было просмотреть фильмы, на площадке были настольные игры и многое другое. Утром второго дня организаторы привезли всем суши.
+This hackathon was one of the most memorable of all because it was very atmospheric - everyone was given foreign food, at night you could watch movies, there were board games on the site, and much more. On the morning of the second day, the organizers brought everyone sushi.
 
 
 1. { }
@@ -25,4 +25,4 @@ alternateLinkIdentifier: hanabihack
 5. ![ ](3_400x400.jpg)
 
 
- После награждения все участники ещё долго обсуждали результаты и давали интервью организаторам. Мне, как и всем, все на этом мероприятии понравилось. 
+ After the awards ceremony, all the participants discussed the results for a long time and gave interviews to the organizers. I, like everyone else, enjoyed the event. 

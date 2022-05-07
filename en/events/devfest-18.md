@@ -1,6 +1,6 @@
 ---
 date: 2018-10-27 00:00
-description: Моё первое посещение этого фестиваля. Больше всего мне на нем понравились лекции, которые помогли мне в изучении Firebase.
+description: My first visit to this festival. Most of all I liked the lectures, which helped me in learning Firebase.
 event.location.latitude: 56.2682659
 event.location.longitude: 44.0253486
 event.location.title: Нижний Новгород
@@ -11,7 +11,7 @@ alternateLinkIdentifier: devfest-18
 ---
 # GDG DevFest Gorky 2018
 
-Моё первое посещение этого фестиваля.
+My first visit to this festival.
 
 
 1. { }
@@ -21,4 +21,4 @@ alternateLinkIdentifier: devfest-18
 5. ![ ](3_400x400.jpg)
 
 
- Больше всего мне на нем понравились лекции, которые помогли мне в изучении Firebase.
+ What I liked most about it were the lectures that helped me learn Firebase.

@@ -1,16 +1,16 @@
 ---
 date: 2013-09-01 00:00
-description: Моё первое знакомство с программированием. В то время мне хотелось любым путем научится делать игры и все что связано с ними.
+description: My first encounter with programming. At that time I wanted to learn how to make games and everything connected with them in any way I could.
 tags: delphi, pascal, course
 event.type: course
-event.location.title: Дворец детского творчества имени В.П. Чкалова
+event.location.title: Chkalov Palace of Children's Art
 logo: .png
 event.location.latitude: 56.32534099999999
 event.location.longitude: 44.01221609999999
 alternateLinkIdentifier: pascal-delphi-course
 ---
-# Курс разработки на Delphi и Pascal
+# Delphi and Pascal development course
 
-Моё первое знакомство с программированием. В то время мне хотелось любым путем научится делать игры и все что связано с ними.
-Первое время мне было сложно изучать устройство программирования, но как только программа обучения подошла к изучению Delphi и разработке графических интерфейсов мой энтузиазм не знал границ. Я выполнял все задачи максимально быстро и качественно, а когда они заканчивались придумывал себе новые и с тем же успехом делал и их.
-С тех пор для меня то время обучения стало мотиватором для последующего развития, и я рад что мне довелось начать свой профессиональный путь в этом месте.
+My first introduction to programming. At the time I wanted any way to learn how to make games and everything associated with them.
+The first time it was difficult for me to study the programming device, but as soon as the training program came to the study of Delphi and the development of graphical interfaces my enthusiasm knew no bounds. I completed all tasks as quickly and accurately as possible, and when they ran out, I invented new ones and did them with the same success.
+Since then that time of training has been a motivator for me to develop further, and I am glad that I started my professional life there.

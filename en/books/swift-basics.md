@@ -1,14 +1,14 @@
 ---
 date: 2020-01-08 00:00
-description: Хорошая книга для введения в язык программирования Swift которую я прочитал для подготовки к курсам разработки на iOS.
+description: A good book for an introduction to the Swift programming language that I read in preparation for an iOS development course.
 tags: swift, ios
 book.site: https://swiftme.ru/
 book.author: Василий Усов
 singleImage: .jpg
 alternateLinkIdentifier: swift-basics
 ---
-# Swift. Основы разработки приложений под iOS, iPadOS и macOS
+# Swift. Fundamentals of iOS, iPadOS, and macOS app development
 
-Хорошая книга для введения в язык программирования Swift которую я прочитал для подготовки к курсам разработки на iOS.
-Эта книга написана максимально интересно, кратко, и по делу. Стоит отметить что автор постарался над мотивацией читателя во время изучения материала, особенно это видно во вступлении и заключении книги.
-В целом мне очень понравилась эта книга, благодаря ней я неплохо изучил основы Swift и познакомился с миром разработки программного обеспечения для устройств от Apple.
+A good book for an introduction to the Swift programming language that I read in preparation for an iOS development course.
+This book is written in the most interesting, concise, and to the point way possible. It is worth noting that the author has tried to motivate the reader while learning the material, especially seen in the introduction and conclusion of the book.
+Overall I really enjoyed this book, I learned the basics of Swift and got to know the world of software development for Apple devices.

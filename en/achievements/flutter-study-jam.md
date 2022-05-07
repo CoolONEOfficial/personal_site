@@ -1,6 +1,6 @@
 ---
 date: 2018-11-10 00:00
-description: Сертификат о прохождении двух дней изучения основ Flutter. Я получил его после Flutter Jam – мероприятия от GDG Nizhny Novgorod.
+description: Certificate of Completion of two days of Flutter Study Jam. I received it after the Flutter Jam - an event from GDG Nizhny Novgorod.
 tags: flutter, certificate
 logo: .png
 singleImage: .jpg
@@ -8,6 +8,6 @@ achievement.organisation: Google Developers Group Nizhny Novgorod
 achievement.type: certificate
 alternateLinkIdentifier: flutter-study-jam
 ---
-# Сертификат о прохождении Flutter Study Jam
+# Flutter Study Jam certificate of completion
 
-Сертификат о прохождении двух дней изучения основ Flutter. Я получил его после Flutter Jam – мероприятия от GDG Nizhny Novgorod.
+Certificate of Completion of two days of Flutter Study Jam. I received it after the Flutter Jam - an event from GDG Nizhny Novgorod.

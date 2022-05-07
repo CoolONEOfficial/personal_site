@@ -1,8 +1,8 @@
 ---
 date: 2019-05-26 00:00
-description: Первый хакатон на выезде. В нем впервые наша команда Team13 в основном составе смогла получить 2 место.
+description: The first hackathon on the road. In it, for the first time our Team13 team in the main squad was able to get the 2nd place.
 tags: web, flutter, hack
-event.location.title: Санкт-Петербург
+event.location.title: St. Petersburg
 event.site: https://hackgatchina.city/
 event.location.latitude: 59.96930399999999
 event.type: hack
@@ -13,7 +13,7 @@ alternateLinkIdentifier: hackgatchina
 ---
 # HackGatchina
 
-Первый хакатон на выезде. В нем впервые наша команда Team13 в основном составе смогла получить 2 место.
+The first hackathon on the road. In it, for the first time our Team13 team in the main squad was able to get the 2nd place.
 
 
 1. { }
@@ -23,4 +23,4 @@ alternateLinkIdentifier: hackgatchina
 5. ![ ](3_400x400.jpg)
 
 
- Организация этого мероприятия мне понравилась, на площадке было удобно работать. Также порадовало что после победы я увёз сертификат о 2м месте с собой. 
+ I liked the organization of the event, it was convenient to work at the site. Also pleased that after winning I took away a certificate of 2nd place with me. 

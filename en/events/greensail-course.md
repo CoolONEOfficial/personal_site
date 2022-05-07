@@ -1,10 +1,10 @@
 ---
 date: 2015-09-01 00:00
-description: Одно из ключевых мест где я обучался программированию т. к. именно в этом месте меня научили делать то что я хотел. Впервые после Pascal я столкнулся с полноценным, современным C++.
+description: One of the key places where I learned how to program, because that's where they taught me how to do what I wanted to do. For the first time since Pascal, I was exposed to full-fledged, modern C++.
 tags: cpp, qt, course
 event.site: http://greensail.ru/
 event.organisation: Group of the youth environmental organization Green Sail
-event.location.title: Зелёный Парус
+event.location.title: Green sail
 logo: .png
 event.location.latitude: 56.3286077
 event.location.longitude: 44.0109856
@@ -13,7 +13,7 @@ alternateLinkIdentifier: greensail-course
 ---
 # C++ development course
 
-Одно из ключевых мест где я обучался программированию т. к. именно в этом месте меня научили делать то что я хотел. Впервые после [Pascal](https://coolone.ru/events/pascal-delphi-course/) я столкнулся с полноценным, современным C++.
-Для меня "Зелёный парус" стал началом всех последующих достижений прежде всего из-за опытного преподавателя, который обеспечил условия для профессионального роста и из-за выбора технологий которые я впоследствии освоил. 
-Как и я, многие программисты по всему миру считают лучшим языком для начала обучения программированию C++. В моем случае первые полгода обучения я изучал именно его, а позже перешёл к Qt, который расширил возможности и позволил использовать графический интерфейс и многое другое.
-Именно в этом месте я разработал свой первый более менее полноценный проект а позже и [игру](https://coolone.ru/projects/sword-battle/), которую я так давно хотел создать.
+One of the key places where I learned how to program because that's where they taught me how to do what I wanted to do. It was the first time since [Pascal](https://coolone.ru/events/pascal-delphi-course/) that I encountered full-fledged, modern C++.
+For me, "Green Sails" was the beginning of all subsequent achievements, primarily because of an experienced tutor who provided the conditions for professional growth, and because of the choice of technologies that I later mastered. 
+Like me, many programmers around the world believe C++ is the best language to start learning how to program. In my case, I studied it for the first six months of training, and then I went on to Qt, which enhanced the possibilities and allowed for a graphical interface and more.
+It was here that I developed my first more or less complete project and later [game](https://coolone.ru/projects/sword-battle/), which I had wanted to create for so long.

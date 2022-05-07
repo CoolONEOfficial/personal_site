@@ -1,6 +1,6 @@
 ---
 date: 2018-05-02 00:00
-description: После окончания программы [IT Школы Samsung](https://coolone.ru/events/samsung-it-school/) все учащиеся представили на конкурс свои итоговые проекты. В моем случае это был [Travel Quest](https://coolone.ru/projects/travel-quest/) – мобильное приложение для туристов, которое в результате оказалось лучшим в своей номинации.
+description: After completing the [Samsung IT School] program (https://coolone.ru/events/samsung-it-school/), all students submitted their final projects to the competition. In my case it was [Travel Quest](https://coolone.ru/projects/travel-quest/), a mobile application for tourists, which ended up being the best in its category.
 tags: java, android, diploma
 singleImage: .jpg
 logo: .jpg
@@ -8,8 +8,8 @@ achievement.organisation: Samsung Electronics
 achievement.type: diploma
 alternateLinkIdentifier: samsung-it-school-selects-the-strongest
 ---
-# Победа на конкурсе проектов "IT Школа выбирает сильнейших"
+# Winning the "IT School Selects the Strongest" project competition
 
-После окончания программы [IT Школы Samsung](https://coolone.ru/events/samsung-it-school/) все учащиеся представили на конкурс свои итоговые проекты. В моем случае это был [Travel Quest](https://coolone.ru/projects/travel-quest/) – мобильное приложение для туристов, которое в результате оказалось лучшим в своей номинации.
-К сожалению я не имел возможности присутствовать на награждении из-за того что был вне города, поэтому я не могу оценить церемонию награждения.
-Этот диплом шёл в комплекте с [сертификатом о прохождении IT Школы Samsung](https://coolone.ru/achievements/samsung-it-school/).
+After finishing the [Samsung IT School](https://coolone.ru/events/samsung-it-school/) program, all the students submitted their final projects to the competition. In my case it was [Travel Quest](https://coolone.ru/projects/travel-quest/) - a mobile application for tourists, which as a result was the best in its category.
+Unfortunately I was not able to attend the awards ceremony due to the fact that I was out of town, so I can not assess the awards ceremony.
+This diploma came with [Samsung IT School certificate](https://coolone.ru/achievements/samsung-it-school/).

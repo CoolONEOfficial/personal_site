@@ -1,6 +1,6 @@
 ---
 date: 2016-04-30 00:00
-description: Моя первая игра на C++. Во время её разработки мне хотелось сделать её максимально красивой и качественной, но в тот момент у меня не было достаточного опыта и знаний для разработки действительно большого проекта, да и лет мне было немного.
+description: My first game in C++. During its development I wanted to make it as beautiful and high-quality as possible, but at that time I didn't have enough experience and knowledge to develop a really big project, and I was not very old.
 tags: qt, cpp, game
 videos: 0siAlCL5R2s
 project.type: game
@@ -11,15 +11,15 @@ alternateLinkIdentifier: sword-battle
 ---
 # Sword Battle
 
-Моя первая игра на C++. Во время её разработки мне хотелось сделать её максимально красивой и качественной, но в тот момент у меня не было достаточного опыта и знаний для разработки действительно большого проекта, да и лет мне было немного.
+My first game in C++. During its development I wanted to make it as beautiful and qualitative as possible, but at that moment I didn't have enough experience and knowledge to develop a really big project, and I was too young.
 
-В этом проекте я впервые столкнулся с множеством трудностей связанных с реализацией игровых механик.
+It was the first time I encountered so many difficulties associated with the implementation of game mechanics.
 
 1. { }
 2. ![ ](2_400x400.jpg)
 3. ![ ](1_400x400.jpg)
 4. ![ ](3_400x400.jpg)
 
-Для разработки этого проекта, как и предыдущих я использовал Qt – один из наиболее подходящих C++ фреймворков. 
+For the development of this project, as well as previous ones, I used Qt - one of the most appropriate C++ frameworks. 
 
-Вся графика в игре была нарисована вручную, а шрифты и музыкальное сопровождение взяты из открытых источников.
+All the graphics in the game were drawn by hand, and the fonts and music were taken from public sources.

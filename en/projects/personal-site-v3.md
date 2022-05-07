@@ -1,6 +1,6 @@
 ---
 date: 2020-11-07 00:00
-description: Третья версия этого сайта, написанная с ипользованием Swift и библиотеки  [Publish](https://github.com/JohnSundell/Publish) для генерации статических сайтов.
+description: The third version of this site, written using Swift and the [Publish] library (https://github.com/JohnSundell/Publish) to generate static sites.
 tags: swift, publish, plot, website
 project.platforms: web
 project.marketplaces: "github: https://github.com/CoolONEOfficial/personal_site", "website: https://coolone.ru"
@@ -8,8 +8,8 @@ logo: .jpg
 project.type: website
 alternateLinkIdentifier: personal-site-v3
 ---
-# Персональный сайт-портфолио (v3)
+# Personal Portfolio Site (v3)
 
-Третья версия этого сайта, написанная с ипользованием Swift и библиотеки  [Publish](https://github.com/JohnSundell/Publish) для генерации статических сайтов.
+The third version of this site, written using Swift and the [Publish] library (https://github.com/JohnSundell/Publish) for generating static sites.
 
-Во время его разработки я перенес весь контент из Firestore в markdown файлы, переписал дизайн на более простой в поддержке, и наконец сделал сайт статическим. Благодаря этому скорость загрузки повысилась, но пришлось немного урезать функционал сайта.
+During its development I moved all the content from Firestore to markdown files, rewrote the design to be easier to maintain, and finally made the site static. This improved loading speed, but I had to cut some functionality of the site.

@@ -1,6 +1,6 @@
 ---
 date: 2021-06-22 00:00
-description: Бот для фотографов, автоматизирующий их рутину, и организующий людей для фотосессий. Бот позволил автоматизировать создание заявок, оповещение персонала, сбор отзывов и обновление портфолио.
+description: A bot for photographers that automates their routine and organizes people for photo shoots. The bot allowed you to automate the creation of requests, notification of staff, collection of feedback, and portfolio updates.
 tags: swift, vapor, fluent, backend, chatbot
 project.platforms: vk, telegram
 project.marketplaces: "github: https://github.com/CoolONEOfficial/photobot", "telegram: https://t.me/tsareva_bot", "vk: https://vk.com/tsar.stasy"
@@ -8,23 +8,23 @@ project.type: chatbot
 logo: .png
 alternateLinkIdentifier: photobot
 ---
-# ФотоБот
+# PhotoBot
 
-Бот для фотографов, автоматизирующий их рутину, и организующий людей для фотосессий. 
+A bot for photographers that automates their routine and organizes people for photo shoots. 
 
-Бот позволяет клиентам: 
-- Смотреть портфолио.
-- Смотреть отзывы.
-- Создавать заказы.
-- Отменять, в будущем переносить заказы.
+The bot allows clients to: 
+- View portfolios.
+- View reviews.
+- Create orders.
+- Cancel, reschedule orders in the future.
 
 <br />
 
-Бот позволяет авторам: 
-- Редактировать портфолио.
-- Анализировать отзывы.
-- Отслеживать заказы.
-- Отменять, а в перспективе переносить заказы.
+Bot allows authors: 
+- Edit a portfolio.
+- Analyze reviews.
+- Track orders.
+- Cancel and, in the long term, transfer orders.
 
 1. { }
 2. ![ ](1.png)

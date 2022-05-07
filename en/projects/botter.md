@@ -1,6 +1,6 @@
 ---
 date: 2021-06-22 00:00
-description: Фреймворк для кроссплатформенной разработки чат-ботов на Swift. Данный фреймворк оборачивает Telegrammer и Vkontakter, абстрагируя детали реализации каждого из них.
+description: A framework for cross-platform chatbot development in Swift. This framework wraps Telegrammer and Vkontakter, abstracting the implementation details of each.
 tags: swift, chatbot, vk, telegram
 project.platforms: vk, telegram
 project.marketplaces: "github: https://github.com/CoolONEOfficial/Botter"
@@ -10,8 +10,8 @@ alternateLinkIdentifier: botter
 ---
 # Botter
 
-Данный фреймворк оборачивает [Telegrammer](https://github.com/givip/Telegrammer) и [Vkontakter](/projects/vkontakter), абстрагируя детали реализации каждого из них, и позволяет работать с тем же функционалом независимо от платформы.
+This framework wraps [Telegrammer](https://github.com/givip/Telegrammer) and [Vkontakter](/projects/vkontakter), abstracting the implementation details of each, and allows you to work with the same functionality regardless of platform.
 
-С его помощью можно:  
-- Отправлять и получать сообщения, медиа.
-- Отслеживать нажатия кнопок, отправлять их в виде клавиатуры.
+With it, you can:  
+- Send and receive messages, media.
+- Track button presses, send them as a keyboard.

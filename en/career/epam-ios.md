@@ -1,9 +1,9 @@
 ---
 date: 2020-08-30 00:00
 career.type: free_schedule
-career.position: iOS разработчик
+career.position: iOS developer
 career.achievements: Got a job after [iOS development courses](https://coolone.ru/events/ios-course/) and internship, two
-description: Мой первый опыт официальной работы. В эту компанию мне удалось устроится после прохождения [курсов по iOS разработке](https://coolone.ru/events/ios-course/) и стажировки. 
+description: My first official work experience. I managed to get a job in this company after taking [iOS development courses] (https://coolone.ru/events/ios-course/) and an internship. 
 logo: .png
 videos: 5HcErqzWxbg
 tags: swift, ios
@@ -11,15 +11,15 @@ alternateLinkIdentifier: epam-ios
 ---
 # Epam Systems
 
-Мой первый опыт официальной работы. В эту компанию мне удалось устроиться после прохождения [курсов по iOS разработке](https://coolone.ru/events/ios-course/) и стажировки. 
+My first official work experience. I managed to get a job at this company after taking [iOS development courses](https://coolone.ru/events/ios-course/) and an internship. 
 
-Во время стажировки я впервые поработал с одной из команд компании, закрыл многие пробелы в технических знаниях с поддержкой ментора, и прошел техническое собеседование на позицию iOS разработчика.
+During the internship, I worked with one of the company's teams for the first time, closed many gaps in my technical knowledge with support from a mentor, and passed the technical interview for the iOS developer position.
 
-В процессе работы используются внутренние сервисы от epam, например [Telescope AI](https://habr.com/ru/company/epam_systems/blog/500718/), которые я считаю достаточно удобными, хоть у меня и не было опыта работы с какими любыми другими сервисами.
+The work process uses internal services from EPAM, such as [Telescope AI](https://habr.com/ru/company/epam_systems/blog/500718/), which I found quite handy, although I had no experience with any other services.
 
-После устройства в это место я в полной мере прочуствовал как удобно и круто иметь ДМС, возможность получать компенсацию за некоторые расходы, возможность получить рабочую технику на выбор, и пользоватся другими плюшками от этого типа работы.
+After joining this place I fully experienced how convenient and cool it is to have an LCA, the ability to get reimbursed for some expenses, the ability to get work equipment to choose from, and to enjoy the other perks of this type of work.
 
-К сожалению или к счастью в настоящее время вся работа проходит удаленно, поэтому не могу поделится впечатлениями от оффлайн работы в офисе, но офис оставляет только положительные впечатления, так как он совсем недавно открылся и имеет удобное местоположение и хорошие условия.
+Unfortunately or fortunately at the moment all work is done remotely, so I can't share my impressions of offline work in the office, but the office leaves only positive impressions as it has just opened and has a convenient location and good conditions.
 <div id="vk_post_-162776821_702" class="vk-post"></div>
 <script type="text/javascript">
   (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "https://vk.com/js/api/openapi.js?168"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'vk_openapi_js'));
@@ -28,6 +28,6 @@ alternateLinkIdentifier: epam-ios
   }());
 </script>
 
-Хоть на момент написания этого поста я работаю в EPAM только месяц, уже могу сказать, что в работе, коллективе, и внутренних сервисах для меня нет значимых минусов, поэтому это место можно смело рекомендовать для развития, для джунов точно)
+Although at the time of writing this post I have only been working at EPAM for a month, I can already say that the work, the team, and internal services for me there are no significant drawbacks, so this place can be safely recommended for development, for juniors for sure)
 
 

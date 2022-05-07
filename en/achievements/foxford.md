@@ -1,6 +1,6 @@
 ---
 date: 2019-05-20 00:00
-description: Сертификат о прохождении онлайн курса по веб разработке от Foxford.
+description: Certificate of Completion for Foxford's online web development course.
 tags: web, vue, js, certificate
 logo: .png
 achievement.organisation: Foxford
@@ -9,6 +9,6 @@ achievement.type: certificate
 achievement.site: https://foxford.ru/users/500595/certificates/3155891
 alternateLinkIdentifier: foxford
 ---
-# Сертификат онлайн-школы Фоксфорд
+# Certificate from Foxford Online School
 
-Сертификат о прохождении онлайн курса по веб разработке от Foxford. Указывает на наличие понимания веб разработки в целом, а в моем случае опыта разработки веб приложений на Vue.js.
+Certificate of completion of an online web development course from Foxford. Indicates an understanding of web development in general, and in my case, experience developing web applications in Vue.js.

@@ -1,8 +1,8 @@
 ---
 date: 2020-01-20 00:00
-description: Курс по iOS разработке от EPAM. После прохождения этого курса мне удалось изучить создание мобильных iOS приложений на Swift. Также после окончания учебной программы в качестве итогового проекта был разработан [мессенджер SmallTalk](https://coolone.ru/projects/smalltalk/), который стал для меня первым большим проектом нацеленным на iOS.
+description: A course on iOS development from EPAM. After taking this course I was able to learn how to create mobile iOS applications in Swift. Also after finishing the training program as a final project I developed [messenger SmallTalk](https://coolone.ru/projects/smalltalk/), which became my first big project aimed at iOS.
 tags: swift, ios, course
-event.location.title: Нижний Новгород, ул. Родионова 23
+event.location.title: Nizhny Novgorod, 23 Rodionov St.
 event.organisation: EPAM
 event.type: course
 event.location.latitude: 56.318183234698445
@@ -11,10 +11,10 @@ event.location.longitude: 44.06063508242369
 event.site: https://training.ru/#!/Training/2354
 alternateLinkIdentifier: ios-course
 ---
-# Курс по iOS разработке
+# iOS development course
 
-Курс по iOS разработке от EPAM. После прохождения этого курса мне удалось изучить создание мобильных iOS приложений на Swift. Также после окончания учебной программы в качестве итогового проекта был разработан [мессенджер SmallTalk](https://coolone.ru/projects/smalltalk/), который стал для меня первым большим проектом нацеленным на iOS.
-Курс проходил в формате лекций в офисе компании до начала карантина, а после проведение лекций было перенесено в онлайн. По мере изучения материала нам давали домашние задания, которые можно было отслеживать на сайте и там же отправлять на проверку.
-По полезности этот курс мне понравился больше всех которые мне доводилось проходить поскольку обычно все сводилось в регулярное прослушивание лекций без какой либо практики, но сдесь ситуация порадовала – после каждой лекции учащиеся задавали вопросы, презентации были с юмором, а знания полученные после каждого занятия проверялись в бою благодаря выполнению домашних заданий.
-Но, к сожалению домашние задания были не сбалансированны из-за чего многие участники испытывали трудности с их выполнением.
-В целом мне курс понравился так как лично для меня плюсов оказалось намного больше чем минусов.
+An iOS development course from EPAM. After taking this course, I was able to learn how to create mobile iOS apps in Swift. Also after the completion of the training program as a final project was developed [messenger SmallTalk](https://coolone.ru/projects/smalltalk/), which became my first big project aimed at iOS.
+The course took place in the format of lectures in the company office before the quarantine, and after the lectures were moved online. As we studied the material, we were given homework, which could be tracked on the site and sent there for review.
+By its usefulness I liked this course more than any other I have ever been on, because usually it was reduced to a regular listening to the lectures without any practice, but here the situation was nice - after each lecture students asked questions, presentations were with humor, and knowledge gained after each lesson was tested in the battle thanks to the homework.
+But, unfortunately, homework assignments were not balanced because of what many participants found it difficult to do.
+In general I liked the course because for me personally there were a lot more pluses than minuses.

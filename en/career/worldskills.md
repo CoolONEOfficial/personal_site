@@ -1,17 +1,17 @@
 ---
 career.achievements: beep
-career.position: Мобильный разработчик
+career.position: Mobile developer
 career.type: contract
 date: 2020-10-01 00:00
-description: С конца 2020го меня взяли в национальную сборную Worldskills по компетенции "Разработка мобильных приложений". 🥳
+description: Since the end of 2020 I have been included in the national Worldskills team for the competence "Mobile Application Development". 🥳
 logo: .png
 tags: ios
 alternateLinkIdentifier: worldskills
 ---
 # Worldskills Russia
 
-С конца 2020го меня взяли в национальную сборную Worldskills по компетенции "Разработка мобильных приложений". 🥳
+Since the end of 2020 I have been included in the national Worldskills team for the competence "Mobile Application Development". 🥳
 
-Это событие было освещено в ряду нижегородских изданий, а также в "Российской газете". Кроме того по этому поводу выпустили публикации в соцсетях группы Samsung Россия и EPAM. 
+This event was covered in a number of Nizhny Novgorod publications, as well as in Rossiyskaya Gazeta. In addition, Samsung Russia and EPAM groups released publications on this occasion in social networks. 
 
-В ближайшее время наша сборная готовится к участию в мировом чемпионате по разработке мобильных приложений, который состоится в Шанхае в 2022 году.
+In the nearest future our team is preparing to participate in the world championship on mobile application development to be held in Shanghai in 2022.

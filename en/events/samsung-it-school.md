@@ -1,16 +1,16 @@
 ---
 date: 2017-09-01 00:00
-description: Этот курс по Android разработки стал началом череды моих проектов направленных на мобильные устройства. Именно благодаря обучению в этом месте был успешно разработан ["Travel Quest"](https://coolone.ru/projects/travel-quest/) и др.
+description: This course on Android development was the beginning of my series of projects aimed at mobile devices. It was thanks to the training in this place that ["Travel Quest"](https://coolone.ru/projects/travel-quest/) and others were successfully developed.
 tags: android, java, course
 event.location.longitude: 44.01591461151838
 logo: .jpg
-event.location.title: Лицей №38
+event.location.title: Lyceum №38
 event.location.latitude: 56.31552386312436
 event.type: course
 singleImage: .jpg
 event.organisation: Samsung
 alternateLinkIdentifier: samsung-it-school
 ---
-# IT Школа Samsung
+# Samsung IT School
 
-Этот курс по Android разработки стал началом череды моих проектов направленных на мобильные устройства. Именно благодаря обучению в этом месте был успешно разработан ["Travel Quest"](https://coolone.ru/projects/travel-quest/) и др.
+This course on Android development was the beginning of a series of my projects aimed at mobile devices. It was thanks to the training in this place that ["Travel Quest"](https://coolone.ru/projects/travel-quest/) and others were successfully developed.

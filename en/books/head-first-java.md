@@ -1,14 +1,14 @@
 ---
 date: 2017-08-10 00:00
-description: Эту книгу я прочитал для подготовки к IT Школе Samsung, что помогло мне в будущем при разработке ["Travel Quest"](https://coolone.ru/projects/travel-quest/). В ней можно найти все базовые знания о Java – историю языка, версии, путь развития и многое другое.
+description: I read this book to prepare for Samsung IT School, which helped me in the future when developing ["Travel Quest"](https://coolone.ru/projects/travel-quest/). In it you can find all the basic knowledge about Java - history of the language, versions, development path and much more.
 tags: java
 book.author: Kathy Sierra, Bert Bates
 book.organisation: O'Reilly
 singleImage: .jpg
 alternateLinkIdentifier: head-first-java
 ---
-# Изучаем Java (Head First Java)
+# Learning Java (Head First Java)
 
-Эту книгу я прочитал для подготовки к IT Школе Samsung, что помогло мне в будущем при разработке ["Travel Quest"](https://coolone.ru/projects/travel-quest/). В ней можно найти все базовые знания о Java – историю языка, версии, путь развития и многое другое.
-После прочтения этой книги мне было ощутимо проще учиться нативной Android разработке и разрабатывать свои проекты используя Java. В каждой из глав понятно и доступно изложены сведения о разных возможностях этого языка программирования.
-В целом книга мне понравилась, особенно запомнились забавные примеры и иллюстрации к ним.
+I read this book to prepare for Samsung IT School, which helped me in the future when developing ["Travel Quest"](https://coolone.ru/projects/travel-quest/). In it you can find all the basic knowledge about Java - history of the language, versions, development path and more.
+After reading this book it was noticeably easier for me to learn native Android development and to develop my own projects using Java. Each of the chapters clearly and understandably explains the different features of this programming language.
+Overall, I liked the book, especially I remember the funny examples and illustrations.
