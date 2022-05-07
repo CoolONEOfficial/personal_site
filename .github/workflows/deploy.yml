@@ -15,9 +15,9 @@ jobs:
         release-version: 5.6
     - uses: actions/checkout@v2
     - name: Publish dep
-      run: curl -OL https://github.com/CoolONEOfficial/Publish/archive/refs/heads/Multi-Language.zip; 7z x Multi-Language.zip; cd Publish-Multi-Language; swift build -c release; cd ..
+      run: git clone https://github.com/CoolONEOfficial/Publish; cd Publish; git checkout Multi-Language; swift build -c release; cd ..
     - name: Build
-      run: ./Publish-Multi-Language/.build/release/publish-cli generate
+      run: ./Publish/.build/release/publish-cli generate
     - name: Deploy files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
