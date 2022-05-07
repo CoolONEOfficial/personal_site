@@ -33,8 +33,8 @@ public struct PortfolioSite: MultiLanguageWebsite {
     }
 
     public var url = URL(string: "https://coolone.ru")!
-    public var name = "Сайт Николая Трухина"
-    public var description = "Здесь собрана вся информация проектах, мероприятиях, книгах и многое другое"
+    public var name = "Nikolai Trukhin's website"
+    public var description = "Here is all the information about projects, events, books, and more"
     public var languages: [Language] { [ .english, .russian ] }
     public var imagePath: Path? { "/avatar.jpg" }
     public var favicon: Favicon? { .init(path: "/avatar.jpg", type: "image/jpg") }
@@ -64,7 +64,6 @@ try PortfolioSite().publish(
     withTheme: .portfolio,
     //deployedUsing: .ftp(connection: ftpConnection, useSSL: false),
     additionalSteps: [
-        //.addDefaultSectionTitles(),
         .addItemPages()
     ],
     plugins: [
@@ -124,17 +123,6 @@ extension Section where Site == PortfolioSite {
 }
 
 extension PublishingStep where Site == PortfolioSite {
-//    static func addDefaultSectionTitles() -> Self {
-//        .step(named: "Default section titles") { context in
-//            let language = context.index.language
-//
-//            context.mutateAllSections { section in
-//
-//
-//            }
-//        }
-//    }
-    
     static func addItemPages() -> Self {
         .step(named: "Add items pages") { context in
             for language in context.site.languages {
@@ -147,7 +135,7 @@ extension PublishingStep where Site == PortfolioSite {
                     let index = index + 1
                     context.addPage(.init(path: "/items/\(index)", content: .init(
                         title: context.site.language == .russian ? "Все посты" : "All posts",
-                        description: "Список всех постов",
+                        description: context.site.language == .russian ? "Список всех постов" : "List of all posts",
                         body: .init(node: .makeItemsPageContent(
                             context: context,
                             items: chunk,
