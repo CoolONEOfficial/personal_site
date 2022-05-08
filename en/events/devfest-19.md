@@ -23,5 +23,5 @@ In between lectures it was interesting for me to walk around the stands of compa
 4. ![ ](3_400x400.jpg)
 
 
- После полного обхода я набрал достаточно много сувениров – наклейки, кружки, блокноты, футболки и многое другое.
-После мероприятия была массовая фотосессия и подведение результатов розыгрышей и конкурсов. В целом, мне понравилось мероприятие так как для меня оно прошло достаточно интересно.
+ After a full round, I picked up quite a few souvenirs - stickers, mugs, notepads, t-shirts, and more.
+After the event there was a mass photo shoot and summing up the results of the raffles and contests. In general, I liked the event because for me it was quite interesting.

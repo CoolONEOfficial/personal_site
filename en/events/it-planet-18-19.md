@@ -14,7 +14,7 @@ alternateLinkIdentifier: it-planet-18-19
 ---
 # Finals of the International Olympiad "IT Planet 2018/19". 
 
-Participation in this competition began with the recommendation of the teacher of the Russian Academy of National Economy and Public Administration. Two projects were chosen for sending - ["Travel Quest"](https://coolone.ru/projects/travel-quest/) which [took 20th place](https://world-it-planet.org/check_certs/?CID=351051-147217-62249-41) in the qualifying stage and ["RANHIGS (Schedule)"](https://coolone.ru/projects/ranepa-timetable/) which [took 7th place](https://world-it-planet.org/check_certs/?CID=351051-147217-41543-41) в отборочном этапе и дал мне возможность попасть на финал и презентовать весь его функционал.
+Participation in this competition began with the recommendation of the teacher of the Russian Academy of National Economy and Public Administration. Two projects were chosen for sending - ["Travel Quest"](https://coolone.ru/projects/travel-quest/) which [took 20th place](https://world-it-planet.org/check_certs/?CID=351051-147217-62249-41) in the qualifying stage and ["RANHIGS (Schedule)"](https://coolone.ru/projects/ranepa-timetable/) which [took 7th place](https://world-it-planet.org/check_certs/?CID=351051-147217-41543-41) in the qualifying stage and gave me the opportunity to get to the finals and present its full functionality.
 
 1. { }
 2. ![ ](2_400x400.jpg)
