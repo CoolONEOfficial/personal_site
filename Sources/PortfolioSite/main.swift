@@ -108,7 +108,7 @@ extension Section where Site == PortfolioSite {
         default:
             switch id {
             case .projects:
-                return "Project"
+                return "Projects"
             case .books:
                 return "Books"
             case .events:

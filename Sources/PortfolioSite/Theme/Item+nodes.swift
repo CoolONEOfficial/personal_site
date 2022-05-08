@@ -189,7 +189,7 @@ extension Item where Site == PortfolioSite {
             .if(sectionShow,
                 .h4(.a(
                     .href(context.site.pathWithPrefix(path: section.path, in: language!)),
-                    .text(section.title)
+                    .text(section.title(in: language!))
                 ))
             ),
             .forEach(subNodes) { $0 }

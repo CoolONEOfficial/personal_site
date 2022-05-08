@@ -73,7 +73,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
             .body(
                 .header(for: context, selectedSection: section.id, in: section.language),
                 .wrapper(
-                    .h1(.text(section.title(in: context.index.language!))),
+                    .h1(.text(section.title(in: section.language!))),
                     .itemList(for: section.items, on: context.site, context: context, sectionShow: false)
                 ),
                 .footer(for: context.site, in: section.language)
