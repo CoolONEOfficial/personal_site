@@ -1,8 +1,8 @@
 ---
 date: 2019-10-05 00:00
-description: Финал международной олимпиады "IT Планета". Я смог туда попасть благодаря своему проекту ["РАНХиГС (Расписание)"](https://coolone.ru/projects/ranepa-timetable/).
+description: Finals of the International Olympiad "IT Planet". I was able to get there thanks to my project ["RANEHS (Schedule)"](https://coolone.ru/projects/ranepa-timetable/).
 tags: open-source, competition
-event.location.title: Национальный исследовательский технологический университет «МИСиС»
+event.location.title: National University of Science and Technology MISiS
 logo: .png
 event.location.longitude: 37.60907639999999
 event.type: competition
@@ -23,5 +23,5 @@ Participation in this competition began with the recommendation of the teacher o
 5. ![ ](3_400x400.jpg)
 6. ![ ](5_400x400.jpg)
 
-По правилам этой олимпиады проезд финалистов должен быть спонсирован вузами, в которых они учатся, поэтому меня обеспечили билетами и проживанием в Москве на время проведения финала.
-Программа финала включала в себя экскурсию в "Сколково", множество лекций и мастер классов, а в заключительный день церемония закрытия и награждение победителей. Из вышеперечисленного мне понравилось буквально всё: экскурсия в "Сколково" продемонстрировала мне какие технологические инновации в последнее время разрабатываются в России, лекции и мастер классы порадовали своей интересностью, а в финале мой проект был в полной мере оценён и удостоен почётного второго места.
+According to the rules of this Olympiad, the finalists' travel must be sponsored by the universities they study at, so I was provided with tickets and lodging in Moscow for the duration of the final.
+The program of the final included a trip to Skolkovo, many lectures and master classes, and on the final day the closing ceremony and awarding of the winners. I liked everything: the tour to Skolkovo showed me what technological innovations have been recently developed in Russia, the lectures and master classes delighted me with their interest, and in the final my project was fully appreciated and awarded an honorable second place.
