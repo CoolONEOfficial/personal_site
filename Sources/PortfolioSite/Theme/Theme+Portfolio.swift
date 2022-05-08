@@ -30,11 +30,16 @@ struct PortfolioHTMLFactory: HTMLFactory {
         "/modules/bootstrap/dist/css/bootstrap-grid.min.css"
     ]
     
+    static let rssFeedName: [Language: String] = [
+        .russian: "Подписаться на ",
+        .english: "Subscribe to"
+    ]
+    
     func makeIndexHTML(for index: Index,
                        context: PublishingContext<PortfolioSite>) throws -> HTML {
         HTML(
             .lang(index.language ?? context.site.language),
-            .head(for: index, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths),
+            .head(for: index, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths, rssFeedTitle: PortfolioHTMLFactory.rssFeedName),
             .body(
                 .header(for: context, selectedSection: nil, in: index.language),
                 .wrapper(
@@ -69,7 +74,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
                          context: PublishingContext<PortfolioSite>) throws -> HTML {
         HTML(
             .lang(section.language ?? context.site.language),
-            .head(for: section, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths),
+            .head(for: section, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths, rssFeedTitle: PortfolioHTMLFactory.rssFeedName),
             .body(
                 .header(for: context, selectedSection: section.id, in: section.language),
                 .wrapper(
@@ -93,7 +98,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
         let showRightSingleImage = metadata.singleImage != nil && metadata.logo == nil
         return HTML(
             .lang(item.language ?? context.site.language),
-            .head(for: item, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths),
+            .head(for: item, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths, rssFeedTitle: PortfolioHTMLFactory.rssFeedName),
             .body(
                 .class("item-page"),
                 .header(for: context, selectedSection: item.sectionID, in: item.language),
@@ -154,7 +159,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
                       context: PublishingContext<PortfolioSite>) throws -> HTML {
         HTML(
             .lang(page.language ?? context.site.language),
-            .head(for: page, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths),
+            .head(for: page, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths, rssFeedTitle: PortfolioHTMLFactory.rssFeedName),
             .body(
                 .header(for: context, selectedSection: nil, in: page.language),
                 .wrapper(.contentBody(page.body)),
@@ -167,7 +172,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
                          context: PublishingContext<PortfolioSite>) throws -> HTML? {
         HTML(
             .lang(page.language ?? context.site.language),
-            .head(for: page, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths),
+            .head(for: page, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths, rssFeedTitle: PortfolioHTMLFactory.rssFeedName),
             .body(
                 .header(for: context, selectedSection: nil, in: page.language),
                 .wrapper(
@@ -194,7 +199,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
                             context: PublishingContext<PortfolioSite>) throws -> HTML? {
         HTML(
             .lang(page.language ?? context.site.language),
-            .head(for: page, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths),
+            .head(for: page, on: context.site, stylesheetPaths: PortfolioHTMLFactory.cssPaths, rssFeedTitle: PortfolioHTMLFactory.rssFeedName),
             .body(
                 .header(for: context, selectedSection: nil, in: page.language),
                 .wrapper(

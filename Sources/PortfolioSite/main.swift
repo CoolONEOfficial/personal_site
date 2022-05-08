@@ -33,8 +33,18 @@ public struct PortfolioSite: MultiLanguageWebsite {
     }
 
     public var url = URL(string: "https://coolone.ru")!
-    public var name = "Nikolai Trukhin's website"
-    public var description = "Here is all the information about projects, events, books, and more"
+    public var names: [Language : String] {
+        [
+            .russian: "Сайт Николая Трухина",
+            .english: "Nikolai Trukhin's website"
+        ]
+    }
+    public var descriptions: [Language : String] {
+        [
+            .russian: "Здесь собрана вся информация о моих проектах, мероприятиях что я посетил, книгах что прочитал и многое другое",
+            .english: "Here is all the information about projects, events, books, and more"
+        ]
+    }
     public var languages: [Language] { [ .english, .russian ] }
     public var imagePath: Path? { "/avatar.jpg" }
     public var favicon: Favicon? { .init(path: "/avatar.jpg", type: "image/jpg") }
@@ -134,8 +144,8 @@ extension PublishingStep where Site == PortfolioSite {
                 for (index, chunk) in chunks.enumerated() {
                     let index = index + 1
                     context.addPage(.init(path: "/items/\(index)", content: .init(
-                        title: context.site.language == .russian ? "Все посты" : "All posts",
-                        description: context.site.language == .russian ? "Список всех постов" : "List of all posts",
+                        title: language == .russian ? "Все посты" : "All posts",
+                        description: language == .russian ? "Список всех постов" : "List of all posts",
                         body: .init(node: .makeItemsPageContent(
                             context: context,
                             items: chunk,
