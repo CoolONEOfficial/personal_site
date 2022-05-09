@@ -2,9 +2,9 @@ import Foundation
 import Publish
 import Ink
 import Plot
-import SplashPublishPlugin
-import DarkImagePublishPlugin
-import TinySliderPublishPlugin
+//import SplashPublishPlugin
+//import DarkImagePublishPlugin
+//import TinySliderPublishPlugin
 import Files
 
 // This type acts as the configuration for your website.
@@ -65,36 +65,30 @@ extension PortfolioSite.ItemMetadata {
     }
 }
 
-//let file = try File(path: #file)
-//guard let ftpConnection = try FTPConnection(file: file) else {
-//    throw FilesError(path: file.path, reason: LocationErrorReason.missing)
-//}
-
 try PortfolioSite().publish(
     withTheme: .portfolio,
-    //deployedUsing: .ftp(connection: ftpConnection, useSSL: false),
     additionalSteps: [
         .addItemPages()
     ],
     plugins: [
-        .splash(withClassPrefix: ""),
-        .darkImage(),
-        .tinySlider(jsPath: "/modules/tiny-slider/src/tiny-slider.js", defaultConfig: [
-            "mouseDrag": true,
-            "swipeAngle": false,
-            "controls": false,
-            "nav": false,
-            "loop": false,
-            "lazyload": true,
-            "responsive": [
-                "350": [
-                    "items": 2
-                ],
-                "500": [
-                    "items": 3
-                ]
-            ],
-        ])
+//        .splash(withClassPrefix: ""),
+//        .darkImage(),
+//        .tinySlider(jsPath: "/modules/tiny-slider/src/tiny-slider.js", defaultConfig: [
+//            "mouseDrag": true,
+//            "swipeAngle": false,
+//            "controls": false,
+//            "nav": false,
+//            "loop": false,
+//            "lazyload": true,
+//            "responsive": [
+//                "350": [
+//                    "items": 2
+//                ],
+//                "500": [
+//                    "items": 3
+//                ]
+//            ],
+//        ])
     ]
 )
 

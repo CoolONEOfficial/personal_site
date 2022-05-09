@@ -1,32 +1,30 @@
-// swift-tools-version:5.6
+// swift-tools-version:5.5
 
 import PackageDescription
 
 let package = Package(
     name: "PortfolioSite",
-    platforms: [.macOS(.v12)],
+    platforms: [.macOS(.v12), .iOS(.v13)],
     products: [
-        .executable(
+        .library(
             name: "PortfolioSite",
             targets: ["PortfolioSite"]
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/CoolONEOfficial/Publish.git", branch: "Multi-Language"),
-        .package(url: "https://github.com/johnsundell/SplashPublishPlugin.git", from: "0.2.0"),
-        .package(url: "https://github.com/CoolONEOfficial/DarkImagePublishPlugin.git", branch: "patch-1"),
-        .package(url: "https://github.com/CoolONEOfficial/TinySliderPublishPlugin.git", exact: "0.1.4")
-//        .package(url: "https://github.com/CoolONEOfficial/FTPPublishDeploy.git", from: "0.1.0")
+        .package(name: "Publish", url: "https://github.com/CoolONEOfficial/Publish.git", revision: "Multi-Language-Mobile"),
+        .package(name: "SplashPublishPlugin", url: "https://github.com/CoolONEOfficial/SplashPublishPlugin.git", branch: "master"),
+        .package(name: "DarkImagePublishPlugin", url: "https://github.com/CoolONEOfficial/DarkImagePublishPlugin.git", branch: "master"),
+        .package(name: "TinySliderPublishPlugin", url: "https://github.com/CoolONEOfficial/TinySliderPublishPlugin.git", .branch("master"))
     ],
     targets: [
-        .executableTarget(
+        .target(
             name: "PortfolioSite",
             dependencies: [
                 .product(name: "Publish", package: "Publish"),
                 .product(name: "SplashPublishPlugin", package: "SplashPublishPlugin"),
                 .product(name: "DarkImagePublishPlugin", package: "DarkImagePublishPlugin"),
                 .product(name: "TinySliderPublishPlugin", package: "TinySliderPublishPlugin"),
-//                "FTPPublishDeploy"
             ]
         )
     ]

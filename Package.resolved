@@ -1,113 +1,106 @@
 {
-  "pins" : [
-    {
-      "identity" : "codextended",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/johnsundell/codextended.git",
-      "state" : {
-        "revision" : "8d7c46dfc9c55240870cf5561d6cefa41e3d7105",
-        "version" : "0.3.0"
+  "object": {
+    "pins": [
+      {
+        "package": "Codextended",
+        "repositoryURL": "https://github.com/johnsundell/codextended.git",
+        "state": {
+          "branch": null,
+          "revision": "8d7c46dfc9c55240870cf5561d6cefa41e3d7105",
+          "version": "0.3.0"
+        }
+      },
+      {
+        "package": "CollectionConcurrencyKit",
+        "repositoryURL": "https://github.com/johnsundell/collectionConcurrencyKit.git",
+        "state": {
+          "branch": null,
+          "revision": "b4f23e24b5a1bff301efc5e70871083ca029ff95",
+          "version": "0.2.0"
+        }
+      },
+      {
+        "package": "DarkImagePublishPlugin",
+        "repositoryURL": "https://github.com/CoolONEOfficial/DarkImagePublishPlugin.git",
+        "state": {
+          "branch": "master",
+          "revision": "fc7cf4865c2a361662169527b6466e9a5d42af73",
+          "version": null
+        }
+      },
+      {
+        "package": "Files",
+        "repositoryURL": "https://github.com/johnsundell/files.git",
+        "state": {
+          "branch": null,
+          "revision": "d273b5b7025d386feef79ef6bad7de762e106eaf",
+          "version": "4.2.0"
+        }
+      },
+      {
+        "package": "Ink",
+        "repositoryURL": "https://github.com/johnsundell/ink.git",
+        "state": {
+          "branch": null,
+          "revision": "77c3d8953374a9cf5418ef0bd7108524999de85a",
+          "version": "0.5.1"
+        }
+      },
+      {
+        "package": "Plot",
+        "repositoryURL": "https://github.com/johnsundell/plot.git",
+        "state": {
+          "branch": null,
+          "revision": "b358860fe565eb53e98b1f5807eb5939c8124547",
+          "version": "0.11.0"
+        }
+      },
+      {
+        "package": "Publish",
+        "repositoryURL": "https://github.com/CoolONEOfficial/Publish.git",
+        "state": {
+          "branch": "Multi-Language-Mobile",
+          "revision": "8e47d79ee22bb366832b13dbbde412fdcfd1db95",
+          "version": null
+        }
+      },
+      {
+        "package": "Splash",
+        "repositoryURL": "https://github.com/johnsundell/Splash.git",
+        "state": {
+          "branch": null,
+          "revision": "7f4df436eb78fe64fe2c32c58006e9949fa28ad8",
+          "version": "0.16.0"
+        }
+      },
+      {
+        "package": "SplashPublishPlugin",
+        "repositoryURL": "https://github.com/CoolONEOfficial/SplashPublishPlugin.git",
+        "state": {
+          "branch": "master",
+          "revision": "b68ec9547820b26ae03b4ebcd649c9a9c80b5a86",
+          "version": null
+        }
+      },
+      {
+        "package": "Sweep",
+        "repositoryURL": "https://github.com/johnsundell/sweep.git",
+        "state": {
+          "branch": null,
+          "revision": "801c2878e4c6c5baf32fe132e1f3f3af6f9fd1b0",
+          "version": "0.4.0"
+        }
+      },
+      {
+        "package": "TinySliderPublishPlugin",
+        "repositoryURL": "https://github.com/CoolONEOfficial/TinySliderPublishPlugin.git",
+        "state": {
+          "branch": "master",
+          "revision": "e43361ad9da83d92d84ef3f312426c7760de6ade",
+          "version": null
+        }
       }
-    },
-    {
-      "identity" : "collectionconcurrencykit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/johnsundell/collectionConcurrencyKit.git",
-      "state" : {
-        "revision" : "b4f23e24b5a1bff301efc5e70871083ca029ff95",
-        "version" : "0.2.0"
-      }
-    },
-    {
-      "identity" : "darkimagepublishplugin",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/CoolONEOfficial/DarkImagePublishPlugin.git",
-      "state" : {
-        "branch" : "patch-1",
-        "revision" : "2828ba4f8d1639789df1972c191dac2ef878ed4f"
-      }
-    },
-    {
-      "identity" : "files",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/johnsundell/files.git",
-      "state" : {
-        "revision" : "d273b5b7025d386feef79ef6bad7de762e106eaf",
-        "version" : "4.2.0"
-      }
-    },
-    {
-      "identity" : "ink",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/johnsundell/ink.git",
-      "state" : {
-        "revision" : "77c3d8953374a9cf5418ef0bd7108524999de85a",
-        "version" : "0.5.1"
-      }
-    },
-    {
-      "identity" : "plot",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/johnsundell/plot.git",
-      "state" : {
-        "revision" : "b358860fe565eb53e98b1f5807eb5939c8124547",
-        "version" : "0.11.0"
-      }
-    },
-    {
-      "identity" : "publish",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/CoolONEOfficial/Publish.git",
-      "state" : {
-        "branch" : "Multi-Language",
-        "revision" : "4563892e5822164f9894f44ae87f61257149a2b8"
-      }
-    },
-    {
-      "identity" : "shellout",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/johnsundell/shellout.git",
-      "state" : {
-        "revision" : "e1577acf2b6e90086d01a6d5e2b8efdaae033568",
-        "version" : "2.3.0"
-      }
-    },
-    {
-      "identity" : "splash",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/johnsundell/Splash.git",
-      "state" : {
-        "revision" : "7f4df436eb78fe64fe2c32c58006e9949fa28ad8",
-        "version" : "0.16.0"
-      }
-    },
-    {
-      "identity" : "splashpublishplugin",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/johnsundell/SplashPublishPlugin.git",
-      "state" : {
-        "revision" : "4fe79070f51e288bc8ba31934a3018cbe099d5f7",
-        "version" : "0.2.0"
-      }
-    },
-    {
-      "identity" : "sweep",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/johnsundell/sweep.git",
-      "state" : {
-        "revision" : "801c2878e4c6c5baf32fe132e1f3f3af6f9fd1b0",
-        "version" : "0.4.0"
-      }
-    },
-    {
-      "identity" : "tinysliderpublishplugin",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/CoolONEOfficial/TinySliderPublishPlugin.git",
-      "state" : {
-        "revision" : "29da0b2fccee2030108687e07665d8fab4a3984a",
-        "version" : "0.1.4"
-      }
-    }
-  ],
-  "version" : 2
+    ]
+  },
+  "version": 1
 }
