@@ -9,13 +9,17 @@ let package = Package(
         .library(
             name: "PortfolioSite",
             targets: ["PortfolioSite"]
-        )
+        ),
+        .executable(
+            name: "PortfolioSiteExecutable",
+            targets: ["PortfolioSiteExecutable"]
+        ),
     ],
     dependencies: [
         .package(name: "Publish", url: "https://github.com/CoolONEOfficial/Publish.git", revision: "Multi-Language-Mobile"),
         .package(name: "SplashPublishPlugin", url: "https://github.com/CoolONEOfficial/SplashPublishPlugin.git", branch: "master"),
         .package(name: "DarkImagePublishPlugin", url: "https://github.com/CoolONEOfficial/DarkImagePublishPlugin.git", branch: "master"),
-        .package(name: "TinySliderPublishPlugin", url: "https://github.com/CoolONEOfficial/TinySliderPublishPlugin.git", .branch("master"))
+        .package(name: "TinySliderPublishPlugin", url: "https://github.com/CoolONEOfficial/TinySliderPublishPlugin.git", .branch("master")),
     ],
     targets: [
         .target(
@@ -26,6 +30,12 @@ let package = Package(
                 .product(name: "DarkImagePublishPlugin", package: "DarkImagePublishPlugin"),
                 .product(name: "TinySliderPublishPlugin", package: "TinySliderPublishPlugin"),
             ]
-        )
+        ),
+        .executableTarget(
+            name: "PortfolioSiteExecutable",
+            dependencies: [
+                "PortfolioSite"
+            ]
+        ),
     ]
 )
