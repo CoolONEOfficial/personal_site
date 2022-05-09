@@ -34,7 +34,7 @@ public struct EventMetadata: WebsiteItemMetadata {
         self.type = type
     }
     
-    var location: Location?
-    var place: Int?
-    var type: EventType
+    public var location: Location?
+    public var place: Int?
+    public var type: EventType
 }

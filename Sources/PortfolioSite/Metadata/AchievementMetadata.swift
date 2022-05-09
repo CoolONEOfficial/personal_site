@@ -12,7 +12,7 @@ public enum AchievementType: String, Codable, CaseIterable {
     case diploma
 }
 
-extension AchievementType {
+public extension AchievementType {
     var name: String {
         switch self {
         case .certificate:
@@ -28,5 +28,5 @@ public struct AchievementMetadata: WebsiteItemMetadata {
         self.type = type
     }
     
-    var type: AchievementType
+    public var type: AchievementType
 }

@@ -16,7 +16,7 @@ public enum JobType: String, Codable, CaseIterable {
     case free_schedule
 }
 
-extension JobType {
+public extension JobType {
     func name(in language: Language) -> String {
         switch language {
         case .russian:
@@ -59,8 +59,8 @@ public struct CareerMetadata: WebsiteItemMetadata {
         self.achievements = achievements
     }
     
-    var location: Location?
-    var type: JobType
-    var position: String
-    var achievements: [String]
+    public var location: Location?
+    public var type: JobType
+    public var position: String
+    public var achievements: [String]
 }

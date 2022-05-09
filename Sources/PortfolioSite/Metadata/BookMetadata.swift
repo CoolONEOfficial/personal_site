@@ -13,6 +13,6 @@ public struct BookMetadata: WebsiteItemMetadata {
         self.organisation = organisation
     }
     
-    var author: String
-    var organisation: String?
+    public var author: String
+    public var organisation: String?
 }

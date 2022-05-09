@@ -22,7 +22,7 @@ public enum ProjectPlatform: String, Codable, Iconic, CaseIterable {
     case vk
     case telegram
 
-    var icon: String {
+    public var icon: String {
         "/projects/icons/platforms/\(self.rawValue).png"
     }
 }
@@ -35,7 +35,7 @@ public enum ProjectMarketplace: String, Codable, Iconic, CaseIterable {
     case telegram
     case github
     
-    var icon: String {
+    public var icon: String {
         "/projects/icons/marketplaces/\(self.rawValue).png"
     }
 }
@@ -66,13 +66,13 @@ public struct ProjectMetadata: WebsiteItemMetadata {
         }
     }
     
-    var type: ProjectType
-    var platforms: [ProjectPlatform]
-    var marketplaces: [String]?
-    var marketplacesParsed: [ProjectMarketplace: String]?
+    public var type: ProjectType
+    public var platforms: [ProjectPlatform]
+    public var marketplaces: [String]?
+    public var marketplacesParsed: [ProjectMarketplace: String]?
 }
 
-extension ProjectType {
+public extension ProjectType {
     func name(in language: Language) -> String {
         switch language {
         case .russian:
@@ -112,15 +112,5 @@ extension ProjectType {
             }
         }
 
-    }
-}
-
-extension String {
-    func capitalizingFirstLetter() -> String {
-        return prefix(1).capitalized + dropFirst()
-    }
-
-    mutating func capitalizeFirstLetter() {
-        self = self.capitalizingFirstLetter()
     }
 }
