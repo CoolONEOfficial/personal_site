@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Publish
 
 public enum AchievementType: String, Codable, CaseIterable {
     case certificate
@@ -23,7 +24,7 @@ public extension AchievementType {
     }
 }
 
-public struct AchievementMetadata: WebsiteItemMetadata {
+public struct AchievementMetadata: WebsiteItemMetadata, Encodable {
     public init(type: AchievementType) {
         self.type = type
     }

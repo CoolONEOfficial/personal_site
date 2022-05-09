@@ -7,6 +7,7 @@
 
 import Foundation
 import Plot
+import Publish
 
 public enum JobType: String, Codable, CaseIterable {
     case office
@@ -51,7 +52,7 @@ public extension JobType {
     }
 }
 
-public struct CareerMetadata: WebsiteItemMetadata {
+public struct CareerMetadata: WebsiteItemMetadata, Encodable {
     public init(location: Location? = nil, type: JobType, position: String, achievements: [String]) {
         self.location = location
         self.type = type

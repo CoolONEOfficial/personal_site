@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Publish
 
 public enum EventType: String, Codable, CaseIterable {
     case other
@@ -27,7 +28,7 @@ public enum EventType: String, Codable, CaseIterable {
     case course
 }
 
-public struct EventMetadata: WebsiteItemMetadata {
+public struct EventMetadata: WebsiteItemMetadata, Encodable {
     public init(location: Location? = nil, place: Int? = nil, type: EventType) {
         self.location = location
         self.place = place

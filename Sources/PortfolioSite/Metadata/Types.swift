@@ -6,15 +6,9 @@
 //
 
 import Foundation
-
-#if os(iOS)
-public typealias WebsiteItemMetadata = Codable & Hashable
-#else
 import Publish
-public typealias WebsiteItemMetadata = Publish.WebsiteItemMetadata
-#endif
 
-public struct Location: WebsiteItemMetadata {
+public struct Location: WebsiteItemMetadata, Encodable {
     var latitude: Double
     var longitude: Double
     var title: String

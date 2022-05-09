@@ -7,6 +7,7 @@
 
 import Foundation
 import Plot
+import Publish
 
 protocol Iconic {
     var icon: String { get }
@@ -48,7 +49,7 @@ public enum ProjectType: String, Codable, CaseIterable {
     case framework
 }
 
-public struct ProjectMetadata: WebsiteItemMetadata {
+public struct ProjectMetadata: WebsiteItemMetadata, Encodable {
     public init(type: ProjectType, platforms: [ProjectPlatform], marketplaces: [String]? = nil) {
         self.type = type
         self.platforms = platforms
