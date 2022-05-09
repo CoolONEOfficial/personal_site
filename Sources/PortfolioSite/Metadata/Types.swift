@@ -14,7 +14,7 @@ import Publish
 public typealias WebsiteItemMetadata = Publish.WebsiteItemMetadata
 #endif
 
-struct Location: WebsiteItemMetadata {
+public struct Location: WebsiteItemMetadata {
     var latitude: Double
     var longitude: Double
     var title: String

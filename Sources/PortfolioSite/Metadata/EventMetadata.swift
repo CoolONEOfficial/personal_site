@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EventType: String, Codable, CaseIterable {
+public enum EventType: String, Codable, CaseIterable {
     case other
     case hack
     case meetup
@@ -28,6 +28,12 @@ enum EventType: String, Codable, CaseIterable {
 }
 
 public struct EventMetadata: WebsiteItemMetadata {
+    public init(location: Location? = nil, place: Int? = nil, type: EventType) {
+        self.location = location
+        self.place = place
+        self.type = type
+    }
+    
     var location: Location?
     var place: Int?
     var type: EventType

@@ -12,7 +12,7 @@ protocol Iconic {
     var icon: String { get }
 }
 
-enum ProjectPlatform: String, Codable, Iconic, CaseIterable {
+public enum ProjectPlatform: String, Codable, Iconic, CaseIterable {
     case android
     case ios
     case linux
@@ -27,7 +27,7 @@ enum ProjectPlatform: String, Codable, Iconic, CaseIterable {
     }
 }
 
-enum ProjectMarketplace: String, Codable, Iconic, CaseIterable {
+public enum ProjectMarketplace: String, Codable, Iconic, CaseIterable {
     case app_store
     case google_play
     case website
@@ -40,7 +40,7 @@ enum ProjectMarketplace: String, Codable, Iconic, CaseIterable {
     }
 }
 
-enum ProjectType: String, Codable, CaseIterable {
+public enum ProjectType: String, Codable, CaseIterable {
     case game
     case app
     case website
@@ -49,7 +49,7 @@ enum ProjectType: String, Codable, CaseIterable {
 }
 
 public struct ProjectMetadata: WebsiteItemMetadata {
-    internal init(type: ProjectType, platforms: [ProjectPlatform], marketplaces: [String]? = nil) {
+    public init(type: ProjectType, platforms: [ProjectPlatform], marketplaces: [String]? = nil) {
         self.type = type
         self.platforms = platforms
         self.marketplaces = marketplaces

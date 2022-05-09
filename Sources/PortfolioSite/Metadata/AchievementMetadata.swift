@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AchievementType: String, Codable, CaseIterable {
+public enum AchievementType: String, Codable, CaseIterable {
     case certificate
     case diploma
 }
@@ -24,5 +24,9 @@ extension AchievementType {
 }
 
 public struct AchievementMetadata: WebsiteItemMetadata {
+    public init(type: AchievementType) {
+        self.type = type
+    }
+    
     var type: AchievementType
 }
