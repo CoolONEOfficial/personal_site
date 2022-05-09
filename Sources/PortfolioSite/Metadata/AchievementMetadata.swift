@@ -23,6 +23,6 @@ extension AchievementType {
     }
 }
 
-struct AchievementMetadata: WebsiteItemMetadata {
+public struct AchievementMetadata: WebsiteItemMetadata {
     var type: AchievementType
 }

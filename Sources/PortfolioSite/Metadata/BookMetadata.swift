@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BookMetadata: WebsiteItemMetadata {
+public struct BookMetadata: WebsiteItemMetadata {
     var author: String
     var organisation: String?
 }

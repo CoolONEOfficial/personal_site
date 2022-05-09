@@ -48,7 +48,7 @@ enum ProjectType: String, Codable, CaseIterable {
     case framework
 }
 
-struct ProjectMetadata: WebsiteItemMetadata {
+public struct ProjectMetadata: WebsiteItemMetadata {
     internal init(type: ProjectType, platforms: [ProjectPlatform], marketplaces: [String]? = nil) {
         self.type = type
         self.platforms = platforms

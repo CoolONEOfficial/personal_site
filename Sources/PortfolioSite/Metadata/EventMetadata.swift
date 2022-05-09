@@ -27,7 +27,7 @@ enum EventType: String, Codable, CaseIterable {
     case course
 }
 
-struct EventMetadata: WebsiteItemMetadata {
+public struct EventMetadata: WebsiteItemMetadata {
     var location: Location?
     var place: Int?
     var type: EventType

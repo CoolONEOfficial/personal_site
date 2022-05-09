@@ -51,7 +51,7 @@ extension JobType {
     }
 }
 
-struct CareerMetadata: WebsiteItemMetadata {
+public struct CareerMetadata: WebsiteItemMetadata {
     var location: Location?
     var type: JobType
     var position: String
