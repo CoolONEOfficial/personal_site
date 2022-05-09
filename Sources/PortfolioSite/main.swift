@@ -8,10 +8,11 @@ import TinySliderPublishPlugin
 import Files
 
 @discardableResult
-public func publishPortfolioSite() throws -> PublishedWebsite<PortfolioSite> {
+public func publishPortfolioSite(at path: Publish.Path? = nil) throws -> PublishedWebsite<PortfolioSite> {
 
     try PortfolioSite().publish(
         withTheme: .portfolio,
+        at: path,
         additionalSteps: [
             .addItemPages()
         ],
