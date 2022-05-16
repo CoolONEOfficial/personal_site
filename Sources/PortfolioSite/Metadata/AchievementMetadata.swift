@@ -7,19 +7,36 @@
 
 import Foundation
 import Publish
+import Plot
 
 public enum AchievementType: String, Codable, CaseIterable {
     case certificate
     case diploma
+    case medal
 }
 
 public extension AchievementType {
-    var name: String {
-        switch self {
-        case .certificate:
-            return "Сертификат"
-        case .diploma:
-            return "Диплом"
+    func name(for language: Language) -> String {
+        switch language {
+        case .russian:
+            switch self {
+            case .certificate:
+                return "Сертификат"
+            case .diploma:
+                return "Диплом"
+            case .medal:
+                return "Медаль"
+            }
+            
+        default:
+            switch self {
+            case .certificate:
+                return "Certificate"
+            case .diploma:
+                return "Diploma"
+            case .medal:
+                return "Medal"
+            }
         }
     }
 }
