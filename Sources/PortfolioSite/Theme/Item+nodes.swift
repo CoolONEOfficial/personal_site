@@ -181,7 +181,7 @@ extension Item where Site == PortfolioSite {
         case .achievements:
             guard let metaAchievement = metadata.achievement else { break }
             subNodes.append(.h4(.text(
-                metaAchievement.type.name
+                metaAchievement.type.name(for: language!)
             )))
         }
         
