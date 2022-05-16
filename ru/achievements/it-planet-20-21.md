@@ -1,7 +1,7 @@
 ---
 date: 2022-01-01 00:00
 description: Результат повторного участия в IT Планете. 🥳
-tags: flutter, open-source, diploma
+tags: vapor, swift, open-source, diploma
 achievement.organisation: IT-Планета
 achievement.type: medal
 achievement.site: https://world-it-planet.org/
