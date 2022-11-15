@@ -1,5 +1,5 @@
 ---
-date: 2020-01-20 00:00
+date: 2018-04-01 00:00
 description: A course on iOS development from EPAM. After taking this course I was able to learn how to create mobile iOS applications in Swift. Also after finishing the training program as a final project I developed [messenger SmallTalk](https://coolone.ru/projects/smalltalk/), which became my first big project aimed at iOS.
 tags: swift, ios, course
 event.location.title: Nizhny Novgorod, 23 Rodionov St.

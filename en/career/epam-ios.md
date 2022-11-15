@@ -1,5 +1,5 @@
 ---
-date: 2020-08-30 00:00
+date: 2018-10-01 00:00
 career.type: free_schedule
 career.position: iOS developer
 career.achievements: Got a job after [iOS development courses](https://coolone.ru/events/ios-course/) and internship, two
