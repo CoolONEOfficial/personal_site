@@ -15,5 +15,7 @@ alternateLinkIdentifier: postgres-meetup
 # PostgreSQL meetup
 
 This meetup is most memorable to me for its originality. Lectures described the benefits of PostgreSQL, the functionality of the technology and information about the Russian-speaking community of the database.
+
 The highlight of the program was the phrase "All you need is Postgres" written on the final slide of the last lecture.
+
 After the event all participants were given small books about the basics of PostgreSQL, so [I had something to read](https://coolone.ru/books/postgres-for-beginners/) the next few days, but the highlight for me personally was a joint photo with [Bruce Momjian](https://momjian.us/) - co-founder of the "PostgreSQL Global Development Group" community.
