@@ -1,6 +1,6 @@
 ---
 date: 2022-12-14 00:00
-description: 
+description: Второй meetup от Яндекса на который я сходил в Сербии, в этот раз посвященный одному из продуктов этой компании, Yandex Go. 
 tags: yandex, meetup, taxi
 event.site: https://www.linkedin.com/company/yandex-go
 logo: .png
