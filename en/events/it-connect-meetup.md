@@ -5,7 +5,7 @@ tags: startup, meetup
 event.site: https://t.me/belgradeitmeetups
 logo: .jpg
 event.organisation: IT Connect community
-event.location.title: Белград
+event.location.title: Belgrade
 event.location.latitude: 44.787197
 event.location.longitude: 20.457273
 event.type: meetup
