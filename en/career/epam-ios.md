@@ -2,7 +2,6 @@
 date: 2018-10-01 00:00
 career.type: free_schedule
 career.position: iOS developer
-career.achievements: Got a job after [iOS development courses](https://coolone.ru/events/ios-course/) and internship, two
 description: My first official work experience. I managed to get a job in this company after taking [iOS development courses] (https://coolone.ru/events/ios-course/) and an internship. 
 logo: .png
 videos: 5HcErqzWxbg

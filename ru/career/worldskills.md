@@ -1,5 +1,4 @@
 ---
-career.achievements: beep
 career.position: Мобильный разработчик
 career.type: contract
 date: 2020-10-01 00:00

@@ -37,5 +37,4 @@ struct CareerMetadata: WebsiteItemMetadata {
     var location: Location?
     var type: JobType
     var position: String
-    var achievements: [String]
 }
