@@ -10,7 +10,7 @@ alternateLinkIdentifier: positive-tech-hack
 ---
 # Winning in the "Most Quality Code" and "Most Secure Web Application" categories
 
-I received these certificates because our team won in these categories at the [Positive Technologies Hackathon] (https://coolone.ru/achievements/positive-tech-hack/).
+I received these certificates because our team won in these categories at the [Positive Technologies Hackathon](https://coolone.ru/achievements/positive-tech-hack/).
 
 1. { }
 2. ![ ](2_400x400.jpg)

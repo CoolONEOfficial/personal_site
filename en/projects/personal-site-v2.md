@@ -17,7 +17,7 @@ On this site you can learn about all my projects, accomplishments, see events I'
 Of the supported technologies framework provides support for SSR, PWA, SEO optimization using JSON-LD and Open Graph Protocol.
 All site data is stored in Firestore - a free NoSQL database from Google.
 
-I wrote a separate [mobile app on Flutter] (https://github.com/CoolONEOfficial/personal_site_app) to manage all the data.
+I wrote a separate [mobile app on Flutter](https://github.com/CoolONEOfficial/personal_site_app) to manage all the data.
 
 All the design was done using Buefy - CSS adaptation of Bulma framework for Vue.js.
 
