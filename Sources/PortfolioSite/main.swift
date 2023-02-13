@@ -7,10 +7,8 @@ import DarkImagePublishPlugin
 import TinySliderPublishPlugin
 import Files
 
-// This type acts as the configuration for your website.
 public struct PortfolioSite: MultiLanguageWebsite {
     public enum SectionID: String, WebsiteSectionID {
-        // Add the sections that you want your website to contain here:
         case projects
         case books
         case events
@@ -34,45 +32,18 @@ public struct PortfolioSite: MultiLanguageWebsite {
 
     public var url = URL(string: "https://coolone.ru")!
     public var names: [Language : String] {
-        [
-            .russian: "Сайт Николая Трухина",
-            .english: "Nikolai Trukhin's website"
-        ]
+        LocalizablePhrase.websiteName.allTranslations
     }
     public var descriptions: [Language : String] {
-        [
-            .russian: "Здесь собрана вся информация о моих проектах, мероприятиях что я посетил, книгах что прочитал и многое другое",
-            .english: "Here is all the information about projects, events, books, and more"
-        ]
+        LocalizablePhrase.websiteDescription.allTranslations
     }
     public var languages: [Language] { [ .english, .russian ] }
     public var imagePath: Path? { "/avatar.jpg" }
     public var favicon: Favicon? { .init(path: "/avatar.jpg", type: "image/jpg") }
 }
 
-extension PortfolioSite.ItemMetadata {
-    static let dateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        return dateFormatter
-    }()
-    
-    var parsedEndDate: Date? {
-        if let endDate = endDate {
-            return PortfolioSite.ItemMetadata.dateFormatter.date(from: endDate)
-        }
-        return nil
-    }
-}
-
-//let file = try File(path: #file)
-//guard let ftpConnection = try FTPConnection(file: file) else {
-//    throw FilesError(path: file.path, reason: LocationErrorReason.missing)
-//}
-
 try PortfolioSite().publish(
     withTheme: .portfolio,
-    //deployedUsing: .ftp(connection: ftpConnection, useSSL: false),
     additionalSteps: [
         .addItemPages()
     ],
@@ -98,40 +69,6 @@ try PortfolioSite().publish(
     ]
 )
 
-extension Section where Site == PortfolioSite {
-    public func title(in language: Language) -> String {
-        switch language {
-        case .russian:
-            switch id {
-            case .projects:
-                return "Проекты"
-            case .books:
-                return "Книги"
-            case .events:
-                return "Мероприятия"
-            case .career:
-                return "Карьера"
-            case .achievements:
-                return "Достижения"
-            }
-
-        default:
-            switch id {
-            case .projects:
-                return "Projects"
-            case .books:
-                return "Books"
-            case .events:
-                return "Events"
-            case .career:
-                return "Career"
-            case .achievements:
-                return "Achievements"
-            }
-        }
-    }
-}
-
 extension PublishingStep where Site == PortfolioSite {
     static func addItemPages() -> Self {
         .step(named: "Add items pages") { context in
@@ -144,8 +81,8 @@ extension PublishingStep where Site == PortfolioSite {
                 for (index, chunk) in chunks.enumerated() {
                     let index = index + 1
                     context.addPage(.init(path: "/items/\(index)", content: .init(
-                        title: language == .russian ? "Все посты" : "All posts",
-                        description: language == .russian ? "Список всех постов" : "List of all posts",
+                        title: language.localized(.allPosts),
+                        description: language.localized(.listAllPosts),
                         body: .init(node: .makeItemsPageContent(
                             context: context,
                             items: chunk,
@@ -157,12 +94,5 @@ extension PublishingStep where Site == PortfolioSite {
                 }
             }
         }
-    }
-}
-
-extension Item {
-    var id: String {
-        let path = self.path.absoluteString
-        return String(path[path.lastIndex(of: "/")!..<path.endIndex])
     }
 }

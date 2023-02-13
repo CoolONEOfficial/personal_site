@@ -30,10 +30,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
         "/modules/bootstrap/dist/css/bootstrap-grid.min.css"
     ]
     
-    static let rssFeedName: [Language: String] = [
-        .russian: "Подписаться на ",
-        .english: "Subscribe to"
-    ]
+    static let rssFeedName: [Language: String] = LocalizablePhrase.subscribeTo.allTranslations
     
     func makeIndexHTML(for index: Index,
                        context: PublishingContext<PortfolioSite>) throws -> HTML {
@@ -50,19 +47,19 @@ struct PortfolioHTMLFactory: HTMLFactory {
                             .contentBody(index.body)
                         )
                     ),
-                    .h2(index.language == .russian ? "Хронология" : "Chronology", .style("text-align: center; margin: 30px 0;")),
+                    .h2(.text(index.language.localized(.chronology)), .style("text-align: center; margin: 30px 0;")),
                     .itemList(
                         for: Array(context.allItems(
                             sortedBy: \.date,
-                            in: index.language!,
+                            in: index.language ?? .default,
                             order: .descending
                         ).prefix(10)),
                         on: context.site,
                         context: context
                     ),
                     .a(
-                        .href(Path("/\(context.site.pathPrefix(for: index.language!))/items/2")),
-                        .h2(index.language == .russian ? "Остальные посты →" : "Other posts →", .style("text-align: center"))
+                        .href(Path("/\(context.site.pathPrefix(for: index.language ?? .default))/items/2")),
+                        .h2(.text(index.language.localized(.otherPosts) + " →"), .style("text-align: center"))
                     )
                 ),
                 .footer(for: context.site, in: index.language)
@@ -78,7 +75,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
             .body(
                 .header(for: context, selectedSection: section.id, in: section.language),
                 .wrapper(
-                    .h1(.text(section.title(in: section.language!))),
+                    .h1(.text(section.language.localized(section.phrase))),
                     .itemList(for: section.items, on: context.site, context: context, sectionShow: false)
                 ),
                 .footer(for: context.site, in: section.language)
@@ -176,7 +173,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
             .body(
                 .header(for: context, selectedSection: nil, in: page.language),
                 .wrapper(
-                    .h1(page.language == .russian ? "Другие теги" : "Other tags"),
+                    .h1(.text(page.language.localized(.otherTags))),
                     .ul(
                         .class("all-tags"),
                         .forEach(page.tags.sorted()) { tag in
@@ -204,19 +201,19 @@ struct PortfolioHTMLFactory: HTMLFactory {
                 .header(for: context, selectedSection: nil, in: page.language),
                 .wrapper(
                     .h1(
-                        page.language == .russian ? "Записи с " : "Posts with ",
+                        .text(page.language.localized(.postsWidth) + " "),
                         .span(.class("tag"), .text(page.tag.string))
                     ),
                     .a(
                         .class("browse-all"),
-                        .text(page.language == .russian ? "Другие теги" : "Other tags"),
-                        .href(context.site.pathWithPrefix(path: context.site.tagListPath, in: page.language!))
+                        .text(page.language.localized(.otherTags)),
+                        .href(context.site.pathWithPrefix(path: context.site.tagListPath, in: page.language ?? .default))
                     ),
                     .itemList(
                         for: context.items(
                             taggedWith: page.tag,
                             sortedBy: \.date,
-                            in: page.language!,
+                            in: page.language ?? .default,
                             order: .descending
                         ),
                         on: context.site,

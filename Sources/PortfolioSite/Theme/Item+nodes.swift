@@ -14,7 +14,7 @@ extension Item where Site == PortfolioSite {
     var itemDateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
-        formatter.locale = Locale(identifier: self.language == .russian ? "ru_RU" : "en_US")
+        formatter.locale = Locale(identifier: self.language.localized(.localeIdentifier))
         return formatter
     }
     
@@ -68,7 +68,7 @@ extension Item where Site == PortfolioSite {
         if let endDate = metadata.parsedEndDate {
             dateStr += " — " + itemDateFormatter.string(from: endDate)
         } else if sectionID == .career {
-            dateStr += language == .russian ? " — по настоящее время" : " - now"
+            dateStr += language.localized(.untilNow)
         }
         
         return .row(
@@ -94,7 +94,7 @@ extension Item where Site == PortfolioSite {
             ),
             .col([.init(breakpoint: .md)],
                 .h1(.a(
-                    .href(context.site.pathWithPrefix(path: path, in: language!)),
+                    .href(context.site.pathWithPrefix(path: path, in: language ?? .default)),
                     .text(title)
                 )),
                 subheader(context: context, sectionShow: sectionShow)
@@ -138,7 +138,7 @@ extension Item where Site == PortfolioSite {
                 },
                 .col([],
                     .h4(
-                        .text(metaProject.type.name(in: language!))
+                        .text(language.localized(metaProject.type.phrase))
                     )
                 )
             ))
@@ -148,7 +148,7 @@ extension Item where Site == PortfolioSite {
                     classSuffix: .spacing([ .init(type: .margin, size: 1, side: .top) ]),
                     .col([.init(size: .auto)],
                         .h4(
-                            .text(language == .russian ? "Доступно на" : "Available on"),
+                            .text(language.localized(.availableOn)),
                             .style("margin-right: 5px")
                         )
                     ),
@@ -176,20 +176,20 @@ extension Item where Site == PortfolioSite {
         case .career:
             guard let metaCareer = metadata.career else { break }
             subNodes.append(.h4(.text(
-                metaCareer.position + ", " + metaCareer.type.name(in: language!)
+                metaCareer.position + ", " + language.localized(metaCareer.type.phrase)
             )))
         case .achievements:
             guard let metaAchievement = metadata.achievement else { break }
             subNodes.append(.h4(.text(
-                metaAchievement.type.name(for: language!)
+                language.localized(metaAchievement.type.phrase)
             )))
         }
         
         return .div(
             .if(sectionShow,
                 .h4(.a(
-                    .href(context.site.pathWithPrefix(path: section.path, in: language!)),
-                    .text(section.title(in: language!))
+                    .href(context.site.pathWithPrefix(path: section.path, in: language ?? .default)),
+                    .text(language.localized(section.phrase))
                 ))
             ),
             .forEach(subNodes) { $0 }
@@ -199,7 +199,7 @@ extension Item where Site == PortfolioSite {
     func tagList(on site: PortfolioSite) -> Node<HTML.BodyContext> {
         .ul(.class("tag-list"), .forEach(tags) { tag in
             .li(.a(
-                .href(site.path(for: tag, in: language!)),
+                .href(site.path(for: tag, in: language ?? .default)),
                 .text(tag.string)
             ))
         })
@@ -226,5 +226,20 @@ extension Item where Site == PortfolioSite {
 extension PortfolioSite {
     func pathWithPrefix(path: Path, in language: Language) -> Path {
         Path(pathPrefix(for: language)).appendingComponent(path.string)
+    }
+}
+
+extension PortfolioSite.ItemMetadata {
+    var dateFormatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        return dateFormatter
+    }
+    
+    var parsedEndDate: Date? {
+        if let endDate = endDate {
+            return dateFormatter.date(from: endDate)
+        }
+        return nil
     }
 }

@@ -73,45 +73,19 @@ struct ProjectMetadata: WebsiteItemMetadata {
 }
 
 extension ProjectType {
-    func name(in language: Language) -> String {
-        switch language {
-        case .russian:
-            switch self {
-            case .app:
-                return "Приложение"
-
-            case .game:
-                return "Игра"
-
-            case .website:
-                return "Сайт"
-
-            case .chatbot:
-                return "Чат-бот"
-
-            case .framework:
-                return "Фреймворк"
-            }
-            
-        default:
-            switch self {
-            case .app:
-                return "App"
-
-            case .game:
-                return "Game"
-
-            case .website:
-                return "Website"
-
-            case .chatbot:
-                return "Chatbot"
-
-            case .framework:
-                return "Framework"
-            }
+    var phrase: LocalizablePhrase {
+        switch self {
+        case .game:
+            return .game
+        case .app:
+            return .app
+        case .website:
+            return .website
+        case .chatbot:
+            return .chatbot
+        case .framework:
+            return .framework
         }
-
     }
 }
 

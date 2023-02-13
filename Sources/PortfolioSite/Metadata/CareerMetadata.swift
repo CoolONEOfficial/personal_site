@@ -13,41 +13,23 @@ enum JobType: String, Codable, CaseIterable {
     case contract
     case remote
     case freelance
-    case free_schedule
+    case freeSchedule = "free_schedule"
 }
 
 extension JobType {
-    func name(in language: Language) -> String {
-        switch language {
-        case .russian:
-            switch self {
-            case .office:
-                return "в офисе"
-            case .contract:
-                return "по контракту"
-            case .remote:
-                return "удаленка"
-            case .freelance:
-                return "на фрилансе"
-            case .free_schedule:
-                return "свободный график"
-            }
-            
-        default:
-            switch self {
-            case .office:
-                return "office"
-            case .contract:
-                return "contract"
-            case .remote:
-                return "remote"
-            case .freelance:
-                return "freelance"
-            case .free_schedule:
-                return "free schedule"
-            }
+    var phrase: LocalizablePhrase {
+        switch self {
+        case .office:
+            return .office
+        case .contract:
+            return .contract
+        case .remote:
+            return .remote
+        case .freelance:
+            return .freelance
+        case .freeSchedule:
+            return .freeSchedule
         }
-        
     }
 }
 

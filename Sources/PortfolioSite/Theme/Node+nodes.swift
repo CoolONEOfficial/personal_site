@@ -17,18 +17,18 @@ extension Node where Context == HTML.BodyContext {
                 .tr(
                     .th(
                         .if(pageIndex > 1, .a(
-                            .text(context.site.language == .russian ? "Назад" : "Back"),
+                            .text(context.site.language.localized(.back)),
                             .href("/\(context.site.pathPrefix(for: context.site.language))/items/\(pageIndex - 1)")
                         )),
                         .class("pagination-prev")
                     ),
                     .th(
-                        .h4(.text("\(context.site.language == .russian ? "Страница" : "Page") \(pageIndex)")),
+                        .h4(.text("\(context.site.language.localized(.page)) \(pageIndex)")),
                         .class("pagination-title")
                     ),
                     .th(
                         .if(!lastPage, .a(
-                            .text(context.site.language == .russian ? "Вперед" : "Next"),
+                            .text(context.site.language.localized(.next)),
                             .href("/\(context.site.pathPrefix(for: context.site.language))/items/\(pageIndex + 1)")
                         )),
                         .class("pagination-next")
@@ -37,7 +37,7 @@ extension Node where Context == HTML.BodyContext {
             )
         )
         return .div(
-            .h1(.text(context.site.language == .russian ? "Последние посты" : "Latest posts")),
+            .h1(.text(context.site.language.localized(.latestPosts))),
             
             navNode,
             .itemList(
@@ -77,14 +77,14 @@ extension Node where Context == HTML.BodyContext {
                             .col([],
                                 .div(
                                     .a(
-                                        .href("/\(context.site.pathPrefix(for: language!))/"),
+                                        .href("/\(context.site.pathPrefix(for: language ?? .default))/"),
                                         .p(
                                             .class("logo-title"),
-                                            .text(language == .russian ? "Николай Трухин" : "Nikolai Trukhin")
+                                            .text(language.localized(.nikolaiTrukhin))
                                         ),
                                         .p(
                                             .class("logo-subtitle"),
-                                            .text(language == .russian ? "iOS разработчик" : "iOS developer")
+                                            .text(language.localized(.positionTitle))
                                         )
                                     )
                                 )
@@ -104,8 +104,8 @@ extension Node where Context == HTML.BodyContext {
                                                 section == selectedSection ? "selected" : "",
                                                 .spacing([ .init(type: .margin, size: 2, side: .horizontal) ])
                                             ),
-                                            .href(Path(context.site.pathPrefix(for: language!)).appendingComponent(context.sections[section].path.string)),
-                                            .text(context.sections[section].title(in: language!))
+                                            .href(Path(context.site.pathPrefix(for: language ?? .default)).appendingComponent(context.sections[section].path.string)),
+                                            .text(language.localized(context.sections[section].phrase))
                                         )
                                     )
                                 } else {
@@ -138,15 +138,15 @@ extension Node where Context == HTML.BodyContext {
     ) -> Node {
         return .footer(
             .p(
-                .text(language == .russian ? "Сгенерировано с помощью " : "Generated using "),
+                .text((language.localized(.generatedUsing)) + " "),
                 .a(
                     .text("Publish"),
                     .href("https://github.com/johnsundell/publish")
                 )
             ),
             .p(.a(
-                .text(language == .russian ? "RSS лента" : "RSS channel"),
-                .href("/\(site.pathPrefix(for: language!))/feed.rss")
+                .text(language.localized(.rssChannel)),
+                .href("/\(site.pathPrefix(for: language ?? .default))/feed.rss")
             ))
         )
     }

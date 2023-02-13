@@ -15,28 +15,15 @@ public enum AchievementType: String, Codable, CaseIterable {
     case medal
 }
 
-public extension AchievementType {
-    func name(for language: Language) -> String {
-        switch language {
-        case .russian:
-            switch self {
-            case .certificate:
-                return "Сертификат"
-            case .diploma:
-                return "Диплом"
-            case .medal:
-                return "Медаль"
-            }
-            
-        default:
-            switch self {
-            case .certificate:
-                return "Certificate"
-            case .diploma:
-                return "Diploma"
-            case .medal:
-                return "Medal"
-            }
+extension AchievementType {
+    var phrase: LocalizablePhrase {
+        switch self {
+        case .certificate:
+            return .certificate
+        case .diploma:
+            return .diploma
+        case .medal:
+            return .medal
         }
     }
 }
