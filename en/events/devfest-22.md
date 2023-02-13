@@ -19,10 +19,12 @@ Why so? The case in the organizers, this time they were local guys. As in Serbia
 
 Unlike the previous time the scale of the event was small, the whole program consisted of several lectures in one flow. Also most of the lectures were in Serbian, so I attended only one lecture in English by the EPAM representative [Alexander Denisov](https://www.linkedin.com/in/aleks-denisov/).
 
+
 1. { }
 2. ![ ](1_400x400.jpg)
 3. ![ ](2_400x400.jpg)
 4. ![ ](3_400x400.jpg)
+
 
 As everything was in a co-working place not far from the center of Belgrade, there was not so much space, as well as people, but the atmosphere was quite pleasant. For example, during the breaks between the lectures all the participants were actively getting to know each other and discussing the contents of the lectures.
 
