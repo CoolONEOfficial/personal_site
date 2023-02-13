@@ -1,6 +1,6 @@
 ---
 date: 2022-12-13 00:00
-description: The third Devfest I've been to, but the first outside of Russia. I learned about it from corporate sources, because this time the event was not as hyped as in Nizhny Novgorod.
+description: The third Devfest I've been to, but the first outside of Russia. I learned about it from corporate sources, because this time the event was not as hyped as [in Nizhny Novgorod](https://coolone.ru/events/devfest-19/).
 tags: flutter, festival
 event.site: https://gdg.community.dev/events/details/google-gdg-beograd-presents-devfest-22/
 logo: .png
