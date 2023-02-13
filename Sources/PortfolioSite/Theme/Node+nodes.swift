@@ -96,17 +96,14 @@ extension Node where Context == HTML.BodyContext {
                                 .init(type: .end, breakpoint: .md),
                                 .init(type: .center)
                             ],
+                             Self.headerSection(context: context, isSelected: false, link: Path(context.site.pathPrefix(for: language ?? .default)).appendingComponent(Constants.cvFilename), text: language.localized(.cv)),
                             .forEach(sectionIDs) { section in
                                 if let section = section {
-                                    return .col([.init(size: .auto)],
-                                        .a(
-                                            .class(
-                                                section == selectedSection ? "selected" : "",
-                                                .spacing([ .init(type: .margin, size: 2, side: .horizontal) ])
-                                            ),
-                                            .href(Path(context.site.pathPrefix(for: language ?? .default)).appendingComponent(context.sections[section].path.string)),
-                                            .text(language.localized(context.sections[section].phrase))
-                                        )
+                                    return Self.headerSection(
+                                        context: context,
+                                        isSelected: section == selectedSection,
+                                        link: Path(context.site.pathPrefix(for: language ?? .default)).appendingComponent(context.sections[section].path.string),
+                                        text: language.localized(context.sections[section].phrase)
                                     )
                                 } else {
                                     return .element(named: "div", nodes: [ .class("header-wrap") ])
@@ -116,6 +113,24 @@ extension Node where Context == HTML.BodyContext {
                     )
                 )
                 
+            )
+        )
+    }
+    
+    private static func headerSection(
+        context: PublishingContext<PortfolioSite>,
+        isSelected: Bool,
+        link: Path,
+        text: String
+    ) -> Node<HTML.BootstrapRowContext> {
+        .col([.init(size: .auto)],
+            .a(
+                .class(
+                    isSelected ? "selected" : "",
+                    .spacing([ .init(type: .margin, size: 2, side: .horizontal) ])
+                ),
+                .href(link),
+                .text(text)
             )
         )
     }
@@ -136,7 +151,7 @@ extension Node where Context == HTML.BodyContext {
         for site: PortfolioSite,
         in language: Language?
     ) -> Node {
-        return .footer(
+        .footer(
             .p(
                 .text((language.localized(.generatedUsing)) + " "),
                 .a(

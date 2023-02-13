@@ -47,6 +47,7 @@ enum LocalizablePhrase {
     case freeSchedule
     case allPosts
     case listAllPosts
+    case cv
 }
 
 extension LocalizablePhrase {
@@ -128,6 +129,8 @@ extension LocalizablePhrase {
             return "Все посты"
         case .listAllPosts:
             return "Список всех постов"
+        case .cv:
+            return "CV"
         }
     }
     
@@ -209,6 +212,8 @@ extension LocalizablePhrase {
             return "All posts"
         case .listAllPosts:
             return "List of all posts"
+        case .cv:
+            return "CV"
         }
     }
     

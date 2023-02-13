@@ -30,7 +30,7 @@ public struct PortfolioSite: MultiLanguageWebsite {
         public var alternateLinkIdentifier: String?
     }
 
-    public var url = URL(string: "https://coolone.ru")!
+    public var url = Constants.websiteUrl
     public var names: [Language : String] {
         LocalizablePhrase.websiteName.allTranslations
     }
@@ -38,8 +38,8 @@ public struct PortfolioSite: MultiLanguageWebsite {
         LocalizablePhrase.websiteDescription.allTranslations
     }
     public var languages: [Language] { [ .english, .russian ] }
-    public var imagePath: Path? { "/avatar.jpg" }
-    public var favicon: Favicon? { .init(path: "/avatar.jpg", type: "image/jpg") }
+    public var imagePath: Path? { Path("/" + Constants.avatarFilename) }
+    public var favicon: Favicon? { Favicon(path: Path("/" + Constants.avatarFilename), type: "image/jpg") }
 }
 
 try PortfolioSite().publish(
