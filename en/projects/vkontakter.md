@@ -1,6 +1,6 @@
 ---
 date: 2021-06-22 00:00
-description: A framework for developing chatbots on the VKontakte social network platform in Swift. Written on the basis of [Telegrammer] framework(https://github.com/givip/Telegrammer).
+description: A framework for developing chatbots on the VKontakte social network platform in Swift. Written on the basis of [Telegrammer framework](https://github.com/givip/Telegrammer).
 tags: swift, chatbot, vk
 project.platforms: vk
 project.marketplaces: "github: https://github.com/CoolONEOfficial/Vkontakter"

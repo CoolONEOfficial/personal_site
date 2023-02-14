@@ -1,6 +1,6 @@
 ---
 date: 2018-05-02 00:00
-description: After completing the [Samsung IT School] program (https://coolone.ru/events/samsung-it-school/), all students submitted their final projects to the competition. In my case it was [Travel Quest](https://coolone.ru/projects/travel-quest/), a mobile application for tourists, which ended up being the best in its category.
+description: After completing the [Samsung IT School program](https://coolone.ru/events/samsung-it-school/), all students submitted their final projects to the competition. In my case it was [Travel Quest](https://coolone.ru/projects/travel-quest/), a mobile application for tourists, which ended up being the best in its category.
 tags: java, android, diploma
 singleImage: .jpg
 logo: .jpg
