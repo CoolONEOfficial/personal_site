@@ -1,5 +1,4 @@
-# Hi 👋
-# Nice to meet you 👨‍💻
+# Hi 👋 Nice to meet you 👨‍💻
 ## My name is Nikolai, I'm iOS dev 🍏 
 ## During working hours I write on swift, but I also have pet projects with Flutter, Vue.js, Java, Qt 👀
-### This site contains notes about my projects, events where I have participated, books that I have read and other details of my career
+### This site contains notes about my projects 👾, events 📅 where I have participated, books 📚 that I have read and other details of my career
