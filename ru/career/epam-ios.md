@@ -1,5 +1,5 @@
 ---
-date: 2020-08-30 00:00
+date: 2019-02-01 00:01
 career.type: free_schedule
 career.position: iOS разработчик
 description: Мой первый опыт официальной работы. В эту компанию мне удалось устроится после прохождения [курсов по iOS разработке](https://coolone.ru/events/ios-course/) и стажировки. 

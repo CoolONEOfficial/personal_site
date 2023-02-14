@@ -1,5 +1,5 @@
 ---
-date: 2020-01-08 00:00
+date: 2019-01-01 00:01
 description: A good book for an introduction to the Swift programming language that I read in preparation for an iOS development course.
 tags: swift, ios
 book.site: https://swiftme.ru/

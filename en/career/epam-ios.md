@@ -1,5 +1,5 @@
 ---
-date: 2018-10-01 00:00
+date: 2019-02-01 00:01
 career.type: free_schedule
 career.position: iOS developer
 description: My first official work experience. I managed to get a job in this company after taking [iOS development courses](https://coolone.ru/events/ios-course/) and an internship. 
