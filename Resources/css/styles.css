@@ -294,11 +294,10 @@ img[alt=item-left] {
 }
 
 .pagination-prev {
-    min-width: 200px;
+    text-align: left;
 }
 
 .pagination-next {
-    min-width: 200px;
     text-align: right;
 }
 
