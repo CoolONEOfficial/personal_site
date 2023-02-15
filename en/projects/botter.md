@@ -10,7 +10,7 @@ alternateLinkIdentifier: botter
 ---
 # Botter
 
-This framework wraps [Telegrammer](https://github.com/givip/Telegrammer) and [Vkontakter](/projects/vkontakter), abstracting the implementation details of each, and allows you to work with the same functionality regardless of platform.
+This framework wraps [Telegrammer](https://github.com/givip/Telegrammer) and [Vkontakter](/projects/vkontakter), abstracting the implementation details of each, and allows you to work with the same functionality regardless of platform. 
 
 With it, you can:  
 - Send and receive messages, media.
