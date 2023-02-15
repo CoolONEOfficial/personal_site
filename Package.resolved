@@ -48,10 +48,10 @@
     {
       "identity" : "plot",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/johnsundell/plot.git",
+      "location" : "https://github.com/CoolONEOfficial/plot.git",
       "state" : {
-        "revision" : "b358860fe565eb53e98b1f5807eb5939c8124547",
-        "version" : "0.11.0"
+        "branch" : "open-graph-fix",
+        "revision" : "a973bed37dcb949e9fee743f710cde68fee69f2f"
       }
     },
     {
@@ -60,7 +60,7 @@
       "location" : "https://github.com/CoolONEOfficial/Publish.git",
       "state" : {
         "branch" : "Multi-Language",
-        "revision" : "4563892e5822164f9894f44ae87f61257149a2b8"
+        "revision" : "6961707add23f7f3795e62f4aa6eb12be457faeb"
       }
     },
     {
