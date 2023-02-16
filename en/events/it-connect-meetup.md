@@ -1,6 +1,6 @@
 ---
 date: 2022-12-03 00:00
-description: A meetup formed thanks to a community of relocated IT professionals - [IT Connect](https://t.me/belgradeitmeetups). Although this event did not have big sponsors and big budgets it was quite interesting.
+description: A meetup formed thanks to a community of relocated IT professionals - [IT Connect](https://t.me/belgradeitmeetups). Although this event did not have big sponsors and big budgets it was quite interesting. 🫱‍🫲
 tags: startup, meetup
 event.site: https://t.me/belgradeitmeetups
 logo: .jpg
@@ -13,7 +13,7 @@ alternateLinkIdentifier: it-connect-meetup
 ---
 # IT Connect Meetup
 
-A meetup formed thanks to a community of relocated IT professionals - [IT Connect](https://t.me/belgradeitmeetups). Although this event did not have big sponsors and big budgets it was quite interesting.
+A meetup formed thanks to a community of relocated IT professionals - [IT Connect](https://t.me/belgradeitmeetups). Although this event did not have big sponsors and big budgets it was quite interesting. 🫱‍🫲
 
 The theme of the event was startups and work in them. It would seem that for me this area was not very relevant, nevertheless the well-built program of the event made it interesting for me as well.
 

@@ -1,6 +1,6 @@
 ---
 date: 2021-12-20 00:00
-description: Finals of the International Olympiad "IT Planet 2020/21". My second participation in this competition.
+description: Finals of the International Olympiad "IT Planet 2020/21". My second participation in this competition. 🏅
 tags: open-source, competition
 event.location.title: Online
 logo: .png
@@ -14,7 +14,7 @@ alternateLinkIdentifier: it-planet-20-21
 ---
 # IT Planet 2020/21 Final International Olympiad 
 
-My second participation in this competition. Like in [last time](https://coolone.ru/ru/events/it-planet-18-19/) I chose the "Best Free Diploma" category, but this time my project was of a completely different type. If last time the topic of the project was a mobile app for scheduling, this time the topic was the development of chatbots.
+My second participation in this competition. 🏅 Like in [last time](https://coolone.ru/ru/events/it-planet-18-19/) I chose the "Best Free Diploma" category, but this time my project was of a completely different type. If last time the topic of the project was a mobile app for scheduling, this time the topic was the development of chatbots.
 
 
 At the Olympiad [I told](https://youtu.be/bvpScG3gJM0?t=5050) about ["Photobot"](https://coolone.ru/projects/photobot/) - a chatbot for photographers that automates the routine in their work. Fortunately I had enough time to mention the necessary details to appreciate my work.

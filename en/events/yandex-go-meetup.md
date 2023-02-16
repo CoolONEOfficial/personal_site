@@ -1,6 +1,6 @@
 ---
 date: 2022-12-14 00:00
-description: The second meetup from Yandex that I attended in Serbia, this time dedicated to one of the products of this company, Yandex Go.
+description: The second meetup from Yandex that I attended in Serbia, this time dedicated to one of the products of this company, Yandex Go. 🚕
 tags: yandex, meetup, taxi
 event.site: https://www.linkedin.com/company/yandex-go
 logo: .jpg
@@ -13,7 +13,7 @@ alternateLinkIdentifier: yandex-go-meetup
 ---
 # Yandex Go Meetup
 
-The second meetup from Yandex that I attended in Serbia, this time dedicated to one of the products of this company, Yandex Go.
+The second meetup from Yandex that I attended in Serbia, this time dedicated to one of the products of this company, Yandex Go. 🚕
 
 During the event there were several lectures, mostly about non-technical topics. Nevertheless, it was interesting to listen how the guys were solving business problems.
 
