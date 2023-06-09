@@ -4,6 +4,7 @@ description: Первая победа в онлайн хакатоне в со�
 tags: swiftui, ios, hackathon, swift
 achievement.type: certificate
 logo: .jpg
+singleImage: .jpg
 achievement.site: https://vcr-challenge.ru
 achievement.organisation: Volvo
 alternateLinkIdentifier: volvo-hack

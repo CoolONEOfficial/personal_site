@@ -4,6 +4,7 @@ description: First victory in online hackathon as a member of Team13. 🥳
 tags: swiftui, ios, hackathon, swift
 achievement.type: certificate
 logo: .jpg
+singleImage: .jpg
 achievement.site: https://vcr-challenge.ru
 achievement.organization: Volvo
 alternateLinkIdentifier: volvo-hack
