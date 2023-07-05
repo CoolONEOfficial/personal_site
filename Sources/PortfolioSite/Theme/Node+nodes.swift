@@ -96,17 +96,17 @@ extension Node where Context == HTML.BodyContext {
                                 .init(type: .end, breakpoint: .md),
                                 .init(type: .center)
                             ],
-                             Self.headerSection(context: context, isSelected: false, link: Path(context.site.pathPrefix(for: language ?? .default)).appendingComponent(Constants.cvFilename), text: language.localized(.cv)),
+                             Self.headerSection(context: context, isSelected: false, link: Path(context.site.pathPrefix(for: language ?? .default)).appendingComponent(Constants.cvFilename), text: language.localized(.cvEmoji)),
                             .forEach(sectionIDs) { section in
                                 if let section = section {
                                     return Self.headerSection(
                                         context: context,
                                         isSelected: section == selectedSection,
                                         link: Path(context.site.pathPrefix(for: language ?? .default)).appendingComponent(context.sections[section].path.string),
-                                        text: language.localized(context.sections[section].phrase)
+                                        text: language.localized(context.sections[section].emojiPhrase)
                                     )
                                 } else {
-                                    return .element(named: "div", nodes: [ .class("header-wrap") ])
+                                    return .element(named: "div")
                                 }
                             }
                         )

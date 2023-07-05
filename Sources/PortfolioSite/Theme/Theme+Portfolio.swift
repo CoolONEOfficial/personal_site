@@ -75,7 +75,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
             .body(
                 .header(for: context, selectedSection: section.id, in: section.language),
                 .wrapper(
-                    .h1(.text(section.language.localized(section.phrase))),
+                    .h1(.text(section.language.localized(section.titlePhrase))),
                     .itemList(for: section.items, on: context.site, context: context, sectionShow: false)
                 ),
                 .footer(for: context.site, in: section.language)

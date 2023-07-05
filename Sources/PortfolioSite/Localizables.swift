@@ -26,10 +26,15 @@ enum LocalizablePhrase {
     case otherPosts
     case subscribeTo
     case projects
+    case projectsEmoji
     case books
+    case booksEmoji
     case events
+    case eventsEmoji
     case career
+    case careerEmoji
     case achievements
+    case achievementsEmoji
     case otherTags
     case postsWidth
     case certificate
@@ -48,6 +53,7 @@ enum LocalizablePhrase {
     case allPosts
     case listAllPosts
     case cv
+    case cvEmoji
 }
 
 extension LocalizablePhrase {
@@ -131,6 +137,18 @@ extension LocalizablePhrase {
             return "Список всех постов"
         case .cv:
             return "CV"
+        case .projectsEmoji:
+            return "👾"
+        case .booksEmoji:
+            return "📚"
+        case .eventsEmoji:
+            return "📅"
+        case .careerEmoji:
+            return "💼"
+        case .achievementsEmoji:
+            return "🏆"
+        case .cvEmoji:
+            return "📄"
         }
     }
     
@@ -214,6 +232,18 @@ extension LocalizablePhrase {
             return "List of all posts"
         case .cv:
             return "CV"
+        case .projectsEmoji:
+            return "👾"
+        case .booksEmoji:
+            return "📚"
+        case .eventsEmoji:
+            return "📅"
+        case .careerEmoji:
+            return "💼"
+        case .achievementsEmoji:
+            return "🏆"
+        case .cvEmoji:
+            return "📄"
         }
     }
     

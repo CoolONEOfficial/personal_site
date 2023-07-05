@@ -28,7 +28,7 @@ body {
 header {
     background-color: #eee;
     overflow: hidden;
-    padding: 24px 12px;
+    padding: 24px 12px 12px 12px;
 }
 
 header .wrapper {
@@ -53,7 +53,10 @@ header a {
 }
 
 header a.selected {
-    color: #8a8a8a
+    color: #8a8a8a;
+    margin: 0px 4px!important;
+    padding: 4px;
+    background-color: #fff;
 }
 
 header .logo-title {
@@ -90,6 +93,19 @@ header .logo-subtitle, header .logo-title {
         margin-bottom: 0;
     }
 }
+
+@media(max-width: 767px) {
+    header {
+        position: sticky;
+        top: -150px;
+        z-index: 1;
+    }
+
+    header .logo-subtitle {
+        padding-bottom: 25px!important;
+    }
+}
+
 
 h1 {
     margin-bottom: 20px;
@@ -329,6 +345,10 @@ img[alt=item-left] {
     
     .welcome-block {
         background-color: #111;
+    }
+
+    header a.selected {
+        background-color: #222;
     }
 }
 
