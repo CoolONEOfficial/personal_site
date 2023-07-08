@@ -31,7 +31,7 @@ extension Item where Site == PortfolioSite {
                     singleImage(hideOnSm: false),
                     footer(on: site, context: context)
                 ),
-                .col([.init(size: .auto, breakpoint: .sm)],
+                 .col([.init(size: ._4, breakpoint: .sm)],
                      .div(
                         .class(.spacing([
                             .init(type: .margin, size: 3, side: .left, breakpoint: .sm),
@@ -53,17 +53,18 @@ extension Item where Site == PortfolioSite {
         }
 
         return .div(
-           .class(
-               .spacing([
-                   .init(type: .margin, size: 3, side: .vertical),
-                   .init(type: .margin, size: 0, side: .vertical, breakpoint: .sm)
-               ]),
-               .display([
-                .init(type: hideOnSm ? .block : .none, breakpoint: .sm),
-                .init(type: hideOnSm ? .none : .block)
-               ])
-           ),
-           image(name, ext)
+            .class(
+                .spacing([
+                    .init(type: .margin, size: 3, side: .vertical),
+                    .init(type: .margin, size: 0, side: .vertical, breakpoint: .sm)
+                ]),
+                .display([
+                 .init(type: hideOnSm ? .block : .none, breakpoint: .sm),
+                 .init(type: hideOnSm ? .none : .block)
+                ]),
+                hideOnSm ? .init() : .init("justify-content-center")
+            ),
+            image(name, ext)
         )
     }
     
@@ -95,11 +96,12 @@ extension Item where Site == PortfolioSite {
         context: PublishingContext<PortfolioSite>,
         sectionShow: Bool = true
     ) -> Node<HTML.BodyContext> {
-        .row(
+        let isLongTitle = title.count > 40
+        return .row(
             .col([.init(size: .auto)],
                  image("logo", metadata.logo)
             ),
-            .col([.init(breakpoint: description.count > 60 ? .sm : nil)],
+            .col([.init(breakpoint: isLongTitle ? .sm : nil)], verticalSpacing: isLongTitle,
                 .h1(.a(
                     .href(context.site.pathWithPrefix(path: path, in: language ?? .default)),
                     .text(title)
