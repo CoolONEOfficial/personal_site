@@ -205,7 +205,7 @@ extension Item where Site == PortfolioSite {
     ) -> Node<HTML.BodyContext> {
         .if(ext != nil,
             .img(
-                .src("/\(path)/\(name)\(preview ? "_400x400" : "")\(ext ?? "")"),
+                .src("/\(path)/\(name)\(preview && !name.contains("_400x400") ? "_400x400" : "")\(ext ?? "")"),
                 .alt(alt),
                 .class("item-\(classPrefix)\(name)"),
                 .roundedImage(ext)
