@@ -45,7 +45,14 @@ extension Item where Site == PortfolioSite {
     }
     
     private func singleImage(hideOnSm: Bool) -> Node<HTML.BodyContext> {
-        .div(
+        var (name, ext) = ("singleImage", metadata.singleImage)
+        if ext == nil,
+           let firstImage = content.body.html.firstSubstring(between: "src=\"", and: "\""),
+           let dotIndex = firstImage.firstIndex(of: ".") {
+            (name, ext) = (String(firstImage[..<dotIndex]), String(firstImage[dotIndex...]))
+        }
+
+        return .div(
            .class(
                .spacing([
                    .init(type: .margin, size: 3, side: .vertical),
@@ -56,7 +63,7 @@ extension Item where Site == PortfolioSite {
                 .init(type: hideOnSm ? .none : .block)
                ])
            ),
-           image("singleImage", metadata.singleImage)
+           image(name, ext)
         )
     }
     
