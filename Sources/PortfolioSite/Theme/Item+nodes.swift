@@ -60,7 +60,7 @@ extension Item where Site == PortfolioSite {
                 ]),
                 .display([
                  .init(type: hideOnSm ? .block : .none, breakpoint: .sm),
-                 .init(type: hideOnSm ? .none : .block)
+                 .init(type: hideOnSm ? .none : .flex)
                 ]),
                 hideOnSm ? .init() : .init("justify-content-center")
             ),
