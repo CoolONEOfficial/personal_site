@@ -243,13 +243,6 @@ a {
     margin-bottom: 5px;
 }
 
-.item-singleImage {
-    width: 190px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 .item-date {
     white-space: pre-wrap;
 }
