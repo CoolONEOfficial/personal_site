@@ -47,6 +47,7 @@ enum ProjectType: String, Codable, CaseIterable {
     case website
     case chatbot
     case framework
+    case library
 }
 
 struct ProjectMetadata: WebsiteItemMetadata {
@@ -86,6 +87,8 @@ extension ProjectType {
             return .chatbot
         case .framework:
             return .framework
+        case .library:
+            return .library
         }
     }
 }

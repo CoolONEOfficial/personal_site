@@ -2,6 +2,7 @@
 date: 2023-06-05 00:00
 description: The PlantMe AR Catalog is an innovative, user-friendly app that leverages AR technology to let users visualize houseplants in their own space and design their ideal indoor jungle.
 logo: .jpg
+tags: swift, app, visionos, swiftui
 project.platforms: visionos
 project.marketplaces: "website: https://plantme.framer.ai/"
 project.type: app

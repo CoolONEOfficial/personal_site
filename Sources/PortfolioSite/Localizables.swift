@@ -45,6 +45,7 @@ enum LocalizablePhrase {
     case website
     case chatbot
     case framework
+    case library
     case office
     case contract
     case remote
@@ -121,6 +122,8 @@ extension LocalizablePhrase {
             return "Чат-бот"
         case .framework:
             return "Фреймворк"
+        case .library:
+            return "Библиотека"
         case .office:
             return "в офисе"
         case .contract:
@@ -216,6 +219,8 @@ extension LocalizablePhrase {
             return "Chatbot"
         case .framework:
             return "Framework"
+        case .library:
+            return "Library"
         case .office:
             return "office"
         case .contract:

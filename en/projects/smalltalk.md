@@ -1,7 +1,7 @@
 ---
 date: 2020-03-06 00:00
 description: A fast and easy-to-use messenger for iOS inspired by Telegram. The app was developed as a final project as part of EPAM's iOS development courses. A team of four students, including myself, was involved in the development.
-tags: swift, firebase, firestore, algolia, app
+tags: swift, firebase, firestore, algolia, app, ios
 project.organisation: EPAM
 project.platforms: ios
 project.marketplaces: "github: https://github.com/CoolONEOfficial/smalltalk_messenger"
