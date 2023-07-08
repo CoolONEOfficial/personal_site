@@ -15,6 +15,7 @@ protocol Iconic {
 enum ProjectPlatform: String, Codable, Iconic, CaseIterable {
     case android
     case ios
+    case visionos
     case linux
     case mac
     case windows
