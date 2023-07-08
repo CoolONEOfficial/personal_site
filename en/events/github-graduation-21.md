@@ -21,9 +21,9 @@ In my case I was lucky enough to be one of the first to register. This gave me t
 
 
 1. { }
-2. ![ ](1_400x400.jpg)
-3. ![ ](2_400x400.jpg)
-4. ![ ](3_400x400.jpg)
+2. ![ ](1.jpg)
+3. ![ ](2.jpg)
+4. ![ ](3.jpg)
 
 
 At the event itself there was a live broadcast on Twich platform where two presenters discussed the news, communicated with the participants and congratulated all the graduates. I liked the technical side of the event without any complaints, as well as the atmosphere created by the presenters. 🎄

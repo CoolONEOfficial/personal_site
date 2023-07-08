@@ -14,10 +14,10 @@ alternateLinkIdentifier: smalltalk
 A fast and convenient messenger for iOS inspired by Telegram. The app was developed as a final project in [EPAM's iOS development course](/events/ios-course). A team of four students, including myself, were involved in the development.
 
 1. { }
-2. ![ ](2_400x400.jpg)
-3. ![ ](4_400x400.jpg)
-4. ![ ](1_400x400.jpg)
-5. ![ ](3_400x400.jpg)
+2. ![ ](2.jpg)
+3. ![ ](4.jpg)
+4. ![ ](1.jpg)
+5. ![ ](3.jpg)
 
 The application has a wide range of functionality: you can create and edit chats, save messages, forward messages, edit your profile and the profiles of your contacts, and much more. 
 

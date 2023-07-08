@@ -21,9 +21,9 @@ Unlike the previous time the scale of the event was small, the whole program con
 
 
 1. { }
-2. ![ ](1_400x400.jpg)
-3. ![ ](2_400x400.jpg)
-4. ![ ](3_400x400.jpg)
+2. ![ ](1.jpg)
+3. ![ ](2.jpg)
+4. ![ ](3.jpg)
 
 
 As everything was in a co-working place not far from the center of Belgrade, there was not so much space, as well as people, but the atmosphere was quite pleasant. For example, during the breaks between the lectures all the participants were actively getting to know each other and discussing the contents of the lectures.

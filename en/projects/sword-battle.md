@@ -16,9 +16,9 @@ My first game in C++. During its development I wanted to make it as beautiful an
 It was the first time I encountered so many difficulties associated with the implementation of game mechanics.
 
 1. { }
-2. ![ ](2_400x400.jpg)
-3. ![ ](1_400x400.jpg)
-4. ![ ](3_400x400.jpg)
+2. ![ ](2.jpg)
+3. ![ ](1.jpg)
+4. ![ ](3.jpg)
 
 For the development of this project, as well as previous ones, I used Qt - one of the most appropriate C++ frameworks. 
 

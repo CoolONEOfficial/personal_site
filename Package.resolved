@@ -104,8 +104,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/CoolONEOfficial/TinySliderPublishPlugin.git",
       "state" : {
-        "revision" : "29da0b2fccee2030108687e07665d8fab4a3984a",
-        "version" : "0.1.4"
+        "revision" : "95e3d2e0e6118ad6740dc91e4a7901ca148f2be2",
+        "version" : "0.1.5"
       }
     }
   ],

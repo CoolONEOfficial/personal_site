@@ -56,7 +56,7 @@ try PortfolioSite().publish(
     plugins: [
         .splash(withClassPrefix: ""),
         .darkImage(),
-        .tinySlider(jsPath: "/modules/tiny-slider/src/tiny-slider.js", defaultConfig: [
+        .tinySlider(jsPath: "/modules/tiny-slider/src/tiny-slider.js", minimizedImagesConfig: [ .init(suffix: "_400x400", imageSize: "400px") ], defaultConfig: [
             "mouseDrag": true,
             "swipeAngle": false,
             "controls": false,

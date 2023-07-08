@@ -18,9 +18,9 @@ In between lectures it was interesting for me to walk around the stands of compa
 
 
 1. { }
-2. ![ ](2_400x400.jpg)
-3. ![ ](1_400x400.jpg)
-4. ![ ](3_400x400.jpg)
+2. ![ ](2.jpg)
+3. ![ ](1.jpg)
+4. ![ ](3.jpg)
 
 
  After a full round, I picked up quite a few souvenirs - stickers, mugs, notepads, t-shirts, and more.

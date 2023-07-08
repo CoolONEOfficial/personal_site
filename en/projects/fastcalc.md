@@ -13,8 +13,8 @@ alternateLinkIdentifier: fastcalc
 An intermediate project within [Samsung IT School](/events/samsung-it-school). When developing this app, I focused on user-friendly design and great functionality.
 
 1. { }
-2. ![ ](2_400x400.jpg)
-3. ![ ](1_400x400.jpg)
-4. ![ ](3_400x400.jpg)
+2. ![ ](2.jpg)
+3. ![ ](1.jpg)
+4. ![ ](3.jpg)
 
 In this project I used Java for the first time to write a native application. Also I had not worked with solving examples before and through this work I gained experience in this direction.

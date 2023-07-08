@@ -19,10 +19,10 @@ This hackathon was one of the most memorable of all because it was very atmosphe
 
 
 1. { }
-2. ![ ](2_400x400.jpg)
-3. ![ ](4_400x400.jpg)
-4. ![ ](1_400x400.jpg)
-5. ![ ](3_400x400.jpg)
+2. ![ ](2.jpg)
+3. ![ ](4.jpg)
+4. ![ ](1.jpg)
+5. ![ ](3.jpg)
 
 
  After the awards ceremony, all the participants discussed the results for a long time and gave interviews to the organizers. I, like everyone else, enjoyed the event. 

@@ -13,5 +13,5 @@ alternateLinkIdentifier: positive-tech-hack
 I received these certificates because our team won in these categories at the [Positive Technologies Hackathon](https://coolone.ru/achievements/positive-tech-hack/).
 
 1. { }
-2. ![ ](2_400x400.jpg)
-3. ![ ](1_400x400.jpg)
+2. ![ ](2.jpg)
+3. ![ ](1.jpg)

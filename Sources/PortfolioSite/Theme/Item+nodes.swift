@@ -92,7 +92,7 @@ extension Item where Site == PortfolioSite {
             .col([.init(size: .auto)],
                  image("logo", metadata.logo)
             ),
-            .col([.init(breakpoint: .md)],
+            .col([.init(breakpoint: description.count > 60 ? .sm : nil)],
                 .h1(.a(
                     .href(context.site.pathWithPrefix(path: path, in: language ?? .default)),
                     .text(title)
@@ -101,22 +101,6 @@ extension Item where Site == PortfolioSite {
             )
         )
     }
-    
-//    private func iconsRow<Key: Iconic & Hashable>(_ icons: Dictionary<Key, String?>, context: PublishingContext<PortfolioSite>) -> Node<HTML.BodyContext> {
-//        .row(
-//            classSuffix: .spacing([ .init(type: .margin, size: 1, side: .top) ]),
-//            .forEach(icons) { iconEntry in
-//                .col([.init(size: .auto)],
-//                     .a(
-//                        .href(iconEntry.value ?? ""),
-//                        .div(
-//                            .icon(iconEntry.key.icon, context: context)
-//                        )
-//                     )
-//                )
-//            }
-//        )
-//    }
 
     func subheader(
         context: PublishingContext<PortfolioSite>,

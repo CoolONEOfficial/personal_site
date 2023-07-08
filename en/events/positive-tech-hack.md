@@ -18,8 +18,8 @@ The second hackathon in my life. Our team consisted of only two people - myself 
 
 
 1. { }
-2. ![ ](2_400x400.jpg)
-3. ![ ](1_400x400.jpg)
+2. ![ ](2.jpg)
+3. ![ ](1.jpg)
 
 
  Unfortunately, we could not finish the task before the deadline, so after submitting the work for review, I did not wait for the results to go home. Waking up the next morning the first thing I saw was a notification of a new entry in the group it52.info. In it was a congratulation of our team for winning in two categories - "Best Quality Code" and "Most Secure Web Application". The conditions at the site were not bad, the temperature was normal, WiFi was not a problem and at night the organizers ordered pizza for everyone.

@@ -15,10 +15,10 @@ My first visit to this festival.
 
 
 1. { }
-2. ![ ](2_400x400.jpg)
-3. ![ ](4_400x400.jpg)
-4. ![ ](1_400x400.jpg)
-5. ![ ](3_400x400.jpg)
+2. ![ ](2.jpg)
+3. ![ ](4.jpg)
+4. ![ ](1.jpg)
+5. ![ ](3.jpg)
 
 
  What I liked most about it were the lectures that helped me learn Firebase.

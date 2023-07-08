@@ -16,11 +16,11 @@ From start to finish this project took about four months.
 After the project was published, it was used by a large number of students and teachers of RANEPA.
 
 1. { }
-4. ![ ](1_400x400.jpg)
-2. ![ ](2_400x400.jpg)
-5. ![ ](3_400x400.jpg)
-3. ![ ](4_400x400.jpg)
-6. ![ ](5_400x400.jpg)
+4. ![ ](1.jpg)
+2. ![ ](2.jpg)
+5. ![ ](3.jpg)
+3. ![ ](4.jpg)
+6. ![ ](5.jpg)
 
 I also had some help with the design and uploading to the App Store from my classmates, whose names are listed in the app. After the end of the development in a few months the repository of the application began to be evaluated by the open source community.
  

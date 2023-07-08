@@ -22,11 +22,11 @@ The schedule of the event consisted of several lectures and an interactive sessi
 To be honest, the lecturers didn't manage to convince me to launch my own startup, but it was interesting to listen to stories about how someone attracted a ton of investment or made a fatal mistake.
 
 1. { }
-2. ![ ](1_400x400.jpg)
-3. ![ ](2_400x400.jpg)
-4. ![ ](3_400x400.jpg)
-4. ![ ](4_400x400.jpg)
-4. ![ ](5_400x400.jpg)
+2. ![ ](1.jpg)
+3. ![ ](2.jpg)
+4. ![ ](3.jpg)
+4. ![ ](4.jpg)
+4. ![ ](5.jpg)
 
 The organizers did not have the question of choosing a venue for the event, as there were not many options. It was a small co-working place with Russian roots and a mini bar. Fortunately it was enough to cover the needs of participants.
 

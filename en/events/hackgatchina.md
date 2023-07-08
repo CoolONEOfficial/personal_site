@@ -17,10 +17,10 @@ The first hackathon on the road. In it, for the first time our Team13 team in th
 
 
 1. { }
-2. ![ ](2_400x400.jpg)
-3. ![ ](4_400x400.jpg)
-4. ![ ](1_400x400.jpg)
-5. ![ ](3_400x400.jpg)
+2. ![ ](2.jpg)
+3. ![ ](4.jpg)
+4. ![ ](1.jpg)
+5. ![ ](3.jpg)
 
 
  I liked the organization of the event, it was convenient to work at the site. Also pleased that after winning I took away a certificate of 2nd place with me. 

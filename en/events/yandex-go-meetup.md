@@ -21,9 +21,9 @@ At the meetup I already knew a few of the participants, but I was able to make a
 
 
 1. { }
-2. ![ ](1_400x400.jpg)
-3. ![ ](2_400x400.jpg)
-4. ![ ](3_400x400.jpg)
+2. ![ ](1.jpg)
+3. ![ ](2.jpg)
+4. ![ ](3.jpg)
 
 
 Separate mention should be made of the surroundings built by the organizers. Yandex always rents quite prestigious premises for its events, and this time was no exception.
