@@ -62,7 +62,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
                         .h2(.text(index.language.localized(.otherPosts) + " →"), .style("text-align: center"))
                     )
                 ),
-                .footer(for: context.site, in: index.language)
+                .footer(for: context.site, in: index.language, context: context)
             )
         )
     }
@@ -78,7 +78,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
                     .h1(.text(section.language.localized(section.titlePhrase))),
                     .itemList(for: section.items, on: context.site, context: context, sectionShow: false)
                 ),
-                .footer(for: context.site, in: section.language)
+                .footer(for: context.site, in: section.language, context: context)
             )
         )
     }
@@ -147,7 +147,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
                         .attribute(named: "async")
                     )
                 ),
-                .footer(for: context.site, in: item.language)
+                .footer(for: context.site, in: item.language, context: context)
             )
         )
     }
@@ -160,7 +160,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
             .body(
                 .header(for: context, selectedSection: nil, in: page.language),
                 .wrapper(.contentBody(page.body)),
-                .footer(for: context.site, in: page.language)
+                .footer(for: context.site, in: page.language, context: context)
             )
         )
     }
@@ -187,7 +187,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
                         }
                     )
                 ),
-                .footer(for: context.site, in: page.language)
+                .footer(for: context.site, in: page.language, context: context)
             )
         )
     }
@@ -220,7 +220,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
                         context: context
                     )
                 ),
-                .footer(for: context.site, in: page.language)
+                .footer(for: context.site, in: page.language, context: context)
             )
         )
     }

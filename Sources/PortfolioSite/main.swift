@@ -8,6 +8,51 @@ import TinySliderPublishPlugin
 import Files
 
 public struct PortfolioSite: MultiLanguageWebsite {
+    public enum Socials: String, CaseIterable {
+        case github
+        case mastodon
+        case twitter
+        case linkedin
+        case threads
+        case vk
+        case producthunt = "product-hunt"
+        case discord
+        case youtube
+        case telegram
+        case instagram
+
+        public var link: String {
+            switch self {
+            case .github:
+                return "https://github.com/CoolONEOfficial"
+            case .mastodon:
+                return "https://mastodon.social/@coolonee"
+            case .twitter:
+                return "https://twitter.com/cooloone"
+            case .linkedin:
+                return "https://www.linkedin.com/in/cooloneofficial/"
+            case .threads:
+                return "https://www.threads.net/@coolone.official"
+            case .vk:
+                return "https://vk.com/cooloneofficial"
+            case .producthunt:
+                return "https://www.producthunt.com/@cooloneofficial"
+            case .discord:
+                return "https://discordapp.com/users/416736090867761152"
+            case .youtube:
+                return "https://www.youtube.com/channel/UC32O3csIGOnT5y3PzO0GxNw"
+            case .telegram:
+                return "https://t.me/cooloneofficial"
+            case .instagram:
+                return "https://www.instagram.com/coolone.official/"
+            }
+        }
+
+        public var image: String {
+            "/en/socials/icons/\(self.rawValue).png"
+        }
+    }
+
     public enum SectionID: String, WebsiteSectionID {
         case projects
         case books

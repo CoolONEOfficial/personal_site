@@ -149,10 +149,29 @@ extension Node where Context == HTML.BodyContext {
 
     static func footer(
         for site: PortfolioSite,
-        in language: Language?
+        in language: Language?,
+        context: PublishingContext<PortfolioSite>
     ) -> Node {
         .footer(
+            .style("padding: 0 20px;"),
+            .row(justifyConfigs: [
+                    .init(type: .center, breakpoint: .md),
+                    .init(type: .between)
+                ],
+                 .forEach(PortfolioSite.Socials.allCases) { social in
+                     .col([.init(size: .auto)],
+                          .a(
+                             .href(social.link),
+                             .div(
+                                .style("padding: 15px;"),
+                                .icon(social.image, context: context)
+                             )
+                          )
+                     )
+                 }
+            ),
             .p(
+                .style("padding-top: 20px;"),
                 .text((language.localized(.generatedUsing)) + " "),
                 .a(
                     .text("Publish"),
