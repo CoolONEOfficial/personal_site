@@ -17,7 +17,6 @@ public struct PortfolioSite: MultiLanguageWebsite {
         case vk
         case producthunt = "product-hunt"
         case discord
-        case youtube
         case telegram
         case instagram
 
@@ -39,8 +38,6 @@ public struct PortfolioSite: MultiLanguageWebsite {
                 return "https://www.producthunt.com/@cooloneofficial"
             case .discord:
                 return "https://discordapp.com/users/416736090867761152"
-            case .youtube:
-                return "https://www.youtube.com/channel/UC32O3csIGOnT5y3PzO0GxNw"
             case .telegram:
                 return "https://t.me/cooloneofficial"
             case .instagram:
