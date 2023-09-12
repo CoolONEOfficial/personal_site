@@ -18,8 +18,6 @@ extension Section where Site == PortfolioSite {
             return .booksEmoji
         case .events:
             return .eventsEmoji
-        case .career:
-            return .careerEmoji
         case .achievements:
             return .achievementsEmoji
         }
@@ -33,8 +31,6 @@ extension Section where Site == PortfolioSite {
             return .books
         case .events:
             return .events
-        case .career:
-            return .career
         case .achievements:
             return .achievements
         }

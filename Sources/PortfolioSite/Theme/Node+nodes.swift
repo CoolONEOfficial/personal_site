@@ -96,7 +96,7 @@ extension Node where Context == HTML.BodyContext {
                                 .init(type: .end, breakpoint: .md),
                                 .init(type: .center)
                             ],
-                             Self.headerSection(context: context, isSelected: false, link: Path(context.site.pathPrefix(for: language ?? .default)).appendingComponent(Constants.cvFilename), text: language.localized(.cvEmoji)),
+                             //Self.headerSection(context: context, isSelected: false, link: Path(context.site.pathPrefix(for: language ?? .default)).appendingComponent(Constants.cvFilename), text: language.localized(.cvEmoji)),
                             .forEach(sectionIDs) { section in
                                 if let section = section {
                                     return Self.headerSection(

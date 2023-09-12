@@ -75,8 +75,6 @@ extension Item where Site == PortfolioSite {
         var dateStr = itemDateFormatter.string(from: date)
         if let endDate = metadata.parsedEndDate {
             dateStr += " — " + itemDateFormatter.string(from: endDate)
-        } else if sectionID == .career {
-            dateStr += language.localized(.untilNow)
         }
         
         return .row(
@@ -165,11 +163,6 @@ extension Item where Site == PortfolioSite {
             guard let metaEvent = metadata.event else { break }
             subNodes.append(.h4(.text(
                 metaEvent.location?.title ?? ""
-            )))
-        case .career:
-            guard let metaCareer = metadata.career else { break }
-            subNodes.append(.h4(.text(
-                metaCareer.position + ", " + language.localized(metaCareer.type.phrase)
             )))
         case .achievements:
             guard let metaAchievement = metadata.achievement else { break }

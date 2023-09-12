@@ -55,13 +55,6 @@ public struct PortfolioSite: MultiLanguageWebsite {
         case books
         case events
         case achievements
-        case career
-        
-        public static var allCases: [SectionID] {
-            return [
-                .projects, .books, .events, .achievements
-            ]
-        }
     }
 
     public struct ItemMetadata: MultiLanguageWebsiteItemMetadata {
