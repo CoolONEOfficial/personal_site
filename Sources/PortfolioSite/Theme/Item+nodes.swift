@@ -72,22 +72,21 @@ extension Item where Site == PortfolioSite {
         on site: PortfolioSite,
         context: PublishingContext<PortfolioSite>
     ) -> Node<HTML.BodyContext> {
-//        var dateStr = itemDateFormatter.string(from: date)
-//        if let endDate = metadata.parsedEndDate {
-//            dateStr += " — " + itemDateFormatter.string(from: endDate)
-//        }
+        var dateStr = itemDateFormatter.string(from: date)
+        if let endDate = metadata.parsedEndDate {
+            dateStr += " — " + itemDateFormatter.string(from: endDate)
+        }
         
         return .row(
             .col([], verticalSpacing: true,
                 tagList(on: site)
+            ),
+            .col([.init(size: .auto)], verticalSpacing: true,
+                .span(
+                    .text(dateStr),
+                    .class("item-date")
+                )
             )
-//            ,
-//            .col([.init(size: .auto)], verticalSpacing: true,
-//                .span(
-//                    .text(dateStr),
-//                    .class("item-date")
-//                )
-//            )
         )
     }
     
@@ -216,17 +215,17 @@ extension PortfolioSite {
     }
 }
 
-//extension PortfolioSite.ItemMetadata {
-//    var dateFormatter: DateFormatter {
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-//        return dateFormatter
-//    }
-//
-//    var parsedEndDate: Date? {
-//        if let endDate = endDate {
-//            return dateFormatter.date(from: endDate)
-//        }
-//        return nil
-//    }
-//}
+extension PortfolioSite.ItemMetadata {
+    var dateFormatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        return dateFormatter
+    }
+    
+    var parsedEndDate: Date? {
+        if let endDate = endDate {
+            return dateFormatter.date(from: endDate)
+        }
+        return nil
+    }
+}
