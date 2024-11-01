@@ -41,7 +41,7 @@ public struct PortfolioSite: MultiLanguageWebsite {
             case .telegram:
                 return "https://t.me/cooloneofficial"
             case .instagram:
-                return "https://www.instagram.com/coolone.official/"
+                return "https://www.instagram.com/coolone.ru/"
             }
         }
 
