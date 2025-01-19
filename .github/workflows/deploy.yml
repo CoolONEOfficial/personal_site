@@ -10,7 +10,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: sersoft-gmbh/swifty-linux-action@v2
+    - uses: sersoft-gmbh/swifty-linux-action@v3
       with:
         release-version: 5.7.1
     - uses: actions/checkout@v2
