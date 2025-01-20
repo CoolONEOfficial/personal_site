@@ -8,11 +8,8 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
-    - uses: sersoft-gmbh/swifty-linux-action@v3
-      with:
-        release-version: 5.7.1
     - uses: actions/checkout@v2
     - name: Publish dep
       run: rm -rf ./Publish; git clone https://github.com/CoolONEOfficial/Publish; cd Publish; git checkout Multi-Language; swift build -c release; cd ..
