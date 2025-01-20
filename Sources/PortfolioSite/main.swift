@@ -29,7 +29,7 @@ public struct PortfolioSite: MultiLanguageWebsite {
             case .twitter:
                 return "https://twitter.com/cooloone"
             case .linkedin:
-                return "https://www.linkedin.com/in/cooloneofficial/"
+                return "https://www.linkedin.com/in/nikolaitrukhin/"
             case .threads:
                 return "https://www.threads.net/@coolone.official"
             case .vk:
