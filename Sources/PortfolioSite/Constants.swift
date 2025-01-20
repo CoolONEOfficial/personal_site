@@ -8,7 +8,7 @@
 import Foundation
 
 enum Constants {
-    static let cvFilename = "nikolai_trukhin_cv.pdf"
+    static let cvFilename = "Nikolai_Trukhin_iOS.pdf"
     static let websiteUrl = URL(string: "https://coolone.ru")!
     static let avatarFilename = "avatar.jpg"
 }
