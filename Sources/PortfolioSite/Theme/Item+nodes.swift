@@ -153,11 +153,6 @@ extension Item where Site == PortfolioSite {
                     }
                 ))
             }
-        case .books:
-            guard let metaBook = metadata.book else { break }
-            subNodes.append(.h4(.text(
-                metaBook.author
-            )))
             
         case .events:
             guard let metaEvent = metadata.event else { break }

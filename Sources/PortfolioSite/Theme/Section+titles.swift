@@ -14,8 +14,6 @@ extension Section where Site == PortfolioSite {
         switch id {
         case .projects:
             return .projectsEmoji
-        case .books:
-            return .booksEmoji
         case .events:
             return .eventsEmoji
         case .achievements:
@@ -27,8 +25,6 @@ extension Section where Site == PortfolioSite {
         switch id {
         case .projects:
             return .projects
-        case .books:
-            return .books
         case .events:
             return .events
         case .achievements:

@@ -52,7 +52,6 @@ public struct PortfolioSite: MultiLanguageWebsite {
 
     public enum SectionID: String, WebsiteSectionID {
         case projects
-        case books
         case events
         case achievements
     }
