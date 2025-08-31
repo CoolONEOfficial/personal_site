@@ -18,7 +18,7 @@ jobs:
     - name: Deploy files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        server: coolone.ru
+        server: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         local-dir: ./Output/
