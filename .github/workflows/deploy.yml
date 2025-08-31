@@ -22,3 +22,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         local-dir: ./Output/
+        timeout: 60000
