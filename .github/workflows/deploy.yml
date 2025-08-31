@@ -16,7 +16,7 @@ jobs:
     - name: Build
       run: rm -rf ./Output; ./Publish/.build/release/publish-cli generate
     - name: Deploy files
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      uses: SamKirkland/FTP-Deploy-Action@4.3.6
       with:
         server: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
