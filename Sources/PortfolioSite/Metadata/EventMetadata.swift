@@ -29,6 +29,5 @@ enum EventType: String, Codable, CaseIterable {
 
 struct EventMetadata: WebsiteItemMetadata {
     var location: Location?
-    var place: Int?
     var type: EventType
 }

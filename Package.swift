@@ -16,7 +16,6 @@ let package = Package(
         .package(url: "https://github.com/johnsundell/SplashPublishPlugin.git", from: "0.2.0"),
         .package(url: "https://github.com/CoolONEOfficial/DarkImagePublishPlugin.git", branch: "patch-1"),
         .package(url: "https://github.com/CoolONEOfficial/TinySliderPublishPlugin.git", exact: "0.1.5")
-//        .package(url: "https://github.com/CoolONEOfficial/FTPPublishDeploy.git", from: "0.1.0")
     ],
     targets: [
         .executableTarget(
@@ -26,7 +25,6 @@ let package = Package(
                 .product(name: "SplashPublishPlugin", package: "SplashPublishPlugin"),
                 .product(name: "DarkImagePublishPlugin", package: "DarkImagePublishPlugin"),
                 .product(name: "TinySliderPublishPlugin", package: "TinySliderPublishPlugin"),
-//                "FTPPublishDeploy"
             ]
         )
     ]
