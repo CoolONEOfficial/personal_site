@@ -30,4 +30,5 @@ extension AchievementType {
 
 struct AchievementMetadata: WebsiteItemMetadata {
     var type: AchievementType
+    var organisation: String?
 }

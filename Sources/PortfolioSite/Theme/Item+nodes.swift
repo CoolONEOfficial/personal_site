@@ -162,7 +162,10 @@ extension Item where Site == PortfolioSite {
         case .achievements:
             guard let metaAchievement = metadata.achievement else { break }
             subNodes.append(.h4(.text(
-                language.localized(metaAchievement.type.phrase)
+                [
+                    language.localized(metaAchievement.type.phrase),
+                    metaAchievement.organisation,
+                ].compactMap { $0 }.joined(separator: ", ")
             )))
         }
         
