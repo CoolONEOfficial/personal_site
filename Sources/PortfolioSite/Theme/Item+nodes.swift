@@ -64,7 +64,7 @@ extension Item where Site == PortfolioSite {
                 ]),
                 hideOnSm ? .init() : .init("justify-content-center")
             ),
-            image(name, ext)
+            image(name, ext, alwaysRounded: true)
         )
     }
     
