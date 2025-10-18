@@ -192,6 +192,7 @@ extension Item where Site == PortfolioSite {
     func image(
         _ name: String,
         _ ext: String?,
+        alwaysRounded: Bool = false,
         classPrefix: String = "",
         alt: String = "",
         preview: Bool = true
@@ -201,7 +202,7 @@ extension Item where Site == PortfolioSite {
                 .src("/\(path)/\(name)\(preview && !name.contains("_400x400") ? "_400x400" : "")\(ext ?? "")"),
                 .alt(alt),
                 .class("item-\(classPrefix)\(name)"),
-                .roundedImage(ext)
+                .roundedImage(ext, force: alwaysRounded)
             )
         )
     }

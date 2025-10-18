@@ -10,7 +10,7 @@ import Publish
 import Plot
 
 extension Attribute where Context == HTML.ImageContext {
-    static func roundedImage(_ ext: String?) -> Attribute {
-        .attribute(named: "style", value: ext == ".jpg" ? "border-radius: 20px;" : "")
+    static func roundedImage(_ ext: String?, force: Bool) -> Attribute {
+        .attribute(named: "style", value: ext == ".jpg" || force ? "border-radius: 20px;" : "")
     }
 }

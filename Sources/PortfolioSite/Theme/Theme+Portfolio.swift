@@ -118,6 +118,7 @@ struct PortfolioHTMLFactory: HTMLFactory {
                                         item.image(
                                             "singleImage",
                                             metadata.singleImage,
+                                            alwaysRounded: true,
                                             classPrefix: "big-",
                                             preview: false
                                         )
