@@ -19,13 +19,12 @@ jobs:
       run: rm -rf ./Publish; git clone https://github.com/CoolONEOfficial/Publish; cd Publish; git checkout Multi-Language; swift build -c release; cd ..
     - name: Build
       run: rm -rf ./Output; ./Publish/.build/release/publish-cli generate
-    - name: Deploy with Password
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+    - name: SFTP uploader
+      uses: wangyucode/sftp-upload-action@v2.0.4
       with:
+        host: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
-        server: ${{ secrets.FTP_SERVER }}
-        port: ${{ secrets.FTP_PORT }}
-        local_path: './Output/*'
-        remote_path: ${{ secrets.FTP_PATH }}
-        sftp_only: true
         password: ${{ secrets.FTP_PASSWORD }}
+        compress: true
+        localDir: './Output/*'
+        remoteDir: ${{ secrets.FTP_PATH }}
