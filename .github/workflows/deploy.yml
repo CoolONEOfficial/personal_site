@@ -26,5 +26,5 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         compress: true
-        localDir: './Output/*'
+        localDir: './Output/'
         remoteDir: ${{ secrets.FTP_PATH }}
