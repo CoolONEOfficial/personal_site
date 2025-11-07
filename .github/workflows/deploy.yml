@@ -19,11 +19,13 @@ jobs:
       run: rm -rf ./Publish; git clone https://github.com/CoolONEOfficial/Publish; cd Publish; git checkout Multi-Language; swift build -c release; cd ..
     - name: Build
       run: rm -rf ./Output; ./Publish/.build/release/publish-cli generate
-    - name: Deploy files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+    - name: Deploy with Password
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.6
       with:
-        server: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        local-dir: ./Output/
-        timeout: 60000
+        username: ${{ secrets.FTP_USERNAME }}
+        server: ${{ secrets.FTP_SERVER }}
+        port: ${{ secrets.FTP_PORT }}
+        local_path: './Output/*'
+        remote_path: ${{ secrets.FTP_PATH }}
+        sftp_only: true
+        password: ${{ secrets.FTP_PASSWORD }}
